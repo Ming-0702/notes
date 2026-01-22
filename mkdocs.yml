@@ -1,7 +1,7 @@
 site_name: AMingg的笔记本
-site_url: https://notes.AMingg.top/
+site_url: https://notes.amingg.top/
 repo_url: https://github.com/Ming-0702/notes
-repo_name: Ming-0702/note
+repo_name: Ming-0702/notes
 
 theme:
   name: material
