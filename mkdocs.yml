@@ -1,0 +1,73 @@
+site_name: AMingg的笔记本
+site_url: https://note.AMingg.top/
+repo_url: https://github.com/Ming-0702/note
+repo_name: Ming-0702/note
+
+theme:
+  name: material
+  font:
+    text: Merriweather Sans
+    code: JetBrains Mono
+  icon: 
+    logo: fontawesome/solid/m
+    repo: fontawesome/brands/github-alt
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: 
+        icon: material/weather-sunny
+        name: Dark Mode
+      primary: grey
+      accent: deep purple
+    - media: "(prefers-color-scheme: light)"
+      scheme: defalut
+      toggle:
+        icon: material/weather-night
+        name: Light Mode
+      primary: light green
+      accent: deep orange
+  features: 
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+
+
+plugins:
+  - search
+  - offline
+  # - git-revision-date-localized:
+    #   enable_creation_date: true
+
+extra:
+  alternate:
+    - name: 简体中文
+      link: /
+      lang: zh 
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Ming-0702
+      name: github
+
+markdown_extensions: 
+  - attr_list
+#  - pymdownx.emoji:
+#      emoji_index: !!python/name:material.extensins.emoji.twemoji
+#      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+
+nav:
+  - 主页:
+    - index.md
+    - 关于: say.md
+  - 课程: 
+    - 第一课: say2.md
+
