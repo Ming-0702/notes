@@ -1,5 +1,5 @@
 site_name: AMingg的笔记本
-site_url: https://notes.amingg.top/
+site_url: https://ming-0702.github.io/notes/
 repo_url: https://github.com/Ming-0702/notes
 repo_name: Ming-0702/notes
 
@@ -50,7 +50,7 @@ plugins:
 extra:
   alternate:
     - name: 简体中文
-      link: /
+      link: /notes/
       lang: zh 
   social:
     - icon: fontawesome/brands/github
@@ -68,6 +68,4 @@ nav:
   - 主页:
     - index.md
     - 关于: say.md
-  - 课程: 
-    - 第一课: say2.md
 

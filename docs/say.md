@@ -7,9 +7,5 @@
     再看看
     </div>
     <br><br>
+这其实是一个空架子
 
-
-**🥺 今天是  ，v我  。**
-    <figure markdown align="center">
-    ![](_assets/wechatPayQRCode.jpg)
-    <figure>
