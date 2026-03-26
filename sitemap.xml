@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://notes.amingg.top/index.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <loc>https://ming-0702.github.io/notes/index.html</loc>
+         <lastmod>2026-03-26</lastmod>
     </url>
     <url>
-         <loc>https://notes.amingg.top/say.html</loc>
-         <lastmod>2026-01-22</lastmod>
-    </url>
-    <url>
-         <loc>https://notes.amingg.top/say2.html</loc>
-         <lastmod>2026-01-22</lastmod>
+         <loc>https://ming-0702.github.io/notes/say.html</loc>
+         <lastmod>2026-03-26</lastmod>
     </url>
 </urlset>
