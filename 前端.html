@@ -1,0 +1,2201 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ming-0702.github.io/notes/%E5%89%8D%E7%AB%AF.html">
+      
+      
+        <link rel="prev" href="%E7%BD%91%E9%A1%B5%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86.html">
+      
+      
+      
+        
+          <link rel="alternate" href="/notes/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>前端 - AMingg的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="AMingg的笔记本" class="md-header__button md-logo" aria-label="AMingg的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M22.7 33.4c13.5-4.1 28.1 1.1 35.9 12.9l165.4 248 165.4-248c7.8-11.7 22.4-17 35.9-12.9S448 49.9 448 64v384c0 17.7-14.3 32-32 32s-32-14.3-32-32V169.7L250.6 369.8c-5.9 8.9-15.9 14.2-26.6 14.2s-20.7-5.3-26.6-14.2L64 169.7V448c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-14.1 9.2-26.5 22.7-30.6"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AMingg的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              前端
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="deep-purple"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark Mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="defalut" data-md-color-primary="light-green" data-md-color-accent="deep-orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/notes/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ming-0702/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ming-0702/notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  主页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="vibecoding.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="AMingg的笔记本" class="md-nav__button md-logo" aria-label="AMingg的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M22.7 33.4c13.5-4.1 28.1 1.1 35.9 12.9l165.4 248 165.4-248c7.8-11.7 22.4-17 35.9-12.9S448 49.9 448 64v384c0 17.7-14.3 32-32 32s-32-14.3-32-32V169.7L250.6 369.8c-5.9 8.9-15.9 14.2-26.6 14.2s-20.7-5.3-26.6-14.2L64 169.7V448c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-14.1 9.2-26.5 22.7-30.6"/></svg>
+
+    </a>
+    AMingg的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ming-0702/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ming-0702/notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    主页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="say.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vibecoding.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Web.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%BD%91%E9%A1%B5%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网页渲染原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="%E5%89%8D%E7%AB%AF.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">前端学习笔记</h1>
+<h1 id="html">HTML</h1>
+<p>HTML 是网页的结构层，用来描述页面内容及其语义。浏览器会根据 HTML 构建 DOM 树，再结合 CSS 和 JavaScript 生成最终页面。</p>
+<h2 id="1">1. 基础结构</h2>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;页面标题&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;主标题&lt;/h1&gt;
+    &lt;p&gt;页面内容&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>关键点：</p>
+<ul>
+<li><code>&lt;!doctype html&gt;</code>：声明使用 HTML5 标准。</li>
+<li><code>html lang="zh-CN"</code>：声明页面语言，有利于无障碍和搜索引擎。</li>
+<li><code>meta charset="UTF-8"</code>：设置字符编码。</li>
+<li><code>meta viewport</code>：适配移动端视口。</li>
+<li><code>title</code>：浏览器标签页标题，也会影响 SEO。</li>
+</ul>
+<h2 id="2">2. 常用标签</h2>
+<p>文本相关：</p>
+<pre><code class="language-html">&lt;h1&gt;一级标题&lt;/h1&gt;
+&lt;h2&gt;二级标题&lt;/h2&gt;
+&lt;p&gt;段落&lt;/p&gt;
+&lt;strong&gt;重要内容&lt;/strong&gt;
+&lt;em&gt;强调内容&lt;/em&gt;
+&lt;span&gt;行内容器&lt;/span&gt;
+&lt;br /&gt;
+&lt;hr /&gt;
+</code></pre>
+<p>链接和图片：</p>
+<pre><code class="language-html">&lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+  打开链接
+&lt;/a&gt;
+
+&lt;img src=&quot;./avatar.png&quot; alt=&quot;用户头像&quot; /&gt;
+</code></pre>
+<p>列表：</p>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;无序列表项&lt;/li&gt;
+  &lt;li&gt;无序列表项&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;有序列表项&lt;/li&gt;
+  &lt;li&gt;有序列表项&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<p>表格：</p>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;姓名&lt;/th&gt;
+      &lt;th&gt;年龄&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;张三&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p>表单：</p>
+<pre><code class="language-html">&lt;form action=&quot;/login&quot; method=&quot;post&quot;&gt;
+  &lt;label for=&quot;username&quot;&gt;用户名&lt;/label&gt;
+  &lt;input id=&quot;username&quot; name=&quot;username&quot; type=&quot;text&quot; required /&gt;
+
+  &lt;label for=&quot;password&quot;&gt;密码&lt;/label&gt;
+  &lt;input id=&quot;password&quot; name=&quot;password&quot; type=&quot;password&quot; required /&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;登录&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p>表单常见控件：</p>
+<ul>
+<li><code>input type="text"</code>：文本输入。</li>
+<li><code>input type="password"</code>：密码输入。</li>
+<li><code>input type="email"</code>：邮箱输入。</li>
+<li><code>input type="checkbox"</code>：多选框。</li>
+<li><code>input type="radio"</code>：单选框。</li>
+<li><code>textarea</code>：多行文本。</li>
+<li><code>select</code> 和 <code>option</code>：下拉选择。</li>
+<li><code>button type="submit"</code>：提交按钮。</li>
+</ul>
+<h2 id="3">3. 语义化标签</h2>
+<p>语义化 HTML 是指用合适的标签表达内容含义，而不是只用 <code>div</code> 和 <code>span</code>。</p>
+<pre><code class="language-html">&lt;header&gt;页面头部&lt;/header&gt;
+&lt;nav&gt;导航&lt;/nav&gt;
+&lt;main&gt;页面主体&lt;/main&gt;
+&lt;section&gt;页面区域&lt;/section&gt;
+&lt;article&gt;独立文章内容&lt;/article&gt;
+&lt;aside&gt;侧边栏&lt;/aside&gt;
+&lt;footer&gt;页面底部&lt;/footer&gt;
+</code></pre>
+<p>优点：</p>
+<ul>
+<li>结构更清晰，便于维护。</li>
+<li>对搜索引擎更友好。</li>
+<li>对屏幕阅读器等辅助技术更友好。</li>
+</ul>
+<h2 id="4">4. 块级元素和行内元素</h2>
+<p>块级元素特点：</p>
+<ul>
+<li>默认独占一行。</li>
+<li>可以设置宽高。</li>
+<li>常见标签：<code>div</code>、<code>p</code>、<code>h1</code> 到 <code>h6</code>、<code>ul</code>、<code>li</code>、<code>section</code>。</li>
+</ul>
+<p>行内元素特点：</p>
+<ul>
+<li>不会独占一行。</li>
+<li>默认宽高由内容决定。</li>
+<li>常见标签：<code>span</code>、<code>a</code>、<code>strong</code>、<code>em</code>、<code>label</code>。</li>
+</ul>
+<p>行内块元素：</p>
+<ul>
+<li>通过 <code>display: inline-block</code> 设置。</li>
+<li>不独占一行，但可以设置宽高。</li>
+</ul>
+<h2 id="5-html">5. HTML 属性</h2>
+<p>常用全局属性：</p>
+<ul>
+<li><code>id</code>：元素唯一标识。</li>
+<li><code>class</code>：元素类名，可重复使用。</li>
+<li><code>style</code>：行内样式，不推荐大量使用。</li>
+<li><code>title</code>：鼠标悬停提示。</li>
+<li><code>data-*</code>：自定义数据属性。</li>
+</ul>
+<pre><code class="language-html">&lt;button class=&quot;btn&quot; data-role=&quot;delete&quot;&gt;删除&lt;/button&gt;
+</code></pre>
+<h2 id="6">6. 可访问性基础</h2>
+<p>可访问性是指页面对不同用户和设备都可用。</p>
+<p>常见实践：</p>
+<ul>
+<li>图片必须提供有意义的 <code>alt</code>。</li>
+<li>表单控件用 <code>label</code> 关联。</li>
+<li>按钮使用 <code>button</code>，不要用 <code>div</code> 模拟。</li>
+<li>交互元素需要能通过键盘访问。</li>
+<li>保持合理的标题层级。</li>
+</ul>
+<pre><code class="language-html">&lt;label for=&quot;email&quot;&gt;邮箱&lt;/label&gt;
+&lt;input id=&quot;email&quot; type=&quot;email&quot; /&gt;
+
+&lt;button type=&quot;button&quot;&gt;提交&lt;/button&gt;
+</code></pre>
+<h2 id="7-seo">7. SEO 基础</h2>
+<p>常见优化：</p>
+<ul>
+<li>每个页面有唯一、明确的 <code>title</code>。</li>
+<li>使用 <code>meta name="description"</code> 描述页面。</li>
+<li>合理使用 <code>h1</code> 到 <code>h6</code>。</li>
+<li>图片添加 <code>alt</code>。</li>
+<li>链接文本要有明确含义。</li>
+</ul>
+<pre><code class="language-html">&lt;meta name=&quot;description&quot; content=&quot;前端学习笔记，包含 HTML、CSS、JavaScript 和 React。&quot; /&gt;
+</code></pre>
+<hr />
+<h1 id="css">CSS</h1>
+<p>CSS 是网页的表现层，用来控制页面布局、颜色、字体、间距、动画和响应式效果。</p>
+<h2 id="1_1">1. 引入方式</h2>
+<p>行内样式：</p>
+<pre><code class="language-html">&lt;p style=&quot;color: red;&quot;&gt;红色文字&lt;/p&gt;
+</code></pre>
+<p>内部样式：</p>
+<pre><code class="language-html">&lt;style&gt;
+  p {
+    color: red;
+  }
+&lt;/style&gt;
+</code></pre>
+<p>外部样式：</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;./style.css&quot; /&gt;
+</code></pre>
+<p>实际开发中推荐外部样式，便于维护和复用。</p>
+<h2 id="2_1">2. 选择器</h2>
+<pre><code class="language-css">/* 标签选择器 */
+p {
+  color: #333;
+}
+
+/* 类选择器 */
+.card {
+  border: 1px solid #ddd;
+}
+
+/* ID 选择器 */
+#app {
+  min-height: 100vh;
+}
+
+/* 后代选择器 */
+.nav a {
+  text-decoration: none;
+}
+
+/* 子代选择器 */
+.list &gt; li {
+  margin-bottom: 8px;
+}
+
+/* 伪类选择器 */
+button:hover {
+  background: #222;
+}
+
+/* 伪元素选择器 */
+p::first-line {
+  font-weight: bold;
+}
+</code></pre>
+<h2 id="3_1">3. 选择器优先级</h2>
+<p>优先级从高到低：</p>
+<ol>
+<li><code>!important</code></li>
+<li>行内样式</li>
+<li>ID 选择器</li>
+<li>类选择器、属性选择器、伪类选择器</li>
+<li>标签选择器、伪元素选择器</li>
+<li>通配符选择器</li>
+</ol>
+<p>建议：</p>
+<ul>
+<li>少用 <code>!important</code>。</li>
+<li>少用 ID 写样式。</li>
+<li>使用清晰的类名组织样式。</li>
+</ul>
+<h2 id="4_1">4. 盒模型</h2>
+<p>盒模型由四部分组成：</p>
+<ul>
+<li><code>content</code>：内容区域。</li>
+<li><code>padding</code>：内边距。</li>
+<li><code>border</code>：边框。</li>
+<li><code>margin</code>：外边距。</li>
+</ul>
+<pre><code class="language-css">.box {
+  width: 200px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  margin: 24px;
+}
+</code></pre>
+<p>默认盒模型：</p>
+<pre><code class="language-css">box-sizing: content-box;
+</code></pre>
+<p>推荐全局设置：</p>
+<pre><code class="language-css">* {
+  box-sizing: border-box;
+}
+</code></pre>
+<p><code>border-box</code> 表示元素最终宽度包含 <code>content</code>、<code>padding</code> 和 <code>border</code>，布局更直观。</p>
+<h2 id="5">5. 常用单位</h2>
+<ul>
+<li><code>px</code>：像素，固定单位。</li>
+<li><code>%</code>：相对父元素。</li>
+<li><code>em</code>：相对当前元素字体大小。</li>
+<li><code>rem</code>：相对根元素字体大小。</li>
+<li><code>vw</code>：视口宽度的百分比。</li>
+<li><code>vh</code>：视口高度的百分比。</li>
+</ul>
+<pre><code class="language-css">html {
+  font-size: 16px;
+}
+
+.title {
+  font-size: 2rem;
+}
+</code></pre>
+<h2 id="6-display">6. display</h2>
+<pre><code class="language-css">.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+</code></pre>
+<p>常见区别：</p>
+<ul>
+<li><code>display: none</code>：元素不显示，也不占位。</li>
+<li><code>visibility: hidden</code>：元素不可见，但仍占位。</li>
+<li><code>opacity: 0</code>：元素透明，但仍占位，并可能响应事件。</li>
+</ul>
+<h2 id="7-position">7. position 定位</h2>
+<pre><code class="language-css">.relative {
+  position: relative;
+  top: 10px;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+</code></pre>
+<p>常见定位：</p>
+<ul>
+<li><code>static</code>：默认定位。</li>
+<li><code>relative</code>：相对自身原位置偏移。</li>
+<li><code>absolute</code>：相对最近的非 <code>static</code> 祖先元素定位。</li>
+<li><code>fixed</code>：相对浏览器视口定位。</li>
+<li><code>sticky</code>：滚动到指定位置后固定。</li>
+</ul>
+<h2 id="8-flex">8. Flex 布局</h2>
+<p>Flex 适合一维布局，可以处理横向或纵向排列。</p>
+<pre><code class="language-css">.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+</code></pre>
+<p>主轴控制：</p>
+<pre><code class="language-css">.container {
+  flex-direction: row;
+  justify-content: space-between;
+}
+</code></pre>
+<p>交叉轴控制：</p>
+<pre><code class="language-css">.container {
+  align-items: center;
+}
+</code></pre>
+<p>常用属性：</p>
+<ul>
+<li><code>flex-direction</code>：主轴方向。</li>
+<li><code>justify-content</code>：主轴对齐。</li>
+<li><code>align-items</code>：交叉轴对齐。</li>
+<li><code>flex-wrap</code>：是否换行。</li>
+<li><code>gap</code>：子元素间距。</li>
+<li><code>flex: 1</code>：按比例分配剩余空间。</li>
+</ul>
+<h2 id="9-grid">9. Grid 布局</h2>
+<p>Grid 适合二维布局，可以同时控制行和列。</p>
+<pre><code class="language-css">.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+</code></pre>
+<p>响应式网格：</p>
+<pre><code class="language-css">.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+</code></pre>
+<h2 id="10">10. 响应式布局</h2>
+<p>媒体查询：</p>
+<pre><code class="language-css">.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+</code></pre>
+<p>常见实践：</p>
+<ul>
+<li>使用 <code>max-width</code> 而不是固定宽度。</li>
+<li>图片设置 <code>max-width: 100%</code>。</li>
+<li>使用 Flex/Grid 做自适应布局。</li>
+<li>移动端优先时，先写小屏样式，再用媒体查询增强大屏。</li>
+</ul>
+<h2 id="11">11. 常用样式</h2>
+<p>文本：</p>
+<pre><code class="language-css">.text {
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+}
+</code></pre>
+<p>背景：</p>
+<pre><code class="language-css">.hero {
+  background-color: #f5f5f5;
+  background-image: url(&quot;./hero.jpg&quot;);
+  background-size: cover;
+  background-position: center;
+}
+</code></pre>
+<p>边框和阴影：</p>
+<pre><code class="language-css">.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 8%);
+}
+</code></pre>
+<p>过渡：</p>
+<pre><code class="language-css">.button {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+</code></pre>
+<h2 id="12-bfc">12. BFC</h2>
+<p>BFC 是块级格式化上下文，是一个独立的渲染区域。常见作用：</p>
+<ul>
+<li>清除浮动影响。</li>
+<li>防止外边距合并。</li>
+<li>限制内部布局不影响外部。</li>
+</ul>
+<p>触发方式：</p>
+<pre><code class="language-css">.bfc {
+  overflow: hidden;
+}
+</code></pre>
+<p>其他方式：</p>
+<ul>
+<li><code>display: flow-root</code></li>
+<li><code>display: flex</code></li>
+<li><code>display: grid</code></li>
+<li><code>position: absolute</code></li>
+<li><code>position: fixed</code></li>
+</ul>
+<h2 id="13-css">13. CSS 变量</h2>
+<pre><code class="language-css">:root {
+  --primary-color: #2563eb;
+  --radius: 8px;
+}
+
+.button {
+  background: var(--primary-color);
+  border-radius: var(--radius);
+}
+</code></pre>
+<p>优点：</p>
+<ul>
+<li>便于统一主题。</li>
+<li>可以在运行时通过 JavaScript 修改。</li>
+<li>减少重复值。</li>
+</ul>
+<hr />
+<h1 id="javascript">JavaScript</h1>
+<p>JavaScript 是网页的行为层，用来处理交互、数据、网络请求和页面逻辑。</p>
+<h2 id="1_2">1. 变量声明</h2>
+<pre><code class="language-js">var oldValue = 1;
+let count = 0;
+const name = &quot;Alice&quot;;
+</code></pre>
+<p>区别：</p>
+<ul>
+<li><code>var</code>：函数作用域，可重复声明，有变量提升，不推荐新代码大量使用。</li>
+<li><code>let</code>：块级作用域，可重新赋值。</li>
+<li><code>const</code>：块级作用域，不可重新赋值。</li>
+</ul>
+<p>推荐：</p>
+<ul>
+<li>默认使用 <code>const</code>。</li>
+<li>需要重新赋值时使用 <code>let</code>。</li>
+<li>避免使用 <code>var</code>。</li>
+</ul>
+<h2 id="2_2">2. 数据类型</h2>
+<p>基本类型：</p>
+<ul>
+<li><code>string</code></li>
+<li><code>number</code></li>
+<li><code>boolean</code></li>
+<li><code>undefined</code></li>
+<li><code>null</code></li>
+<li><code>symbol</code></li>
+<li><code>bigint</code></li>
+</ul>
+<p>引用类型：</p>
+<ul>
+<li><code>object</code></li>
+<li><code>array</code></li>
+<li><code>function</code></li>
+<li><code>date</code></li>
+<li><code>regexp</code></li>
+</ul>
+<pre><code class="language-js">typeof &quot;hello&quot;; // &quot;string&quot;
+typeof 123; // &quot;number&quot;
+typeof true; // &quot;boolean&quot;
+typeof undefined; // &quot;undefined&quot;
+typeof null; // &quot;object&quot;
+Array.isArray([]); // true
+</code></pre>
+<p>注意：<code>typeof null</code> 返回 <code>"object"</code> 是 JavaScript 的历史遗留问题。</p>
+<h2 id="3_2">3. 运算符</h2>
+<pre><code class="language-js">1 + 2;
+5 - 3;
+2 * 4;
+8 / 2;
+7 % 3;
+</code></pre>
+<p>比较：</p>
+<pre><code class="language-js">1 == &quot;1&quot;; // true
+1 === &quot;1&quot;; // false
+</code></pre>
+<p>推荐使用严格比较：</p>
+<pre><code class="language-js">value === expected;
+value !== expected;
+</code></pre>
+<p>逻辑运算：</p>
+<pre><code class="language-js">const a = true;
+const b = false;
+
+a &amp;&amp; b;
+a || b;
+!a;
+</code></pre>
+<p>空值合并：</p>
+<pre><code class="language-js">const username = inputName ?? &quot;匿名用户&quot;;
+</code></pre>
+<p>可选链：</p>
+<pre><code class="language-js">const city = user?.address?.city;
+</code></pre>
+<h2 id="4_2">4. 条件和循环</h2>
+<p>条件：</p>
+<pre><code class="language-js">if (score &gt;= 90) {
+  console.log(&quot;优秀&quot;);
+} else if (score &gt;= 60) {
+  console.log(&quot;及格&quot;);
+} else {
+  console.log(&quot;不及格&quot;);
+}
+</code></pre>
+<p><code>switch</code>：</p>
+<pre><code class="language-js">switch (status) {
+  case &quot;loading&quot;:
+    console.log(&quot;加载中&quot;);
+    break;
+  case &quot;success&quot;:
+    console.log(&quot;成功&quot;);
+    break;
+  default:
+    console.log(&quot;未知状态&quot;);
+}
+</code></pre>
+<p>循环：</p>
+<pre><code class="language-js">for (let i = 0; i &lt; 5; i += 1) {
+  console.log(i);
+}
+
+for (const item of list) {
+  console.log(item);
+}
+
+while (count &lt; 10) {
+  count += 1;
+}
+</code></pre>
+<h2 id="5_1">5. 函数</h2>
+<p>函数声明：</p>
+<pre><code class="language-js">function add(a, b) {
+  return a + b;
+}
+</code></pre>
+<p>函数表达式：</p>
+<pre><code class="language-js">const add = function (a, b) {
+  return a + b;
+};
+</code></pre>
+<p>箭头函数：</p>
+<pre><code class="language-js">const add = (a, b) =&gt; a + b;
+</code></pre>
+<p>默认参数：</p>
+<pre><code class="language-js">function greet(name = &quot;用户&quot;) {
+  return `你好，${name}`;
+}
+</code></pre>
+<p>剩余参数：</p>
+<pre><code class="language-js">function sum(...numbers) {
+  return numbers.reduce((total, item) =&gt; total + item, 0);
+}
+</code></pre>
+<h2 id="6_1">6. 作用域和闭包</h2>
+<p>作用域决定变量的可访问范围。</p>
+<pre><code class="language-js">function outer() {
+  const message = &quot;hello&quot;;
+
+  function inner() {
+    console.log(message);
+  }
+
+  return inner;
+}
+
+const fn = outer();
+fn(); // &quot;hello&quot;
+</code></pre>
+<p>闭包：函数可以记住并访问它创建时所在的词法作用域，即使外层函数已经执行完毕。</p>
+<p>常见用途：</p>
+<ul>
+<li>保存私有变量。</li>
+<li>函数柯里化。</li>
+<li>防抖和节流。</li>
+<li>React Hooks 中的状态和副作用逻辑。</li>
+</ul>
+<h2 id="7">7. 数组常用方法</h2>
+<pre><code class="language-js">const numbers = [1, 2, 3, 4];
+
+numbers.map((item) =&gt; item * 2); // [2, 4, 6, 8]
+numbers.filter((item) =&gt; item &gt; 2); // [3, 4]
+numbers.find((item) =&gt; item === 3); // 3
+numbers.some((item) =&gt; item &gt; 3); // true
+numbers.every((item) =&gt; item &gt; 0); // true
+numbers.reduce((total, item) =&gt; total + item, 0); // 10
+</code></pre>
+<p>会改变原数组的方法：</p>
+<ul>
+<li><code>push</code></li>
+<li><code>pop</code></li>
+<li><code>shift</code></li>
+<li><code>unshift</code></li>
+<li><code>splice</code></li>
+<li><code>sort</code></li>
+<li><code>reverse</code></li>
+</ul>
+<p>不会改变原数组的方法：</p>
+<ul>
+<li><code>map</code></li>
+<li><code>filter</code></li>
+<li><code>slice</code></li>
+<li><code>concat</code></li>
+<li><code>find</code></li>
+<li><code>some</code></li>
+<li><code>every</code></li>
+</ul>
+<p>React 中更新数组时通常要返回新数组，而不是直接修改原数组。</p>
+<h2 id="8">8. 对象常用操作</h2>
+<pre><code class="language-js">const user = {
+  id: 1,
+  name: &quot;Alice&quot;,
+  age: 18,
+};
+
+user.name;
+user[&quot;age&quot;];
+</code></pre>
+<p>解构：</p>
+<pre><code class="language-js">const { name, age } = user;
+</code></pre>
+<p>展开：</p>
+<pre><code class="language-js">const newUser = {
+  ...user,
+  age: 19,
+};
+</code></pre>
+<p>遍历：</p>
+<pre><code class="language-js">Object.keys(user);
+Object.values(user);
+Object.entries(user);
+</code></pre>
+<h2 id="9">9. 原型和原型链</h2>
+<p>JavaScript 对象可以通过原型继承属性和方法。</p>
+<pre><code class="language-js">function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.sayHello = function () {
+  console.log(`Hello, ${this.name}`);
+};
+
+const person = new Person(&quot;Alice&quot;);
+person.sayHello();
+</code></pre>
+<p>查找属性时：</p>
+<ol>
+<li>先找对象自身属性。</li>
+<li>找不到就去对象原型上找。</li>
+<li>继续沿着原型链查找。</li>
+<li>最终到 <code>null</code> 停止。</li>
+</ol>
+<h2 id="10-this">10. this 指向</h2>
+<p><code>this</code> 的值取决于函数调用方式。</p>
+<pre><code class="language-js">const user = {
+  name: &quot;Alice&quot;,
+  sayName() {
+    console.log(this.name);
+  },
+};
+
+user.sayName(); // this 指向 user
+</code></pre>
+<p>常见规则：</p>
+<ul>
+<li>普通函数直接调用：非严格模式下指向全局对象，严格模式下为 <code>undefined</code>。</li>
+<li>对象方法调用：指向调用该方法的对象。</li>
+<li>构造函数调用：指向新创建的实例。</li>
+<li><code>call</code>、<code>apply</code>、<code>bind</code>：显式绑定。</li>
+<li>箭头函数：没有自己的 <code>this</code>，继承外层作用域的 <code>this</code>。</li>
+</ul>
+<pre><code class="language-js">function sayName() {
+  console.log(this.name);
+}
+
+sayName.call({ name: &quot;Alice&quot; });
+</code></pre>
+<h2 id="11-dom">11. DOM 操作</h2>
+<p>获取元素：</p>
+<pre><code class="language-js">const title = document.querySelector(&quot;.title&quot;);
+const items = document.querySelectorAll(&quot;.item&quot;);
+</code></pre>
+<p>修改内容：</p>
+<pre><code class="language-js">title.textContent = &quot;新标题&quot;;
+title.innerHTML = &quot;&lt;span&gt;新标题&lt;/span&gt;&quot;;
+</code></pre>
+<p>修改样式：</p>
+<pre><code class="language-js">title.style.color = &quot;red&quot;;
+title.classList.add(&quot;active&quot;);
+title.classList.remove(&quot;hidden&quot;);
+title.classList.toggle(&quot;open&quot;);
+</code></pre>
+<p>创建元素：</p>
+<pre><code class="language-js">const li = document.createElement(&quot;li&quot;);
+li.textContent = &quot;新列表项&quot;;
+document.querySelector(&quot;ul&quot;).appendChild(li);
+</code></pre>
+<h2 id="12">12. 事件</h2>
+<pre><code class="language-js">const button = document.querySelector(&quot;button&quot;);
+
+button.addEventListener(&quot;click&quot;, (event) =&gt; {
+  console.log(event.target);
+});
+</code></pre>
+<p>事件流：</p>
+<ol>
+<li>捕获阶段</li>
+<li>目标阶段</li>
+<li>冒泡阶段</li>
+</ol>
+<p>阻止默认行为：</p>
+<pre><code class="language-js">form.addEventListener(&quot;submit&quot;, (event) =&gt; {
+  event.preventDefault();
+});
+</code></pre>
+<p>阻止冒泡：</p>
+<pre><code class="language-js">button.addEventListener(&quot;click&quot;, (event) =&gt; {
+  event.stopPropagation();
+});
+</code></pre>
+<p>事件委托：</p>
+<pre><code class="language-js">document.querySelector(&quot;.list&quot;).addEventListener(&quot;click&quot;, (event) =&gt; {
+  if (event.target.matches(&quot;button&quot;)) {
+    console.log(&quot;点击了按钮&quot;);
+  }
+});
+</code></pre>
+<h2 id="13">13. 异步编程</h2>
+<p>回调函数：</p>
+<pre><code class="language-js">setTimeout(() =&gt; {
+  console.log(&quot;1 秒后执行&quot;);
+}, 1000);
+</code></pre>
+<p>Promise：</p>
+<pre><code class="language-js">const request = new Promise((resolve, reject) =&gt; {
+  const success = true;
+
+  if (success) {
+    resolve(&quot;成功&quot;);
+  } else {
+    reject(new Error(&quot;失败&quot;));
+  }
+});
+
+request
+  .then((result) =&gt; {
+    console.log(result);
+  })
+  .catch((error) =&gt; {
+    console.error(error);
+  });
+</code></pre>
+<p>async/await：</p>
+<pre><code class="language-js">async function getUser() {
+  try {
+    const response = await fetch(&quot;/api/user&quot;);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+</code></pre>
+<h2 id="14-fetch">14. Fetch 请求</h2>
+<p>GET：</p>
+<pre><code class="language-js">async function getList() {
+  const response = await fetch(&quot;/api/list&quot;);
+
+  if (!response.ok) {
+    throw new Error(&quot;请求失败&quot;);
+  }
+
+  return response.json();
+}
+</code></pre>
+<p>POST：</p>
+<pre><code class="language-js">async function createUser(user) {
+  const response = await fetch(&quot;/api/users&quot;, {
+    method: &quot;POST&quot;,
+    headers: {
+      &quot;Content-Type&quot;: &quot;application/json&quot;,
+    },
+    body: JSON.stringify(user),
+  });
+
+  return response.json();
+}
+</code></pre>
+<h2 id="15">15. 防抖和节流</h2>
+<p>防抖：事件连续触发时，只在最后一次触发后执行。适合搜索输入。</p>
+<pre><code class="language-js">function debounce(fn, delay) {
+  let timer = null;
+
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() =&gt; {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+</code></pre>
+<p>节流：一段时间内最多执行一次。适合滚动、拖拽、窗口 resize。</p>
+<pre><code class="language-js">function throttle(fn, delay) {
+  let lastTime = 0;
+
+  return function (...args) {
+    const now = Date.now();
+
+    if (now - lastTime &gt;= delay) {
+      lastTime = now;
+      fn.apply(this, args);
+    }
+  };
+}
+</code></pre>
+<h2 id="16">16. 模块化</h2>
+<p>导出：</p>
+<pre><code class="language-js">export const name = &quot;Alice&quot;;
+
+export function add(a, b) {
+  return a + b;
+}
+
+export default function App() {
+  return &quot;App&quot;;
+}
+</code></pre>
+<p>导入：</p>
+<pre><code class="language-js">import App, { name, add } from &quot;./app.js&quot;;
+</code></pre>
+<h2 id="17">17. 常见错误处理</h2>
+<pre><code class="language-js">try {
+  JSON.parse(&quot;{ invalid json }&quot;);
+} catch (error) {
+  console.error(&quot;解析失败&quot;, error);
+}
+</code></pre>
+<p>常见错误类型：</p>
+<ul>
+<li><code>SyntaxError</code>：语法错误。</li>
+<li><code>ReferenceError</code>：引用不存在的变量。</li>
+<li><code>TypeError</code>：类型错误。</li>
+<li><code>RangeError</code>：数值超出范围。</li>
+</ul>
+<hr />
+<h1 id="react">React</h1>
+<p>React 是用于构建用户界面的 JavaScript 库。它通过组件化、声明式渲染和状态驱动视图来组织复杂界面。</p>
+<h2 id="1-react">1. 创建 React 项目</h2>
+<p>常用方式：</p>
+<pre><code class="language-bash">npm create vite@latest my-app -- --template react
+cd my-app
+npm install
+npm run dev
+</code></pre>
+<p>常见目录：</p>
+<pre><code class="language-text">src/
+  App.jsx
+  main.jsx
+  components/
+  pages/
+  hooks/
+  utils/
+</code></pre>
+<h2 id="2-jsx">2. JSX</h2>
+<p>JSX 是 JavaScript 的语法扩展，可以在 JS 中写类似 HTML 的结构。</p>
+<pre><code class="language-jsx">function App() {
+  const title = &quot;React 笔记&quot;;
+
+  return (
+    &lt;main&gt;
+      &lt;h1&gt;{title}&lt;/h1&gt;
+      &lt;p&gt;用组件构建页面&lt;/p&gt;
+    &lt;/main&gt;
+  );
+}
+</code></pre>
+<p>注意：</p>
+<ul>
+<li>JSX 中只能返回一个根节点。</li>
+<li>使用 <code>className</code> 代替 <code>class</code>。</li>
+<li>使用 <code>htmlFor</code> 代替 <code>for</code>。</li>
+<li>JavaScript 表达式写在 <code>{}</code> 中。</li>
+<li>标签必须闭合。</li>
+</ul>
+<h2 id="3_3">3. 组件</h2>
+<p>函数组件：</p>
+<pre><code class="language-jsx">function Button() {
+  return &lt;button type=&quot;button&quot;&gt;点击&lt;/button&gt;;
+}
+</code></pre>
+<p>组件复用：</p>
+<pre><code class="language-jsx">function UserCard({ name, age }) {
+  return (
+    &lt;section&gt;
+      &lt;h2&gt;{name}&lt;/h2&gt;
+      &lt;p&gt;{age} 岁&lt;/p&gt;
+    &lt;/section&gt;
+  );
+}
+
+function App() {
+  return &lt;UserCard name=&quot;Alice&quot; age={18} /&gt;;
+}
+</code></pre>
+<p>组件命名：</p>
+<ul>
+<li>组件名必须以大写字母开头。</li>
+<li>文件名通常和组件名一致。</li>
+<li>一个组件只负责一类明确职责。</li>
+</ul>
+<h2 id="4-props">4. Props</h2>
+<p>Props 是父组件传给子组件的数据。</p>
+<pre><code class="language-jsx">function Welcome(props) {
+  return &lt;h1&gt;你好，{props.name}&lt;/h1&gt;;
+}
+
+function App() {
+  return &lt;Welcome name=&quot;Alice&quot; /&gt;;
+}
+</code></pre>
+<p>解构写法：</p>
+<pre><code class="language-jsx">function Welcome({ name }) {
+  return &lt;h1&gt;你好，{name}&lt;/h1&gt;;
+}
+</code></pre>
+<p>Props 特点：</p>
+<ul>
+<li>从父组件流向子组件。</li>
+<li>子组件不应该直接修改 props。</li>
+<li>props 可以是字符串、数字、布尔值、数组、对象、函数或 React 节点。</li>
+</ul>
+<h2 id="5-state">5. State</h2>
+<p>State 是组件内部状态，状态变化会触发组件重新渲染。</p>
+<pre><code class="language-jsx">import { useState } from &quot;react&quot;;
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{count}&lt;/p&gt;
+      &lt;button type=&quot;button&quot; onClick={() =&gt; setCount(count + 1)}&gt;
+        +1
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>基于旧状态更新：</p>
+<pre><code class="language-jsx">setCount((prevCount) =&gt; prevCount + 1);
+</code></pre>
+<p>对象状态更新：</p>
+<pre><code class="language-jsx">const [user, setUser] = useState({ name: &quot;Alice&quot;, age: 18 });
+
+setUser((prevUser) =&gt; ({
+  ...prevUser,
+  age: 19,
+}));
+</code></pre>
+<p>数组状态更新：</p>
+<pre><code class="language-jsx">const [list, setList] = useState([]);
+
+setList((prevList) =&gt; [...prevList, newItem]);
+setList((prevList) =&gt; prevList.filter((item) =&gt; item.id !== id));
+</code></pre>
+<h2 id="6_2">6. 条件渲染</h2>
+<pre><code class="language-jsx">function UserInfo({ user }) {
+  if (!user) {
+    return &lt;p&gt;请先登录&lt;/p&gt;;
+  }
+
+  return &lt;p&gt;欢迎，{user.name}&lt;/p&gt;;
+}
+</code></pre>
+<p>三元表达式：</p>
+<pre><code class="language-jsx">{isLogin ? &lt;UserPanel /&gt; : &lt;LoginButton /&gt;}
+</code></pre>
+<p>逻辑与：</p>
+<pre><code class="language-jsx">{message &amp;&amp; &lt;p&gt;{message}&lt;/p&gt;}
+</code></pre>
+<p>注意：如果 <code>message</code> 可能是 <code>0</code>，逻辑与可能渲染出 <code>0</code>，需要转换为布尔值。</p>
+<pre><code class="language-jsx">{Boolean(message) &amp;&amp; &lt;p&gt;{message}&lt;/p&gt;}
+</code></pre>
+<h2 id="7_1">7. 列表渲染</h2>
+<pre><code class="language-jsx">function TodoList({ todos }) {
+  return (
+    &lt;ul&gt;
+      {todos.map((todo) =&gt; (
+        &lt;li key={todo.id}&gt;{todo.title}&lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}
+</code></pre>
+<p><code>key</code> 的作用：</p>
+<ul>
+<li>帮助 React 识别列表项。</li>
+<li>提高更新效率。</li>
+<li>避免状态错乱。</li>
+</ul>
+<p>建议：</p>
+<ul>
+<li>优先使用稳定唯一的业务 ID。</li>
+<li>不推荐使用数组索引作为 key，除非列表完全静态。</li>
+</ul>
+<h2 id="8_1">8. 事件处理</h2>
+<pre><code class="language-jsx">function Button() {
+  function handleClick(event) {
+    console.log(event.target);
+  }
+
+  return (
+    &lt;button type=&quot;button&quot; onClick={handleClick}&gt;
+      点击
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<p>传参：</p>
+<pre><code class="language-jsx">&lt;button type=&quot;button&quot; onClick={() =&gt; handleDelete(item.id)}&gt;
+  删除
+&lt;/button&gt;
+</code></pre>
+<p>注意：不要直接执行函数。</p>
+<pre><code class="language-jsx">// 错误
+&lt;button onClick={handleDelete(id)}&gt;删除&lt;/button&gt;
+
+// 正确
+&lt;button onClick={() =&gt; handleDelete(id)}&gt;删除&lt;/button&gt;
+</code></pre>
+<h2 id="9_1">9. 表单处理</h2>
+<p>受控组件：表单值由 React state 控制。</p>
+<pre><code class="language-jsx">import { useState } from &quot;react&quot;;
+
+function LoginForm() {
+  const [form, setForm] = useState({
+    username: &quot;&quot;,
+    password: &quot;&quot;,
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setForm((prevForm) =&gt; ({
+      ...prevForm,
+      [name]: value,
+    }));
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(form);
+  }
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;input
+        name=&quot;username&quot;
+        value={form.username}
+        onChange={handleChange}
+      /&gt;
+      &lt;input
+        name=&quot;password&quot;
+        type=&quot;password&quot;
+        value={form.password}
+        onChange={handleChange}
+      /&gt;
+      &lt;button type=&quot;submit&quot;&gt;登录&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}
+</code></pre>
+<h2 id="10-useeffect">10. useEffect</h2>
+<p><code>useEffect</code> 用于处理副作用，例如请求数据、订阅事件、操作 DOM、定时器等。</p>
+<pre><code class="language-jsx">import { useEffect, useState } from &quot;react&quot;;
+
+function UserList() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() =&gt; {
+    async function fetchUsers() {
+      const response = await fetch(&quot;/api/users&quot;);
+      const data = await response.json();
+      setUsers(data);
+    }
+
+    fetchUsers();
+  }, []);
+
+  return (
+    &lt;ul&gt;
+      {users.map((user) =&gt; (
+        &lt;li key={user.id}&gt;{user.name}&lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}
+</code></pre>
+<p>依赖数组：</p>
+<ul>
+<li>不写依赖数组：每次渲染后执行。</li>
+<li><code>[]</code>：组件挂载后执行一次。</li>
+<li><code>[value]</code>：<code>value</code> 变化后执行。</li>
+</ul>
+<p>清理副作用：</p>
+<pre><code class="language-jsx">useEffect(() =&gt; {
+  const timer = setInterval(() =&gt; {
+    console.log(&quot;tick&quot;);
+  }, 1000);
+
+  return () =&gt; {
+    clearInterval(timer);
+  };
+}, []);
+</code></pre>
+<h2 id="11-useref">11. useRef</h2>
+<p><code>useRef</code> 可以保存一个可变值，修改它不会触发重新渲染。也常用于访问 DOM。</p>
+<pre><code class="language-jsx">import { useRef } from &quot;react&quot;;
+
+function SearchInput() {
+  const inputRef = useRef(null);
+
+  function focusInput() {
+    inputRef.current.focus();
+  }
+
+  return (
+    &lt;div&gt;
+      &lt;input ref={inputRef} /&gt;
+      &lt;button type=&quot;button&quot; onClick={focusInput}&gt;
+        聚焦
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<p>保存定时器：</p>
+<pre><code class="language-jsx">const timerRef = useRef(null);
+
+timerRef.current = setTimeout(() =&gt; {
+  console.log(&quot;done&quot;);
+}, 1000);
+</code></pre>
+<h2 id="12-usememo-usecallback">12. useMemo 和 useCallback</h2>
+<p><code>useMemo</code> 缓存计算结果：</p>
+<pre><code class="language-jsx">const total = useMemo(() =&gt; {
+  return list.reduce((sum, item) =&gt; sum + item.price, 0);
+}, [list]);
+</code></pre>
+<p><code>useCallback</code> 缓存函数引用：</p>
+<pre><code class="language-jsx">const handleClick = useCallback(() =&gt; {
+  setCount((prevCount) =&gt; prevCount + 1);
+}, []);
+</code></pre>
+<p>使用建议：</p>
+<ul>
+<li>不要为了使用而使用。</li>
+<li>当计算成本较高，或函数需要作为依赖传给子组件时再考虑。</li>
+<li>先保证代码正确，再考虑性能优化。</li>
+</ul>
+<h2 id="13-hook">13. 自定义 Hook</h2>
+<p>自定义 Hook 用于复用状态逻辑，名称必须以 <code>use</code> 开头。</p>
+<pre><code class="language-jsx">import { useEffect, useState } from &quot;react&quot;;
+
+function useFetch(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() =&gt; {
+    let ignore = false;
+
+    async function request() {
+      try {
+        setLoading(true);
+        const response = await fetch(url);
+
+        if (!response.ok) {
+          throw new Error(&quot;请求失败&quot;);
+        }
+
+        const result = await response.json();
+
+        if (!ignore) {
+          setData(result);
+        }
+      } catch (requestError) {
+        if (!ignore) {
+          setError(requestError);
+        }
+      } finally {
+        if (!ignore) {
+          setLoading(false);
+        }
+      }
+    }
+
+    request();
+
+    return () =&gt; {
+      ignore = true;
+    };
+  }, [url]);
+
+  return { data, loading, error };
+}
+</code></pre>
+<p>使用：</p>
+<pre><code class="language-jsx">function UserPage() {
+  const { data, loading, error } = useFetch(&quot;/api/users&quot;);
+
+  if (loading) return &lt;p&gt;加载中&lt;/p&gt;;
+  if (error) return &lt;p&gt;加载失败&lt;/p&gt;;
+
+  return &lt;pre&gt;{JSON.stringify(data, null, 2)}&lt;/pre&gt;;
+}
+</code></pre>
+<h2 id="14">14. 组件通信</h2>
+<p>父传子：使用 props。</p>
+<pre><code class="language-jsx">function Parent() {
+  return &lt;Child name=&quot;Alice&quot; /&gt;;
+}
+
+function Child({ name }) {
+  return &lt;p&gt;{name}&lt;/p&gt;;
+}
+</code></pre>
+<p>子传父：父组件传函数给子组件。</p>
+<pre><code class="language-jsx">function Parent() {
+  function handleChange(value) {
+    console.log(value);
+  }
+
+  return &lt;Child onChange={handleChange} /&gt;;
+}
+
+function Child({ onChange }) {
+  return (
+    &lt;button type=&quot;button&quot; onClick={() =&gt; onChange(&quot;hello&quot;)}&gt;
+      通知父组件
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<p>跨层级通信：使用 Context。</p>
+<pre><code class="language-jsx">import { createContext, useContext } from &quot;react&quot;;
+
+const ThemeContext = createContext(&quot;light&quot;);
+
+function App() {
+  return (
+    &lt;ThemeContext.Provider value=&quot;dark&quot;&gt;
+      &lt;Toolbar /&gt;
+    &lt;/ThemeContext.Provider&gt;
+  );
+}
+
+function Toolbar() {
+  const theme = useContext(ThemeContext);
+  return &lt;p&gt;当前主题：{theme}&lt;/p&gt;;
+}
+</code></pre>
+<h2 id="15-context">15. Context 使用建议</h2>
+<p>适合：</p>
+<ul>
+<li>当前用户信息。</li>
+<li>主题。</li>
+<li>语言。</li>
+<li>全局配置。</li>
+</ul>
+<p>不适合：</p>
+<ul>
+<li>所有业务状态都放入 Context。</li>
+<li>高频变化的大型状态直接放入 Context，可能引起不必要渲染。</li>
+</ul>
+<h2 id="16-react-router">16. React Router 基础</h2>
+<p>常见写法：</p>
+<pre><code class="language-jsx">import { BrowserRouter, Link, Route, Routes } from &quot;react-router-dom&quot;;
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;nav&gt;
+        &lt;Link to=&quot;/&quot;&gt;首页&lt;/Link&gt;
+        &lt;Link to=&quot;/about&quot;&gt;关于&lt;/Link&gt;
+      &lt;/nav&gt;
+
+      &lt;Routes&gt;
+        &lt;Route path=&quot;/&quot; element={&lt;Home /&gt;} /&gt;
+        &lt;Route path=&quot;/about&quot; element={&lt;About /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+</code></pre>
+<p>动态路由：</p>
+<pre><code class="language-jsx">import { useParams } from &quot;react-router-dom&quot;;
+
+function UserDetail() {
+  const { id } = useParams();
+  return &lt;p&gt;用户 ID：{id}&lt;/p&gt;;
+}
+</code></pre>
+<h2 id="17_1">17. 状态管理思路</h2>
+<p>状态应该放在哪里：</p>
+<ul>
+<li>只有一个组件用：放在当前组件。</li>
+<li>多个兄弟组件用：提升到共同父组件。</li>
+<li>多层组件共享：考虑 Context。</li>
+<li>大型应用复杂共享状态：考虑 Zustand、Redux Toolkit、Jotai 等状态库。</li>
+</ul>
+<p>判断状态是否必要：</p>
+<ul>
+<li>能从 props 计算出来的，不一定要存 state。</li>
+<li>不参与渲染的值，可以用 <code>useRef</code>。</li>
+<li>服务端数据可以交给 React Query、SWR 等请求缓存库管理。</li>
+</ul>
+<h2 id="18">18. 性能优化</h2>
+<p>常见方向：</p>
+<ul>
+<li>使用稳定的 <code>key</code>。</li>
+<li>避免不必要的 state。</li>
+<li>拆分组件，缩小重渲染范围。</li>
+<li>对昂贵计算使用 <code>useMemo</code>。</li>
+<li>对传给子组件的回调使用 <code>useCallback</code>。</li>
+<li>大列表使用虚拟列表。</li>
+<li>路由页面使用懒加载。</li>
+</ul>
+<p>懒加载：</p>
+<pre><code class="language-jsx">import { lazy, Suspense } from &quot;react&quot;;
+
+const About = lazy(() =&gt; import(&quot;./pages/About&quot;));
+
+function App() {
+  return (
+    &lt;Suspense fallback={&lt;p&gt;加载中&lt;/p&gt;}&gt;
+      &lt;About /&gt;
+    &lt;/Suspense&gt;
+  );
+}
+</code></pre>
+<h2 id="19">19. 常见错误</h2>
+<p>直接修改 state：</p>
+<pre><code class="language-jsx">// 错误
+user.age = 20;
+setUser(user);
+
+// 正确
+setUser((prevUser) =&gt; ({
+  ...prevUser,
+  age: 20,
+}));
+</code></pre>
+<p>在条件中调用 Hook：</p>
+<pre><code class="language-jsx">// 错误
+if (show) {
+  const [value, setValue] = useState(&quot;&quot;);
+}
+
+// 正确
+const [value, setValue] = useState(&quot;&quot;);
+</code></pre>
+<p>忘记清理副作用：</p>
+<pre><code class="language-jsx">useEffect(() =&gt; {
+  const handleResize = () =&gt; {
+    console.log(window.innerWidth);
+  };
+
+  window.addEventListener(&quot;resize&quot;, handleResize);
+
+  return () =&gt; {
+    window.removeEventListener(&quot;resize&quot;, handleResize);
+  };
+}, []);
+</code></pre>
+<h2 id="20-react">20. React 组件设计原则</h2>
+<ul>
+<li>组件职责单一。</li>
+<li>Props 命名清晰。</li>
+<li>状态尽量靠近使用它的地方。</li>
+<li>派生数据优先计算，不轻易存入 state。</li>
+<li>副作用放在 <code>useEffect</code> 或事件处理函数中。</li>
+<li>UI 组件和业务逻辑适当分离。</li>
+<li>复用逻辑优先考虑自定义 Hook。</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Ming-0702" target="_blank" rel="noopener" title="github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tracking", "navigation.tabs", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
