@@ -70,4 +70,5 @@ nav:
     - 关于: say.md
   - 笔记:
     - Vibe Coding: vibecoding.md
-    - Web: Web.md
+    - Web基础: Web.md
+    - 网页渲染原理: 网页渲染原理.md
