@@ -14,6 +14,8 @@
         <link rel="prev" href="vibecoding.html">
       
       
+        <link rel="next" href="%E7%BD%91%E9%A1%B5%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86.html">
+      
       
         
           <link rel="alternate" href="/notes/" hreflang="zh">
@@ -25,7 +27,7 @@
     
     
       
-        <title>Web - AMingg的笔记本</title>
+        <title>Web基础 - AMingg的笔记本</title>
       
     
     
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Web
+              Web基础
             
           </span>
         </div>
@@ -464,6 +466,8 @@
       
         
       
+        
+      
     
     
     
@@ -563,7 +567,7 @@
   <span class="md-ellipsis">
     
   
-    Web
+    Web基础
   
 
     
@@ -581,7 +585,7 @@
   <span class="md-ellipsis">
     
   
-    Web
+    Web基础
   
 
     
@@ -1546,6 +1550,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%BD%91%E9%A1%B5%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网页渲染原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -4312,621 +4344,6 @@ curl -I https://example.com
 <li>路由是否可达。</li>
 <li>NAT 或端口映射是否正确。</li>
 <li>云服务器安全组是否开放。</li>
-</ul>
-<h1 id="web">Web 渲染原理</h1>
-<p>Web 渲染原理研究的是：浏览器拿到 HTML、CSS、JavaScript、图片等资源后，如何把它们转换成用户最终看到的页面。</p>
-<p>简化流程：</p>
-<pre><code class="language-text">HTML/CSS/JS 下载
-  -&gt; HTML 解析生成 DOM 树
-  -&gt; CSS 解析生成 CSSOM 树
-  -&gt; DOM + CSSOM 合成 Render Tree
-  -&gt; Layout 计算布局
-  -&gt; Paint 绘制像素
-  -&gt; Composite 合成图层
-  -&gt; 显示到屏幕
-</code></pre>
-<h3 id="1_5">1. 浏览器主要组成</h3>
-<p>浏览器不是单个模块，而是多个模块协同工作。</p>
-<table>
-<thead>
-<tr>
-<th>组成部分</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>用户界面</td>
-<td>地址栏、前进后退、书签栏等</td>
-</tr>
-<tr>
-<td>浏览器引擎</td>
-<td>协调 UI 和渲染引擎</td>
-</tr>
-<tr>
-<td>渲染引擎</td>
-<td>解析 HTML/CSS，布局、绘制页面</td>
-</tr>
-<tr>
-<td>JavaScript 引擎</td>
-<td>解析和执行 JavaScript</td>
-</tr>
-<tr>
-<td>网络模块</td>
-<td>发送 HTTP/HTTPS 请求，下载资源</td>
-</tr>
-<tr>
-<td>存储模块</td>
-<td>管理 Cookie、LocalStorage、Cache 等</td>
-</tr>
-<tr>
-<td>GPU 进程</td>
-<td>处理图层合成、部分图形加速</td>
-</tr>
-</tbody>
-</table>
-<p>常见渲染引擎：</p>
-<ul>
-<li>Blink：Chrome、Edge 使用。</li>
-<li>WebKit：Safari 使用。</li>
-<li>Gecko：Firefox 使用。</li>
-</ul>
-<p>常见 JavaScript 引擎：</p>
-<ul>
-<li>V8：Chrome、Edge、Node.js 使用。</li>
-<li>JavaScriptCore：Safari 使用。</li>
-<li>SpiderMonkey：Firefox 使用。</li>
-</ul>
-<h3 id="2_5">2. 多进程架构</h3>
-<p>现代浏览器通常采用多进程架构，提高稳定性和安全性。</p>
-<p>常见进程：</p>
-<table>
-<thead>
-<tr>
-<th>进程</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>浏览器主进程</td>
-<td>管理窗口、地址栏、书签、下载等</td>
-</tr>
-<tr>
-<td>渲染进程</td>
-<td>负责页面解析、JS 执行、布局、绘制</td>
-</tr>
-<tr>
-<td>网络进程</td>
-<td>负责网络请求</td>
-</tr>
-<tr>
-<td>GPU 进程</td>
-<td>负责图形加速和图层合成</td>
-</tr>
-<tr>
-<td>插件进程</td>
-<td>运行浏览器插件</td>
-</tr>
-</tbody>
-</table>
-<p>多进程的好处：</p>
-<ul>
-<li>一个页面崩溃不一定影响整个浏览器。</li>
-<li>不同站点可以隔离，安全性更高。</li>
-<li>可以更好地利用多核 CPU。</li>
-</ul>
-<h3 id="3_5">3. 关键渲染路径</h3>
-<p>关键渲染路径是浏览器从接收 HTML 到首次渲染页面所经历的关键步骤。</p>
-<p>核心步骤：</p>
-<ol>
-<li>解析 HTML，构建 DOM 树。</li>
-<li>解析 CSS，构建 CSSOM 树。</li>
-<li>DOM 和 CSSOM 合成渲染树。</li>
-<li>计算每个节点的位置和大小。</li>
-<li>把节点绘制到不同图层。</li>
-<li>合成图层并显示到屏幕。</li>
-</ol>
-<p>优化关键渲染路径的目标是让页面更快出现可见内容。</p>
-<h3 id="4-html-dom">4. HTML 解析与 DOM 树</h3>
-<p>浏览器下载 HTML 后，会边下载边解析。</p>
-<p>HTML 解析过程：</p>
-<pre><code class="language-text">字节流 -&gt; 字符 -&gt; Token -&gt; Node -&gt; DOM Tree
-</code></pre>
-<p>DOM 是 Document Object Model，表示页面结构。</p>
-<p>示例 HTML：</p>
-<pre><code class="language-html">&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Demo&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello&lt;/h1&gt;
-    &lt;p&gt;Web rendering&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p>对应 DOM 树大致是：</p>
-<pre><code class="language-text">Document
-  html
-    head
-      title
-    body
-      h1
-      p
-</code></pre>
-<p>DOM 树只描述文档结构，不包含最终样式和布局位置。</p>
-<h3 id="5-css-cssom">5. CSS 解析与 CSSOM 树</h3>
-<p>CSSOM 是 CSS Object Model，表示 CSS 规则解析后的结构。</p>
-<p>CSS 解析过程：</p>
-<pre><code class="language-text">CSS 文本 -&gt; Token -&gt; Rule -&gt; CSSOM Tree
-</code></pre>
-<p>示例 CSS：</p>
-<pre><code class="language-css">body {
-  font-size: 16px;
-}
-
-h1 {
-  color: red;
-}
-</code></pre>
-<p>CSSOM 会记录选择器、属性、继承关系和层叠结果。</p>
-<p>CSSOM 的特点：</p>
-<ul>
-<li>CSS 会阻塞渲染，因为浏览器必须知道样式才能正确绘制页面。</li>
-<li>CSS 不一定阻塞 DOM 解析，但会影响渲染树生成。</li>
-<li>外部 CSS 文件下载慢，会延迟首次渲染。</li>
-</ul>
-<h3 id="6-javascript">6. JavaScript 对解析的影响</h3>
-<p>普通 <code>&lt;script&gt;</code> 会阻塞 HTML 解析。</p>
-<p>原因：</p>
-<ul>
-<li>JavaScript 可能通过 <code>document.write()</code> 修改 HTML。</li>
-<li>JavaScript 可能读取或修改 DOM。</li>
-<li>JavaScript 可能读取样式计算结果。</li>
-</ul>
-<p>示例：</p>
-<pre><code class="language-html">&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-<p>浏览器遇到普通脚本时通常会：</p>
-<ol>
-<li>暂停 HTML 解析。</li>
-<li>下载脚本。</li>
-<li>执行脚本。</li>
-<li>继续解析 HTML。</li>
-</ol>
-<p><code>defer</code> 和 <code>async</code> 可以减少阻塞。</p>
-<table>
-<thead>
-<tr>
-<th>写法</th>
-<th>下载行为</th>
-<th>执行时机</th>
-<th>是否保证顺序</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>普通 script</td>
-<td>阻塞解析时下载</td>
-<td>下载后立即执行</td>
-<td>是</td>
-</tr>
-<tr>
-<td>defer</td>
-<td>不阻塞 HTML 解析</td>
-<td>DOM 解析完成后执行</td>
-<td>是</td>
-</tr>
-<tr>
-<td>async</td>
-<td>不阻塞 HTML 解析</td>
-<td>下载完成后立即执行</td>
-<td>否</td>
-</tr>
-</tbody>
-</table>
-<p>使用建议：</p>
-<ul>
-<li>依赖 DOM 的脚本可以使用 <code>defer</code>。</li>
-<li>独立统计、广告脚本可以使用 <code>async</code>。</li>
-<li>关键交互脚本应控制体积，避免长时间占用主线程。</li>
-</ul>
-<h3 id="7-render-tree">7. 渲染树 Render Tree</h3>
-<p>浏览器会把 DOM 和 CSSOM 合成渲染树。</p>
-<p>渲染树只包含需要显示的节点。</p>
-<p>不会进入渲染树的节点：</p>
-<ul>
-<li><code>display: none</code> 的元素。</li>
-<li><code>head</code>、<code>script</code>、<code>meta</code> 等不直接显示的节点。</li>
-</ul>
-<p>会进入渲染树但可能不可见的节点：</p>
-<ul>
-<li><code>visibility: hidden</code> 的元素仍占据布局空间。</li>
-<li><code>opacity: 0</code> 的元素仍参与布局和绘制。</li>
-</ul>
-<p>对比：</p>
-<table>
-<thead>
-<tr>
-<th>样式</th>
-<th>是否占据空间</th>
-<th>是否渲染</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>display: none</code></td>
-<td>否</td>
-<td>否</td>
-</tr>
-<tr>
-<td><code>visibility: hidden</code></td>
-<td>是</td>
-<td>不可见</td>
-</tr>
-<tr>
-<td><code>opacity: 0</code></td>
-<td>是</td>
-<td>透明</td>
-</tr>
-</tbody>
-</table>
-<h3 id="8-layout">8. 布局 Layout</h3>
-<p>布局也叫回流 Reflow。它负责计算每个可见元素的几何信息。</p>
-<p>布局阶段会计算：</p>
-<ul>
-<li>元素宽高。</li>
-<li>元素位置。</li>
-<li>行盒、块盒、弹性盒、网格布局等。</li>
-<li>父子元素之间的约束关系。</li>
-</ul>
-<p>可能触发布局的操作：</p>
-<ul>
-<li>修改元素尺寸：<code>width</code>、<code>height</code>。</li>
-<li>修改元素位置：<code>top</code>、<code>left</code>、<code>margin</code>。</li>
-<li>添加或删除 DOM 节点。</li>
-<li>修改字体大小。</li>
-<li>改变窗口大小。</li>
-<li>读取某些布局属性后又修改样式。</li>
-</ul>
-<p>常见会强制浏览器计算布局的属性：</p>
-<pre><code class="language-text">offsetWidth
-offsetHeight
-offsetTop
-offsetLeft
-clientWidth
-clientHeight
-scrollTop
-scrollHeight
-getBoundingClientRect()
-getComputedStyle()
-</code></pre>
-<p>如果在循环中反复读写这些属性，容易造成布局抖动。</p>
-<h3 id="9-paint">9. 绘制 Paint</h3>
-<p>绘制阶段会把渲染树中的节点转换为绘制指令。</p>
-<p>绘制内容包括：</p>
-<ul>
-<li>文本。</li>
-<li>颜色。</li>
-<li>边框。</li>
-<li>阴影。</li>
-<li>图片。</li>
-<li>背景。</li>
-</ul>
-<p>常见会触发重绘的操作：</p>
-<ul>
-<li>修改 <code>color</code>。</li>
-<li>修改 <code>background-color</code>。</li>
-<li>修改 <code>box-shadow</code>。</li>
-<li>修改 <code>visibility</code>。</li>
-</ul>
-<p>重绘不一定重新布局，但仍然有性能成本。</p>
-<h3 id="10-composite">10. 合成 Composite</h3>
-<p>浏览器可能会把页面拆分为多个图层。绘制完成后，合成线程把这些图层按正确顺序合成到屏幕上。</p>
-<p>可能创建独立合成层的情况：</p>
-<ul>
-<li>使用 <code>transform</code>。</li>
-<li>使用 <code>opacity</code> 动画。</li>
-<li>使用 <code>position: fixed</code>。</li>
-<li>使用 <code>will-change</code>。</li>
-<li>使用视频、Canvas、WebGL。</li>
-</ul>
-<p>合成的优势：</p>
-<ul>
-<li>某些动画可以只在合成层完成，不触发布局和绘制。</li>
-<li><code>transform</code> 和 <code>opacity</code> 通常比修改 <code>left</code>、<code>top</code> 更流畅。</li>
-</ul>
-<p>示例：</p>
-<pre><code class="language-css">/* 推荐用于动画 */
-.box {
-  transform: translateX(100px);
-}
-
-/* 容易触发布局 */
-.box {
-  left: 100px;
-}
-</code></pre>
-<p>注意：不要滥用 <code>will-change</code>，过多图层会增加内存占用和合成成本。</p>
-<h3 id="11">11. 回流、重绘、合成的区别</h3>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>英文</th>
-<th>影响范围</th>
-<th>性能成本</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>回流</td>
-<td>Layout / Reflow</td>
-<td>重新计算布局</td>
-<td>最大</td>
-</tr>
-<tr>
-<td>重绘</td>
-<td>Paint / Repaint</td>
-<td>重新绘制像素</td>
-<td>中等</td>
-</tr>
-<tr>
-<td>合成</td>
-<td>Composite</td>
-<td>合成已有图层</td>
-<td>较小</td>
-</tr>
-</tbody>
-</table>
-<p>性能成本大致：</p>
-<pre><code class="language-text">回流 &gt; 重绘 &gt; 合成
-</code></pre>
-<p>例子：</p>
-<table>
-<thead>
-<tr>
-<th>操作</th>
-<th>可能触发</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>改 <code>width</code></td>
-<td>回流 + 重绘 + 合成</td>
-</tr>
-<tr>
-<td>改 <code>color</code></td>
-<td>重绘 + 合成</td>
-</tr>
-<tr>
-<td>改 <code>transform</code></td>
-<td>合成</td>
-</tr>
-<tr>
-<td>改 <code>opacity</code></td>
-<td>合成</td>
-</tr>
-<tr>
-<td>添加 DOM 节点</td>
-<td>回流 + 重绘 + 合成</td>
-</tr>
-</tbody>
-</table>
-<h3 id="12">12. 浏览器主线程与事件循环</h3>
-<p>渲染进程中有一个重要的主线程，负责大量页面工作。</p>
-<p>主线程通常负责：</p>
-<ul>
-<li>执行 JavaScript。</li>
-<li>解析 HTML。</li>
-<li>样式计算。</li>
-<li>布局。</li>
-<li>绘制准备。</li>
-<li>处理用户输入事件。</li>
-</ul>
-<p>如果 JavaScript 长时间占用主线程，页面就可能卡顿，用户点击、滚动也会变慢。</p>
-<p>事件循环大致流程：</p>
-<pre><code class="language-text">执行一个宏任务
-  -&gt; 清空微任务队列
-  -&gt; 必要时执行渲染
-  -&gt; 执行下一个宏任务
-</code></pre>
-<p>常见宏任务：</p>
-<ul>
-<li><code>setTimeout</code></li>
-<li><code>setInterval</code></li>
-<li>用户交互事件</li>
-<li>网络回调</li>
-<li>整体脚本执行</li>
-</ul>
-<p>常见微任务：</p>
-<ul>
-<li><code>Promise.then</code></li>
-<li><code>queueMicrotask</code></li>
-<li><code>MutationObserver</code></li>
-</ul>
-<p>示例：</p>
-<pre><code class="language-js">console.log('start');
-
-setTimeout(() =&gt; {
-  console.log('timeout');
-});
-
-Promise.resolve().then(() =&gt; {
-  console.log('promise');
-});
-
-console.log('end');
-</code></pre>
-<p>输出顺序：</p>
-<pre><code class="language-text">start
-end
-promise
-timeout
-</code></pre>
-<h3 id="13">13. 一帧是如何渲染的</h3>
-<p>大多数屏幕刷新率是 60Hz，也就是每秒刷新 60 次。</p>
-<p>每帧时间约为：</p>
-<pre><code class="language-text">1000ms / 60 ≈ 16.7ms
-</code></pre>
-<p>一帧中可能包含：</p>
-<ol>
-<li>处理输入事件。</li>
-<li>执行 JavaScript。</li>
-<li>执行 <code>requestAnimationFrame</code> 回调。</li>
-<li>样式计算。</li>
-<li>布局。</li>
-<li>绘制。</li>
-<li>合成。</li>
-<li>显示到屏幕。</li>
-</ol>
-<p>如果一帧内工作超过 16.7ms，就可能掉帧，用户会感觉卡顿。</p>
-<p><code>requestAnimationFrame</code> 适合做动画，因为它会在浏览器下一次绘制前执行。</p>
-<pre><code class="language-js">function move() {
-  element.style.transform = 'translateX(100px)';
-  requestAnimationFrame(move);
-}
-
-requestAnimationFrame(move);
-</code></pre>
-<h3 id="14">14. 资源加载对渲染的影响</h3>
-<p>不同资源对渲染的影响不同。</p>
-<table>
-<thead>
-<tr>
-<th>资源</th>
-<th>对渲染的影响</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HTML</td>
-<td>渲染入口，必须先解析</td>
-</tr>
-<tr>
-<td>CSS</td>
-<td>阻塞渲染，影响 CSSOM 和渲染树</td>
-</tr>
-<tr>
-<td>普通 JS</td>
-<td>阻塞 HTML 解析</td>
-</tr>
-<tr>
-<td>defer JS</td>
-<td>不阻塞 HTML 解析，DOM 完成后执行</td>
-</tr>
-<tr>
-<td>async JS</td>
-<td>不阻塞 HTML 解析，下载完立即执行</td>
-</tr>
-<tr>
-<td>图片</td>
-<td>通常不阻塞 DOM 解析，但会影响布局和 LCP</td>
-</tr>
-<tr>
-<td>字体</td>
-<td>可能导致文字不可见或字体切换</td>
-</tr>
-</tbody>
-</table>
-<p>常见资源优化手段：</p>
-<pre><code class="language-html">&lt;link rel=&quot;preload&quot; href=&quot;/style.css&quot; as=&quot;style&quot;&gt;
-&lt;link rel=&quot;preconnect&quot; href=&quot;https://cdn.example.com&quot;&gt;
-&lt;script src=&quot;/main.js&quot; defer&gt;&lt;/script&gt;
-&lt;img src=&quot;/hero.jpg&quot; loading=&quot;lazy&quot; alt=&quot;&quot;&gt;
-</code></pre>
-<p>说明：</p>
-<ul>
-<li><code>preload</code>：提前加载当前页面马上要用的关键资源。</li>
-<li><code>preconnect</code>：提前建立到第三方源的连接。</li>
-<li><code>defer</code>：延后执行脚本，减少解析阻塞。</li>
-<li><code>loading="lazy"</code>：图片懒加载，减少首屏资源压力。</li>
-</ul>
-<h3 id="15">15. 前端性能指标</h3>
-<p>常见页面性能指标：</p>
-<table>
-<thead>
-<tr>
-<th>指标</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>FP</td>
-<td>First Paint，首次绘制</td>
-</tr>
-<tr>
-<td>FCP</td>
-<td>First Contentful Paint，首次内容绘制</td>
-</tr>
-<tr>
-<td>LCP</td>
-<td>Largest Contentful Paint，最大内容绘制</td>
-</tr>
-<tr>
-<td>CLS</td>
-<td>Cumulative Layout Shift，累计布局偏移</td>
-</tr>
-<tr>
-<td>TTFB</td>
-<td>Time To First Byte，首字节时间</td>
-</tr>
-<tr>
-<td>TTI</td>
-<td>Time To Interactive，可交互时间</td>
-</tr>
-<tr>
-<td>INP</td>
-<td>Interaction to Next Paint，交互到下一次绘制的延迟</td>
-</tr>
-</tbody>
-</table>
-<p>重点理解：</p>
-<ul>
-<li>FCP 关注页面何时开始出现内容。</li>
-<li>LCP 关注首屏主要内容何时完成显示。</li>
-<li>CLS 关注页面是否发生意外布局跳动。</li>
-<li>INP 关注用户交互后页面响应是否及时。</li>
-<li>TTFB 反映网络和服务端响应速度。</li>
-</ul>
-<h3 id="16">16. 常见优化思路</h3>
-<p>减少网络耗时：</p>
-<ul>
-<li>开启 HTTP 缓存。</li>
-<li>使用 CDN。</li>
-<li>压缩 HTML、CSS、JavaScript。</li>
-<li>使用 HTTP/2 或 HTTP/3。</li>
-<li>减少不必要请求。</li>
-</ul>
-<p>减少渲染阻塞：</p>
-<ul>
-<li>关键 CSS 内联或优先加载。</li>
-<li>非关键 CSS 延迟加载。</li>
-<li>JavaScript 使用 <code>defer</code> 或按需加载。</li>
-<li>减少首屏依赖的大体积资源。</li>
-</ul>
-<p>减少回流和重绘：</p>
-<ul>
-<li>批量修改 DOM。</li>
-<li>避免循环中交替读取布局属性和修改样式。</li>
-<li>动画优先使用 <code>transform</code> 和 <code>opacity</code>。</li>
-<li>避免频繁修改影响布局的 CSS 属性。</li>
-</ul>
-<p>优化图片和字体：</p>
-<ul>
-<li>使用合适尺寸的图片。</li>
-<li>使用 WebP、AVIF 等高压缩格式。</li>
-<li>给图片设置 <code>width</code> 和 <code>height</code>，减少布局偏移。</li>
-<li>字体按需加载，避免加载过多字重。</li>
-</ul>
-<p>优化 JavaScript：</p>
-<ul>
-<li>拆分长任务。</li>
-<li>减少主线程阻塞。</li>
-<li>使用 Web Worker 处理复杂计算。</li>
-<li>对滚动、输入等高频事件使用节流或防抖。</li>
 </ul>
 
 
