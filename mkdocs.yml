@@ -67,5 +67,7 @@ markdown_extensions:
 nav:
   - 主页:
     - index.md
-    - Vibe Coding: vibecoding.md
     - 关于: say.md
+  - 笔记:
+    - Vibe Coding: vibecoding.md
+    - Web: Web.md
