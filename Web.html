@@ -1,0 +1,5006 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ming-0702.github.io/notes/Web.html">
+      
+      
+        <link rel="prev" href="vibecoding.html">
+      
+      
+      
+        
+          <link rel="alternate" href="/notes/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Web - AMingg的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="AMingg的笔记本" class="md-header__button md-logo" aria-label="AMingg的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M22.7 33.4c13.5-4.1 28.1 1.1 35.9 12.9l165.4 248 165.4-248c7.8-11.7 22.4-17 35.9-12.9S448 49.9 448 64v384c0 17.7-14.3 32-32 32s-32-14.3-32-32V169.7L250.6 369.8c-5.9 8.9-15.9 14.2-26.6 14.2s-20.7-5.3-26.6-14.2L64 169.7V448c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-14.1 9.2-26.5 22.7-30.6"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AMingg的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="deep-purple"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark Mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="defalut" data-md-color-primary="light-green" data-md-color-accent="deep-orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/notes/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ming-0702/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ming-0702/notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  主页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="vibecoding.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="AMingg的笔记本" class="md-nav__button md-logo" aria-label="AMingg的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M22.7 33.4c13.5-4.1 28.1 1.1 35.9 12.9l165.4 248 165.4-248c7.8-11.7 22.4-17 35.9-12.9S448 49.9 448 64v384c0 17.7-14.3 32-32 32s-32-14.3-32-32V169.7L250.6 369.8c-5.9 8.9-15.9 14.2-26.6 14.2s-20.7-5.3-26.6-14.2L64 169.7V448c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-14.1 9.2-26.5 22.7-30.6"/></svg>
+
+    </a>
+    AMingg的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ming-0702/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ming-0702/notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    主页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="say.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vibecoding.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Web.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、计算机网络概述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、计算机网络概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 什么是计算机网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 网络的分类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 常见网络拓扑
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、网络体系结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、网络体系结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. OSI 七层模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. TCP/IP 四层模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 数据封装过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、物理层
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、物理层">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 常见传输介质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 常见单位
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、数据链路层
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、数据链路层">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. MAC 地址
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 以太网帧
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 交换机工作原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 广播与冲突
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. VLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、网络层
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、网络层">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. IP 地址
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 子网掩码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cidr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. CIDR 表示法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 私有 IP 地址
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 默认网关
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-arp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. ARP 协议
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-icmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. ICMP 协议
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-nat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. NAT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 路由
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、传输层
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、传输层">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 端口号
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. UDP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. TCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. TCP 三次握手
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. TCP 四次挥手
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. TCP 可靠传输机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 流量控制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 拥塞控制
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        七、应用层协议
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="七、应用层协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS 层级结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS 解析过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        递归查询和迭代查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-ttl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS 缓存和 TTL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS 使用的传输协议
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见 DNS 问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. HTTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL 结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP 请求报文
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP 响应报文
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见请求头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见响应头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-cookie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP 无状态与 Cookie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP 缓存
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP 连接管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        跨域 CORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. HTTPS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. HTTPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TLS 的安全目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对称加密和非对称加密
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数字证书
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tls_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TLS 握手简化过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SNI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hsts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HSTS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS 常见问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. DHCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ftpsmtppop3imap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. FTP、SMTP、POP3、IMAP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        八、浏览器访问网页的完整过程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        九、网络安全基础
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="九、网络安全基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 安全三要素
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 常见攻击
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 常见防护手段
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 防火墙
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十、常用网络命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十、常用网络命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Windows 常用命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Linux 常用命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十一、常见故障排查思路
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十一、常见故障排查思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 无法上网
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ping-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 能 ping IP，但不能访问域名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 能访问网站，但速度慢
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 某个端口无法访问
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、计算机网络概述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、计算机网络概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 什么是计算机网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 网络的分类
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 常见网络拓扑
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、网络体系结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、网络体系结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. OSI 七层模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. TCP/IP 四层模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 数据封装过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、物理层
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、物理层">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 常见传输介质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 常见单位
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、数据链路层
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、数据链路层">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. MAC 地址
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 以太网帧
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 交换机工作原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 广播与冲突
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. VLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、网络层
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、网络层">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. IP 地址
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 子网掩码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cidr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. CIDR 表示法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 私有 IP 地址
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 默认网关
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-arp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. ARP 协议
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-icmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. ICMP 协议
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-nat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. NAT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 路由
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、传输层
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、传输层">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 端口号
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. UDP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. TCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. TCP 三次握手
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. TCP 四次挥手
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. TCP 可靠传输机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 流量控制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 拥塞控制
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        七、应用层协议
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="七、应用层协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. DNS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS 层级结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS 解析过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        递归查询和迭代查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-ttl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS 缓存和 TTL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS 使用的传输协议
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见 DNS 问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. HTTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL 结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP 请求报文
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP 响应报文
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见请求头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常见响应头
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-cookie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP 无状态与 Cookie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP 缓存
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP 连接管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        跨域 CORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. HTTPS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. HTTPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TLS 的安全目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对称加密和非对称加密
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数字证书
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tls_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TLS 握手简化过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sni" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SNI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hsts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HSTS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS 常见问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. DHCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ftpsmtppop3imap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. FTP、SMTP、POP3、IMAP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        八、浏览器访问网页的完整过程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        九、网络安全基础
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="九、网络安全基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 安全三要素
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 常见攻击
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 常见防护手段
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 防火墙
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十、常用网络命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十、常用网络命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Windows 常用命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Linux 常用命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十一、常见故障排查思路
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十一、常见故障排查思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 无法上网
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ping-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 能 ping IP，但不能访问域名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 能访问网站，但速度慢
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 某个端口无法访问
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">计算机网络笔记</h1>
+<h2 id="_2">一、计算机网络概述</h2>
+<h3 id="1">1. 什么是计算机网络</h3>
+<p>计算机网络是指把分布在不同地理位置的计算机、服务器、终端设备和网络设备，通过通信线路连接起来，实现数据通信、资源共享和协同工作的系统。</p>
+<p>网络的核心目标：</p>
+<ul>
+<li>数据通信：让不同设备之间可以交换信息。</li>
+<li>资源共享：共享文件、打印机、服务器、数据库等资源。</li>
+<li>分布式处理：多台设备共同完成任务。</li>
+<li>提高可靠性：某些节点故障时，仍可通过其他路径通信。</li>
+</ul>
+<h3 id="2">2. 网络的分类</h3>
+<p>按覆盖范围划分：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>中文名</th>
+<th>特点</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PAN</td>
+<td>个人区域网</td>
+<td>范围很小，围绕个人设备</td>
+<td>蓝牙耳机、手机热点</td>
+</tr>
+<tr>
+<td>LAN</td>
+<td>局域网</td>
+<td>范围较小，速度快，延迟低</td>
+<td>家庭网络、校园网、公司内网</td>
+</tr>
+<tr>
+<td>MAN</td>
+<td>城域网</td>
+<td>覆盖一个城市或地区</td>
+<td>城市政务网络</td>
+</tr>
+<tr>
+<td>WAN</td>
+<td>广域网</td>
+<td>跨地区、跨国家</td>
+<td>互联网</td>
+</tr>
+</tbody>
+</table>
+<p>按传输介质划分：</p>
+<ul>
+<li>有线网络：双绞线、同轴电缆、光纤。</li>
+<li>无线网络：Wi-Fi、蓝牙、蜂窝网络、卫星通信。</li>
+</ul>
+<p>按交换方式划分：</p>
+<ul>
+<li>电路交换：通信前先建立固定线路，典型例子是传统电话网络。</li>
+<li>分组交换：把数据拆成多个分组独立传输，互联网主要采用这种方式。</li>
+<li>报文交换：以完整报文为单位存储转发，现在较少直接使用。</li>
+</ul>
+<h3 id="3">3. 常见网络拓扑</h3>
+<ul>
+<li>总线型：所有设备共享一条通信线路，结构简单但冲突多。</li>
+<li>星型：设备连接到中心交换设备，现代局域网常用。</li>
+<li>环型：设备首尾相连形成环，数据沿固定方向传输。</li>
+<li>网状型：节点之间有多条连接，可靠性高，成本也高。</li>
+<li>树型：分层结构，适合大型网络管理。</li>
+</ul>
+<h2 id="_3">二、网络体系结构</h2>
+<h3 id="1-osi">1. OSI 七层模型</h3>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>名称</th>
+<th>作用</th>
+<th>常见协议或设备</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>应用层</td>
+<td>为用户应用提供网络服务</td>
+<td>HTTP、DNS、FTP、SMTP</td>
+</tr>
+<tr>
+<td>6</td>
+<td>表示层</td>
+<td>数据格式转换、加密、压缩</td>
+<td>SSL/TLS、JPEG、ASCII</td>
+</tr>
+<tr>
+<td>5</td>
+<td>会话层</td>
+<td>建立、管理和释放会话</td>
+<td>RPC、NetBIOS</td>
+</tr>
+<tr>
+<td>4</td>
+<td>传输层</td>
+<td>端到端传输、可靠性控制</td>
+<td>TCP、UDP</td>
+</tr>
+<tr>
+<td>3</td>
+<td>网络层</td>
+<td>IP 寻址和路由选择</td>
+<td>IP、ICMP、路由器</td>
+</tr>
+<tr>
+<td>2</td>
+<td>数据链路层</td>
+<td>帧传输、MAC 地址、差错检测</td>
+<td>Ethernet、交换机</td>
+</tr>
+<tr>
+<td>1</td>
+<td>物理层</td>
+<td>比特流传输</td>
+<td>网线、光纤、集线器</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-tcpip">2. TCP/IP 四层模型</h3>
+<table>
+<thead>
+<tr>
+<th>TCP/IP 模型</th>
+<th>对应 OSI 层</th>
+<th>主要功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>应用层</td>
+<td>应用层、表示层、会话层</td>
+<td>具体应用协议</td>
+</tr>
+<tr>
+<td>传输层</td>
+<td>传输层</td>
+<td>进程到进程通信</td>
+</tr>
+<tr>
+<td>网际层</td>
+<td>网络层</td>
+<td>IP 寻址和路由</td>
+</tr>
+<tr>
+<td>网络接口层</td>
+<td>数据链路层、物理层</td>
+<td>局域网传输和物理传输</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3_1">3. 数据封装过程</h3>
+<p>发送数据时，数据会从高层向低层逐层封装：</p>
+<pre><code class="language-text">应用数据
+  -&gt; 传输层加 TCP/UDP 首部，形成段 Segment
+  -&gt; 网络层加 IP 首部，形成包 Packet
+  -&gt; 数据链路层加帧头帧尾，形成帧 Frame
+  -&gt; 物理层转换为比特流 Bit
+</code></pre>
+<p>接收数据时，过程相反，逐层解封装。</p>
+<h2 id="_4">三、物理层</h2>
+<p>物理层负责在传输介质上传输原始比特流。</p>
+<h3 id="1_1">1. 常见传输介质</h3>
+<ul>
+<li>双绞线：局域网常用，成本低，常见接口是 RJ-45。</li>
+<li>光纤：传输距离远，速度快，抗干扰能力强。</li>
+<li>无线电波：用于 Wi-Fi、蓝牙、蜂窝网络。</li>
+</ul>
+<h3 id="2_1">2. 常见单位</h3>
+<ul>
+<li><code>bit</code>：比特，网络传输的基本单位。</li>
+<li><code>Byte</code>：字节，<code>1 Byte = 8 bit</code>。</li>
+<li><code>Mbps</code>：每秒百万比特。</li>
+<li><code>MB/s</code>：每秒百万字节。</li>
+</ul>
+<p>换算示例：</p>
+<pre><code class="language-text">100 Mbps ≈ 12.5 MB/s
+</code></pre>
+<p>实际下载速度还要扣除协议开销，所以通常达不到理论值。</p>
+<h2 id="_5">四、数据链路层</h2>
+<p>数据链路层负责在同一链路或同一局域网内传输数据帧。</p>
+<h3 id="1-mac">1. MAC 地址</h3>
+<p>MAC 地址是网卡的硬件地址，长度为 48 位，通常写成：</p>
+<pre><code class="language-text">00-1A-2B-3C-4D-5E
+</code></pre>
+<p>特点：</p>
+<ul>
+<li>用于局域网内部识别设备。</li>
+<li>交换机根据 MAC 地址转发数据帧。</li>
+<li>MAC 地址工作在数据链路层。</li>
+</ul>
+<h3 id="2_2">2. 以太网帧</h3>
+<p>以太网帧的核心字段：</p>
+<ul>
+<li>目标 MAC 地址</li>
+<li>源 MAC 地址</li>
+<li>类型字段</li>
+<li>数据部分</li>
+<li>FCS 校验字段</li>
+</ul>
+<p>FCS 通常使用 CRC 校验，用于发现传输错误。</p>
+<h3 id="3_2">3. 交换机工作原理</h3>
+<p>交换机主要根据 MAC 地址表转发数据：</p>
+<ol>
+<li>收到数据帧后，记录源 MAC 地址和对应端口。</li>
+<li>查找目标 MAC 地址所在端口。</li>
+<li>如果找到目标端口，就只向该端口转发。</li>
+<li>如果找不到目标端口，就向除接收端口外的其他端口广播。</li>
+</ol>
+<p>交换机比集线器更高效，因为它不会无脑广播所有数据。</p>
+<h3 id="4">4. 广播与冲突</h3>
+<ul>
+<li>冲突域：同一时间只能有一个设备发送数据的范围。</li>
+<li>广播域：广播帧可以到达的范围。</li>
+<li>交换机可以隔离冲突域。</li>
+<li>路由器可以隔离广播域。</li>
+</ul>
+<h3 id="5-vlan">5. VLAN</h3>
+<p>VLAN 是虚拟局域网，可以在同一物理交换机上划分多个逻辑网络。</p>
+<p>作用：</p>
+<ul>
+<li>隔离广播域。</li>
+<li>提高安全性。</li>
+<li>方便网络管理。</li>
+</ul>
+<h2 id="_6">五、网络层</h2>
+<p>网络层负责跨网络传输数据包，核心任务是 IP 寻址和路由选择。</p>
+<h3 id="1-ip">1. IP 地址</h3>
+<p>IPv4 地址长度为 32 位，通常写成点分十进制：</p>
+<pre><code class="language-text">192.168.1.10
+</code></pre>
+<p>IP 地址由两部分组成：</p>
+<ul>
+<li>网络号：标识所属网络。</li>
+<li>主机号：标识该网络中的具体主机。</li>
+</ul>
+<p>IP 协议的特点：</p>
+<ul>
+<li>无连接：发送 IP 数据包前，不需要先建立连接。</li>
+<li>尽力而为：IP 只尽力转发，不保证一定送达。</li>
+<li>不保证顺序：多个数据包可能经过不同路径，到达顺序可能不同。</li>
+<li>不负责重传：丢包后的重传通常由 TCP 或应用层处理。</li>
+</ul>
+<p>IPv4 报文头中的重要字段：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Version</td>
+<td>IP 协议版本，IPv4 中值为 4</td>
+</tr>
+<tr>
+<td>Header Length</td>
+<td>IP 首部长度</td>
+</tr>
+<tr>
+<td>Total Length</td>
+<td>整个 IP 数据包长度</td>
+</tr>
+<tr>
+<td>Identification</td>
+<td>分片重组时识别同一个数据包</td>
+</tr>
+<tr>
+<td>Flags</td>
+<td>控制是否允许分片，如 DF、MF</td>
+</tr>
+<tr>
+<td>Fragment Offset</td>
+<td>分片偏移量</td>
+</tr>
+<tr>
+<td>TTL</td>
+<td>生存时间，每经过一个路由器减 1</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>上层协议，如 TCP 为 6，UDP 为 17，ICMP 为 1</td>
+</tr>
+<tr>
+<td>Header Checksum</td>
+<td>IP 首部校验和</td>
+</tr>
+<tr>
+<td>Source IP</td>
+<td>源 IP 地址</td>
+</tr>
+<tr>
+<td>Destination IP</td>
+<td>目标 IP 地址</td>
+</tr>
+</tbody>
+</table>
+<p>TTL 的作用是防止数据包在网络中无限循环。路由器每转发一次，TTL 减 1；当 TTL 变为 0 时，路由器丢弃该包，并可能返回 ICMP 超时报文。</p>
+<p>常见特殊 IPv4 地址：</p>
+<table>
+<thead>
+<tr>
+<th>地址</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0.0.0</td>
+<td>未指定地址，也可表示监听本机所有网卡</td>
+</tr>
+<tr>
+<td>127.0.0.1</td>
+<td>本机回环地址，常用于测试本机服务</td>
+</tr>
+<tr>
+<td>169.254.0.0/16</td>
+<td>自动私有地址，通常表示 DHCP 获取地址失败</td>
+</tr>
+<tr>
+<td>255.255.255.255</td>
+<td>受限广播地址，只在本地网络内广播</td>
+</tr>
+<tr>
+<td>网络地址</td>
+<td>主机位全为 0，表示整个网段</td>
+</tr>
+<tr>
+<td>广播地址</td>
+<td>主机位全为 1，表示该网段内所有主机</td>
+</tr>
+</tbody>
+</table>
+<p>IPv6 地址长度为 128 位，通常使用十六进制和冒号表示：</p>
+<pre><code class="language-text">2001:0db8:0000:0000:0000:ff00:0042:8329
+</code></pre>
+<p>IPv6 可以压缩连续的 0：</p>
+<pre><code class="language-text">2001:db8::ff00:42:8329
+</code></pre>
+<p>IPv6 的特点：</p>
+<ul>
+<li>地址空间极大，缓解 IPv4 地址不足。</li>
+<li>不使用广播，改用多播和任播。</li>
+<li>首部结构比 IPv4 更简化。</li>
+<li>支持自动地址配置。</li>
+<li>常见回环地址是 <code>::1</code>。</li>
+<li>常见链路本地地址前缀是 <code>fe80::/10</code>。</li>
+</ul>
+<h3 id="2_3">2. 子网掩码</h3>
+<p>子网掩码用于区分 IP 地址中的网络号和主机号。</p>
+<p>示例：</p>
+<pre><code class="language-text">IP 地址：     192.168.1.10
+子网掩码：   255.255.255.0
+网络地址：   192.168.1.0
+广播地址：   192.168.1.255
+可用主机：   192.168.1.1 ~ 192.168.1.254
+</code></pre>
+<p>判断两个 IP 是否在同一网段，需要把 IP 地址和子网掩码进行按位与运算。如果得到的网络地址相同，说明它们在同一网段。</p>
+<p>示例：</p>
+<pre><code class="language-text">192.168.1.10  AND  255.255.255.0  = 192.168.1.0
+192.168.1.20  AND  255.255.255.0  = 192.168.1.0
+</code></pre>
+<p>这两个地址的网络地址相同，所以属于同一网段。</p>
+<h3 id="3-cidr">3. CIDR 表示法</h3>
+<p>CIDR 用斜杠表示网络前缀长度：</p>
+<pre><code class="language-text">192.168.1.0/24
+</code></pre>
+<p><code>/24</code> 表示前 24 位是网络号。</p>
+<p>常见前缀：</p>
+<table>
+<thead>
+<tr>
+<th>CIDR</th>
+<th>子网掩码</th>
+<th>可用主机数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/24</td>
+<td>255.255.255.0</td>
+<td>254</td>
+</tr>
+<tr>
+<td>/25</td>
+<td>255.255.255.128</td>
+<td>126</td>
+</tr>
+<tr>
+<td>/26</td>
+<td>255.255.255.192</td>
+<td>62</td>
+</tr>
+<tr>
+<td>/27</td>
+<td>255.255.255.224</td>
+<td>30</td>
+</tr>
+<tr>
+<td>/30</td>
+<td>255.255.255.252</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>可用主机数计算：</p>
+<pre><code class="language-text">可用主机数 = 2^(主机位数) - 2
+</code></pre>
+<p>减去的 2 个地址分别是网络地址和广播地址。</p>
+<p>子网划分示例：</p>
+<pre><code class="language-text">原网络：192.168.10.0/24
+需求：划分为 4 个子网
+</code></pre>
+<p>需要借 2 位主机位作为子网位，因为 <code>2^2 = 4</code>。新的前缀长度为 <code>/26</code>。</p>
+<table>
+<thead>
+<tr>
+<th>子网</th>
+<th>网络地址</th>
+<th>可用主机范围</th>
+<th>广播地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>192.168.10.0/26</td>
+<td>192.168.10.1 ~ 192.168.10.62</td>
+<td>192.168.10.63</td>
+</tr>
+<tr>
+<td>2</td>
+<td>192.168.10.64/26</td>
+<td>192.168.10.65 ~ 192.168.10.126</td>
+<td>192.168.10.127</td>
+</tr>
+<tr>
+<td>3</td>
+<td>192.168.10.128/26</td>
+<td>192.168.10.129 ~ 192.168.10.190</td>
+<td>192.168.10.191</td>
+</tr>
+<tr>
+<td>4</td>
+<td>192.168.10.192/26</td>
+<td>192.168.10.193 ~ 192.168.10.254</td>
+<td>192.168.10.255</td>
+</tr>
+</tbody>
+</table>
+<p>子网划分的关键步骤：</p>
+<ol>
+<li>明确需要多少个子网或每个子网需要多少主机。</li>
+<li>根据需求确定需要借几位。</li>
+<li>计算新的子网掩码。</li>
+<li>计算每个子网的网络地址、广播地址和可用地址范围。</li>
+</ol>
+<h3 id="4-ip">4. 私有 IP 地址</h3>
+<p>私有地址只能在内网使用，不能直接在公网路由。</p>
+<table>
+<thead>
+<tr>
+<th>地址范围</th>
+<th>CIDR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.0.0.0 ~ 10.255.255.255</td>
+<td>10.0.0.0/8</td>
+</tr>
+<tr>
+<td>172.16.0.0 ~ 172.31.255.255</td>
+<td>172.16.0.0/12</td>
+</tr>
+<tr>
+<td>192.168.0.0 ~ 192.168.255.255</td>
+<td>192.168.0.0/16</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5">5. 默认网关</h3>
+<p>默认网关是主机访问其他网络时交给的下一跳设备，通常是路由器接口地址。</p>
+<p>如果目标 IP 和本机不在同一网段，数据会先发给默认网关。</p>
+<p>主机发送数据时的判断流程：</p>
+<ol>
+<li>主机先用自己的 IP 和子网掩码算出本机网络地址。</li>
+<li>再用目标 IP 和子网掩码算出目标网络地址。</li>
+<li>如果两个网络地址相同，说明目标在同一局域网，直接通过 ARP 查目标 MAC。</li>
+<li>如果两个网络地址不同，说明目标在其他网络，先通过 ARP 查默认网关的 MAC。</li>
+<li>数据帧的目标 MAC 是下一跳设备的 MAC，但 IP 包里的目标 IP 仍然是最终目标 IP。</li>
+</ol>
+<p>也就是说，跨网段通信时，MAC 地址每经过一跳都会改变，IP 地址通常保持不变，除非经过 NAT。</p>
+<h3 id="6-arp">6. ARP 协议</h3>
+<p>ARP 用于根据 IP 地址查询对应的 MAC 地址。</p>
+<p>工作过程：</p>
+<ol>
+<li>主机想发送数据给同一局域网内的某个 IP。</li>
+<li>如果不知道目标 MAC，就发送 ARP 广播。</li>
+<li>目标主机收到后回复自己的 MAC 地址。</li>
+<li>发送方把 IP 与 MAC 的映射保存到 ARP 缓存中。</li>
+</ol>
+<p>注意：</p>
+<ul>
+<li>ARP 只在局域网内工作。</li>
+<li>ARP 欺骗是常见内网攻击方式。</li>
+</ul>
+<p>ARP 缓存可以减少重复广播。Windows 可用 <code>arp -a</code> 查看 ARP 缓存。</p>
+<p>常见 ARP 类型：</p>
+<ul>
+<li>普通 ARP：根据目标 IP 查询目标 MAC。</li>
+<li>免费 ARP：主机主动广播自己的 IP 和 MAC，用于检测地址冲突或更新其他设备缓存。</li>
+<li>代理 ARP：路由器代替其他主机回应 ARP 请求，常见于特殊网络场景。</li>
+</ul>
+<h3 id="7-icmp">7. ICMP 协议</h3>
+<p>ICMP 用于网络控制和错误报告。</p>
+<p>常见用途：</p>
+<ul>
+<li><code>ping</code>：测试主机是否可达。</li>
+<li><code>tracert</code> 或 <code>traceroute</code>：追踪数据包经过的路由。</li>
+</ul>
+<p><code>ping</code> 通常使用 ICMP Echo Request 和 Echo Reply。目标不响应 <code>ping</code> 不一定表示目标不可达，也可能是防火墙禁用了 ICMP。</p>
+<p><code>tracert</code> 的核心思路是逐步增加 TTL：</p>
+<ol>
+<li>第一个包 TTL 为 1，到第一跳路由器后 TTL 变为 0，被丢弃。</li>
+<li>第一跳路由器返回 ICMP 超时消息。</li>
+<li>第二个包 TTL 为 2，可以到第二跳。</li>
+<li>不断重复，直到到达目标主机。</li>
+</ol>
+<h3 id="8-nat">8. NAT</h3>
+<p>NAT 是网络地址转换，常用于家庭或企业网络中。</p>
+<p>作用：</p>
+<ul>
+<li>让多个内网设备共享一个公网 IP 上网。</li>
+<li>隐藏内部网络结构。</li>
+<li>缓解 IPv4 地址不足。</li>
+</ul>
+<p>常见类型：</p>
+<ul>
+<li>静态 NAT：一个内网地址固定映射一个公网地址。</li>
+<li>动态 NAT：从公网地址池中动态分配。</li>
+<li>PAT：多个内网地址通过不同端口复用同一个公网地址，家庭路由器常用。</li>
+</ul>
+<h3 id="9">9. 路由</h3>
+<p>路由是为数据包选择转发路径的过程。</p>
+<p>路由表常见字段：</p>
+<ul>
+<li>目标网络</li>
+<li>子网掩码或前缀长度</li>
+<li>下一跳地址</li>
+<li>出接口</li>
+<li>度量值</li>
+</ul>
+<p>常见路由类型：</p>
+<ul>
+<li>直连路由：设备接口直接连接的网络。</li>
+<li>静态路由：管理员手动配置。</li>
+<li>动态路由：路由器通过协议自动学习，如 RIP、OSPF、BGP。</li>
+</ul>
+<h2 id="_7">六、传输层</h2>
+<p>传输层负责进程到进程之间的通信。网络层只负责主机到主机，传输层通过端口号定位具体应用进程。</p>
+<h3 id="1_2">1. 端口号</h3>
+<p>端口号范围：<code>0 ~ 65535</code>。</p>
+<p>常见端口：</p>
+<table>
+<thead>
+<tr>
+<th>端口</th>
+<th>协议</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20/21</td>
+<td>FTP</td>
+<td>文件传输</td>
+</tr>
+<tr>
+<td>22</td>
+<td>SSH</td>
+<td>远程登录</td>
+</tr>
+<tr>
+<td>25</td>
+<td>SMTP</td>
+<td>邮件发送</td>
+</tr>
+<tr>
+<td>53</td>
+<td>DNS</td>
+<td>域名解析</td>
+</tr>
+<tr>
+<td>80</td>
+<td>HTTP</td>
+<td>Web 服务</td>
+</tr>
+<tr>
+<td>110</td>
+<td>POP3</td>
+<td>邮件接收</td>
+</tr>
+<tr>
+<td>143</td>
+<td>IMAP</td>
+<td>邮件接收</td>
+</tr>
+<tr>
+<td>443</td>
+<td>HTTPS</td>
+<td>加密 Web 服务</td>
+</tr>
+<tr>
+<td>3306</td>
+<td>MySQL</td>
+<td>数据库</td>
+</tr>
+<tr>
+<td>6379</td>
+<td>Redis</td>
+<td>缓存数据库</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-udp">2. UDP</h3>
+<p>UDP 是无连接、不可靠、面向报文的传输协议。</p>
+<p>特点：</p>
+<ul>
+<li>不建立连接。</li>
+<li>不保证可靠到达。</li>
+<li>没有复杂的重传和拥塞控制。</li>
+<li>首部开销小，速度快。</li>
+</ul>
+<p>适用场景：</p>
+<ul>
+<li>DNS 查询</li>
+<li>视频直播</li>
+<li>在线语音</li>
+<li>游戏实时通信</li>
+</ul>
+<h3 id="3-tcp">3. TCP</h3>
+<p>TCP 是面向连接、可靠、面向字节流的传输协议。</p>
+<p>特点：</p>
+<ul>
+<li>建立连接后再传输数据。</li>
+<li>保证数据可靠、有序到达。</li>
+<li>支持确认、重传、流量控制、拥塞控制。</li>
+<li>开销比 UDP 大。</li>
+</ul>
+<p>适用场景：</p>
+<ul>
+<li>网页浏览</li>
+<li>文件传输</li>
+<li>邮件传输</li>
+<li>数据库连接</li>
+</ul>
+<h3 id="4-tcp">4. TCP 三次握手</h3>
+<p>三次握手用于建立连接：</p>
+<pre><code class="language-text">客户端 -&gt; 服务端：SYN
+服务端 -&gt; 客户端：SYN + ACK
+客户端 -&gt; 服务端：ACK
+</code></pre>
+<p>三次握手的目的：</p>
+<ul>
+<li>确认双方发送和接收能力正常。</li>
+<li>同步初始序列号。</li>
+<li>建立可靠连接的状态。</li>
+</ul>
+<h3 id="5-tcp">5. TCP 四次挥手</h3>
+<p>四次挥手用于释放连接：</p>
+<pre><code class="language-text">主动关闭方 -&gt; 被动关闭方：FIN
+被动关闭方 -&gt; 主动关闭方：ACK
+被动关闭方 -&gt; 主动关闭方：FIN
+主动关闭方 -&gt; 被动关闭方：ACK
+</code></pre>
+<p>为什么通常是四次：</p>
+<p>TCP 是全双工通信，双方的发送通道需要分别关闭。一方说“我发完了”，另一方可能还有数据要发送，所以 FIN 和 ACK 往往分开发送。</p>
+<h3 id="6-tcp">6. TCP 可靠传输机制</h3>
+<p>TCP 可靠性主要依靠：</p>
+<ul>
+<li>序列号：给字节流编号，保证顺序。</li>
+<li>确认应答：接收方收到数据后返回 ACK。</li>
+<li>超时重传：发送后长时间未收到 ACK 就重传。</li>
+<li>快速重传：收到多个重复 ACK 时提前重传。</li>
+<li>校验和：检测数据是否出错。</li>
+</ul>
+<h3 id="7">7. 流量控制</h3>
+<p>流量控制用于避免发送方发送太快，导致接收方缓冲区溢出。</p>
+<p>TCP 使用滑动窗口机制：</p>
+<ul>
+<li>接收方通过窗口大小告诉发送方自己还能接收多少数据。</li>
+<li>发送方根据窗口大小控制发送速率。</li>
+</ul>
+<h3 id="8">8. 拥塞控制</h3>
+<p>拥塞控制用于避免网络中数据过多导致严重丢包和延迟。</p>
+<p>常见算法阶段：</p>
+<ul>
+<li>慢启动：拥塞窗口从小开始指数增长。</li>
+<li>拥塞避免：窗口增长变慢，线性增长。</li>
+<li>快速重传：发现丢包后尽快重传。</li>
+<li>快速恢复：降低窗口后继续传输。</li>
+</ul>
+<h2 id="_8">七、应用层协议</h2>
+<h3 id="1-dns">1. DNS</h3>
+<p>DNS 用于把域名解析为 IP 地址。</p>
+<p>DNS 的全称是 Domain Name System，中文常称为域名系统。人更容易记住域名，例如 <code>www.example.com</code>；计算机通信最终需要 IP 地址，所以访问网站前通常要先做 DNS 解析。</p>
+<p>DNS 的核心作用：</p>
+<ul>
+<li>域名解析：把域名转换为 IP 地址。</li>
+<li>服务发现：通过 MX、SRV 等记录找到对应服务。</li>
+<li>负载均衡：同一个域名可以返回多个 IP。</li>
+<li>容灾切换：通过调整解析结果，把流量切到其他服务器。</li>
+</ul>
+<h4 id="dns">DNS 层级结构</h4>
+<p>DNS 是分层的树状结构：</p>
+<pre><code class="language-text">根域 .
+  -&gt; 顶级域 .com / .cn / .org
+    -&gt; 二级域 example.com
+      -&gt; 主机名 www.example.com
+</code></pre>
+<p>常见 DNS 服务器类型：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>根域名服务器</td>
+<td>告诉查询者顶级域名服务器在哪里</td>
+</tr>
+<tr>
+<td>顶级域名服务器</td>
+<td>管理 <code>.com</code>、<code>.cn</code> 等顶级域</td>
+</tr>
+<tr>
+<td>权威域名服务器</td>
+<td>保存某个域名的真实 DNS 记录</td>
+</tr>
+<tr>
+<td>本地递归 DNS 服务器</td>
+<td>代替客户端完成完整查询，常由运营商、公司或公共 DNS 提供</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dns_1">DNS 解析过程</h4>
+<p>以解析 <code>www.example.com</code> 为例：</p>
+<ol>
+<li>浏览器检查自身缓存。</li>
+<li>操作系统检查 DNS 缓存。</li>
+<li>检查本地 <code>hosts</code> 文件。</li>
+<li>如果本地没有结果，就查询本地递归 DNS 服务器。</li>
+<li>本地递归 DNS 服务器向根域名服务器查询 <code>.com</code> 的服务器地址。</li>
+<li>再向 <code>.com</code> 顶级域名服务器查询 <code>example.com</code> 的权威服务器地址。</li>
+<li>再向 <code>example.com</code> 的权威域名服务器查询 <code>www.example.com</code> 的记录。</li>
+<li>权威服务器返回 IP 地址。</li>
+<li>本地递归 DNS 缓存结果，并返回给客户端。</li>
+<li>浏览器拿到 IP 后再建立 TCP 或 QUIC 连接。</li>
+</ol>
+<h4 id="_9">递归查询和迭代查询</h4>
+<ul>
+<li>递归查询：客户端把问题交给本地 DNS，本地 DNS 负责查到底，并返回最终结果。</li>
+<li>迭代查询：DNS 服务器不直接给最终答案，而是告诉查询者下一步应该问谁。</li>
+</ul>
+<p>普通用户设备一般向本地 DNS 发起递归查询；本地 DNS 再向根、顶级域、权威 DNS 发起迭代查询。</p>
+<h4 id="dns-ttl">DNS 缓存和 TTL</h4>
+<p>DNS 结果通常会被缓存，缓存位置包括：</p>
+<ul>
+<li>浏览器缓存</li>
+<li>操作系统缓存</li>
+<li>本地递归 DNS 缓存</li>
+<li>路由器或网关缓存</li>
+<li>应用程序自己的缓存</li>
+</ul>
+<p>TTL 表示 DNS 记录可以缓存多久，单位是秒。</p>
+<p>例如：</p>
+<pre><code class="language-text">www.example.com.  300  IN  A  93.184.216.34
+</code></pre>
+<p>这里 <code>300</code> 表示该记录可以缓存 300 秒。</p>
+<p>TTL 的影响：</p>
+<ul>
+<li>TTL 较大：缓存时间长，解析压力小，但变更生效慢。</li>
+<li>TTL 较小：变更生效快，但 DNS 查询次数更多。</li>
+</ul>
+<p>常见 DNS 记录：</p>
+<table>
+<thead>
+<tr>
+<th>记录类型</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>域名到 IPv4 地址</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td>域名到 IPv6 地址</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>域名别名</td>
+</tr>
+<tr>
+<td>MX</td>
+<td>邮件服务器</td>
+</tr>
+<tr>
+<td>NS</td>
+<td>域名服务器</td>
+</tr>
+<tr>
+<td>TXT</td>
+<td>文本记录，常用于验证</td>
+</tr>
+<tr>
+<td>SOA</td>
+<td>权威区域的起始授权记录</td>
+</tr>
+<tr>
+<td>PTR</td>
+<td>反向解析，把 IP 解析为域名</td>
+</tr>
+<tr>
+<td>SRV</td>
+<td>指定某个服务的位置和端口</td>
+</tr>
+<tr>
+<td>CAA</td>
+<td>指定哪些 CA 可以为域名签发证书</td>
+</tr>
+</tbody>
+</table>
+<p>记录示例：</p>
+<pre><code class="language-text">example.com.        A      93.184.216.34
+www.example.com.    CNAME  example.com.
+example.com.        MX     10 mail.example.com.
+</code></pre>
+<p>注意点：</p>
+<ul>
+<li><code>A</code> 和 <code>AAAA</code> 返回的是 IP 地址。</li>
+<li><code>CNAME</code> 返回的是另一个域名，客户端还需要继续解析。</li>
+<li>一个域名可以有多个 <code>A</code> 记录，用于简单负载均衡。</li>
+<li>邮件服务通常依赖 <code>MX</code> 记录。</li>
+<li>反向 DNS 使用 <code>PTR</code> 记录。</li>
+</ul>
+<h4 id="dns_2">DNS 使用的传输协议</h4>
+<p>DNS 默认使用 UDP 53 端口，因为 UDP 开销小、速度快。</p>
+<p>在以下场景中可能使用 TCP 53 端口：</p>
+<ul>
+<li>响应数据太大，UDP 放不下。</li>
+<li>进行区域传送。</li>
+<li>客户端或服务器要求使用 TCP。</li>
+</ul>
+<p>现代场景还可能使用：</p>
+<ul>
+<li>DoT：DNS over TLS，通常使用 853 端口。</li>
+<li>DoH：DNS over HTTPS，使用 HTTPS 加密 DNS 查询。</li>
+</ul>
+<h4 id="dns_3">常见 DNS 问题</h4>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>可能原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能 ping IP，不能访问域名</td>
+<td>DNS 配置错误或 DNS 服务异常</td>
+</tr>
+<tr>
+<td>域名解析到旧 IP</td>
+<td>DNS 缓存未过期</td>
+</tr>
+<tr>
+<td>NXDOMAIN</td>
+<td>域名不存在</td>
+</tr>
+<tr>
+<td>SERVFAIL</td>
+<td>DNS 服务器查询失败</td>
+</tr>
+<tr>
+<td>解析结果不稳定</td>
+<td>负载均衡、CDN 或不同地区线路导致</td>
+</tr>
+</tbody>
+</table>
+<p>常用排查命令：</p>
+<pre><code class="language-powershell">nslookup www.example.com
+ipconfig /flushdns
+</code></pre>
+<pre><code class="language-bash">dig www.example.com
+dig www.example.com A
+dig www.example.com CNAME
+dig +trace www.example.com
+</code></pre>
+<h3 id="2-http">2. HTTP</h3>
+<p>HTTP 是超文本传输协议，主要用于浏览器和服务器之间通信。</p>
+<p>特点：</p>
+<ul>
+<li>基于请求-响应模型。</li>
+<li>默认使用 TCP。</li>
+<li>HTTP 本身是无状态协议。</li>
+<li>明文传输，内容可能被窃听或篡改。</li>
+<li>灵活，可传输 HTML、JSON、图片、视频等多种资源。</li>
+</ul>
+<h4 id="url">URL 结构</h4>
+<p>URL 用于定位网络资源。</p>
+<pre><code class="language-text">https://www.example.com:443/path/index.html?keyword=network&amp;page=1#title
+</code></pre>
+<p>组成部分：</p>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>示例</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>协议</td>
+<td><code>https</code></td>
+<td>使用的应用层协议</td>
+</tr>
+<tr>
+<td>主机名</td>
+<td><code>www.example.com</code></td>
+<td>服务器域名</td>
+</tr>
+<tr>
+<td>端口</td>
+<td><code>443</code></td>
+<td>服务监听端口</td>
+</tr>
+<tr>
+<td>路径</td>
+<td><code>/path/index.html</code></td>
+<td>资源在服务器上的位置</td>
+</tr>
+<tr>
+<td>查询字符串</td>
+<td><code>keyword=network&amp;page=1</code></td>
+<td>传递给服务器的参数</td>
+</tr>
+<tr>
+<td>片段标识</td>
+<td><code>#title</code></td>
+<td>页面内部定位，不会发送给服务器</td>
+</tr>
+</tbody>
+</table>
+<h4 id="http">HTTP 请求报文</h4>
+<p>HTTP 请求由请求行、请求头、空行和请求体组成。</p>
+<pre><code class="language-http">GET /index.html HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0
+Accept: text/html
+
+</code></pre>
+<p>请求行包含：</p>
+<ul>
+<li>请求方法：如 <code>GET</code>、<code>POST</code>。</li>
+<li>请求路径：如 <code>/index.html</code>。</li>
+<li>HTTP 版本：如 <code>HTTP/1.1</code>。</li>
+</ul>
+<p>如果是提交 JSON 数据，请求可能是：</p>
+<pre><code class="language-http">POST /api/users HTTP/1.1
+Host: www.example.com
+Content-Type: application/json
+Content-Length: 37
+
+{&quot;name&quot;:&quot;Alice&quot;,&quot;age&quot;:18}
+</code></pre>
+<h4 id="http_1">HTTP 响应报文</h4>
+<p>HTTP 响应由状态行、响应头、空行和响应体组成。</p>
+<pre><code class="language-http">HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 1256
+Cache-Control: max-age=3600
+
+&lt;html&gt;...&lt;/html&gt;
+</code></pre>
+<p>状态行包含：</p>
+<ul>
+<li>HTTP 版本</li>
+<li>状态码</li>
+<li>原因短语</li>
+</ul>
+<p>常见请求方法：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>获取资源</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>提交数据或创建资源</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>整体更新资源</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>部分更新资源</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>删除资源</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>只获取响应头</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>查询服务器支持的方法</td>
+</tr>
+</tbody>
+</table>
+<p>方法特性：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>是否安全</th>
+<th>是否幂等</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>是</td>
+<td>是</td>
+<td>只获取资源，不应修改服务器状态</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>是</td>
+<td>是</td>
+<td>类似 GET，但只返回响应头</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>否</td>
+<td>否</td>
+<td>常用于提交表单、创建订单</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>否</td>
+<td>是</td>
+<td>多次整体替换同一资源，结果应一致</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>否</td>
+<td>不一定</td>
+<td>部分更新资源</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>否</td>
+<td>是</td>
+<td>多次删除同一资源，结果通常一致</td>
+</tr>
+</tbody>
+</table>
+<p>安全方法指语义上不应修改服务器状态；幂等指同一个请求执行一次和执行多次，对资源状态的影响应该相同。</p>
+<p>常见状态码：</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>请求成功</td>
+</tr>
+<tr>
+<td>201</td>
+<td>创建成功</td>
+</tr>
+<tr>
+<td>301</td>
+<td>永久重定向</td>
+</tr>
+<tr>
+<td>302</td>
+<td>临时重定向</td>
+</tr>
+<tr>
+<td>304</td>
+<td>使用缓存</td>
+</tr>
+<tr>
+<td>400</td>
+<td>请求错误</td>
+</tr>
+<tr>
+<td>401</td>
+<td>未认证</td>
+</tr>
+<tr>
+<td>403</td>
+<td>无权限</td>
+</tr>
+<tr>
+<td>404</td>
+<td>资源不存在</td>
+</tr>
+<tr>
+<td>500</td>
+<td>服务器内部错误</td>
+</tr>
+<tr>
+<td>502</td>
+<td>网关错误</td>
+</tr>
+<tr>
+<td>503</td>
+<td>服务不可用</td>
+</tr>
+</tbody>
+</table>
+<p>状态码分类：</p>
+<table>
+<thead>
+<tr>
+<th>范围</th>
+<th>类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1xx</td>
+<td>信息响应</td>
+<td>请求已收到，继续处理</td>
+</tr>
+<tr>
+<td>2xx</td>
+<td>成功</td>
+<td>请求成功处理</td>
+</tr>
+<tr>
+<td>3xx</td>
+<td>重定向</td>
+<td>需要进一步操作</td>
+</tr>
+<tr>
+<td>4xx</td>
+<td>客户端错误</td>
+<td>请求有问题</td>
+</tr>
+<tr>
+<td>5xx</td>
+<td>服务端错误</td>
+<td>服务器处理失败</td>
+</tr>
+</tbody>
+</table>
+<p>更多常见状态码：</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+<th>常见场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>204</td>
+<td>无响应体</td>
+<td>删除成功但不返回内容</td>
+</tr>
+<tr>
+<td>206</td>
+<td>部分内容</td>
+<td>分片下载、视频拖动</td>
+</tr>
+<tr>
+<td>307</td>
+<td>临时重定向</td>
+<td>保持原请求方法重定向</td>
+</tr>
+<tr>
+<td>308</td>
+<td>永久重定向</td>
+<td>保持原请求方法永久重定向</td>
+</tr>
+<tr>
+<td>405</td>
+<td>方法不允许</td>
+<td>用 POST 访问只支持 GET 的接口</td>
+</tr>
+<tr>
+<td>408</td>
+<td>请求超时</td>
+<td>客户端发送请求太慢</td>
+</tr>
+<tr>
+<td>409</td>
+<td>冲突</td>
+<td>资源状态冲突</td>
+</tr>
+<tr>
+<td>413</td>
+<td>请求体太大</td>
+<td>上传文件超过限制</td>
+</tr>
+<tr>
+<td>429</td>
+<td>请求过多</td>
+<td>被限流</td>
+</tr>
+<tr>
+<td>504</td>
+<td>网关超时</td>
+<td>代理服务器等不到上游响应</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">常见请求头</h4>
+<table>
+<thead>
+<tr>
+<th>请求头</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host</td>
+<td>指定访问的主机名，HTTP/1.1 必需</td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>客户端信息，如浏览器和系统</td>
+</tr>
+<tr>
+<td>Accept</td>
+<td>客户端希望接收的数据类型</td>
+</tr>
+<tr>
+<td>Accept-Encoding</td>
+<td>客户端支持的压缩方式，如 gzip、br</td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>请求体的数据类型</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>请求体长度</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>身份认证信息</td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td>携带浏览器保存的 Cookie</td>
+</tr>
+<tr>
+<td>Referer</td>
+<td>请求来源页面</td>
+</tr>
+<tr>
+<td>Origin</td>
+<td>跨域请求来源</td>
+</tr>
+<tr>
+<td>Cache-Control</td>
+<td>控制缓存策略</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">常见响应头</h4>
+<table>
+<thead>
+<tr>
+<th>响应头</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>响应体的数据类型</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>响应体长度</td>
+</tr>
+<tr>
+<td>Content-Encoding</td>
+<td>响应体压缩方式</td>
+</tr>
+<tr>
+<td>Set-Cookie</td>
+<td>让浏览器保存 Cookie</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>重定向目标地址</td>
+</tr>
+<tr>
+<td>Cache-Control</td>
+<td>缓存控制</td>
+</tr>
+<tr>
+<td>ETag</td>
+<td>资源版本标识</td>
+</tr>
+<tr>
+<td>Last-Modified</td>
+<td>资源最后修改时间</td>
+</tr>
+<tr>
+<td>Access-Control-Allow-Origin</td>
+<td>CORS 跨域访问控制</td>
+</tr>
+<tr>
+<td>Server</td>
+<td>服务器软件信息</td>
+</tr>
+</tbody>
+</table>
+<h4 id="http-cookie">HTTP 无状态与 Cookie</h4>
+<p>HTTP 本身无状态，服务器默认不知道两次请求是否来自同一个用户。</p>
+<p>为了解决登录状态问题，常用 Cookie、Session 或 Token：</p>
+<ul>
+<li>Cookie：浏览器保存的小段数据，请求同一站点时自动携带。</li>
+<li>Session：服务端保存会话数据，客户端通常只保存 Session ID。</li>
+<li>Token：客户端保存令牌，请求时放入 <code>Authorization</code> 请求头或 Cookie。</li>
+</ul>
+<p>Cookie 重要属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expires / Max-Age</td>
+<td>设置过期时间</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>指定 Cookie 生效域名</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>指定 Cookie 生效路径</td>
+</tr>
+<tr>
+<td>HttpOnly</td>
+<td>禁止 JavaScript 读取，降低 XSS 风险</td>
+</tr>
+<tr>
+<td>Secure</td>
+<td>只在 HTTPS 下发送</td>
+</tr>
+<tr>
+<td>SameSite</td>
+<td>限制跨站请求携带 Cookie，降低 CSRF 风险</td>
+</tr>
+</tbody>
+</table>
+<h4 id="http_2">HTTP 缓存</h4>
+<p>HTTP 缓存可以减少重复下载，提高访问速度。</p>
+<p>强缓存：浏览器直接使用本地缓存，不向服务器确认。</p>
+<p>常见响应头：</p>
+<pre><code class="language-http">Cache-Control: max-age=3600
+</code></pre>
+<p>含义是资源 3600 秒内可直接使用缓存。</p>
+<p>常见 <code>Cache-Control</code> 指令：</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>max-age=秒数</td>
+<td>缓存有效时间</td>
+</tr>
+<tr>
+<td>no-cache</td>
+<td>使用缓存前必须向服务器验证</td>
+</tr>
+<tr>
+<td>no-store</td>
+<td>不允许保存缓存</td>
+</tr>
+<tr>
+<td>public</td>
+<td>可被浏览器和代理服务器缓存</td>
+</tr>
+<tr>
+<td>private</td>
+<td>只能被用户浏览器缓存</td>
+</tr>
+</tbody>
+</table>
+<p>协商缓存：浏览器询问服务器资源是否变化，没变化就返回 <code>304 Not Modified</code>。</p>
+<p>常见机制：</p>
+<pre><code class="language-http">ETag: &quot;abc123&quot;
+If-None-Match: &quot;abc123&quot;
+</code></pre>
+<pre><code class="language-http">Last-Modified: Tue, 19 May 2026 10:00:00 GMT
+If-Modified-Since: Tue, 19 May 2026 10:00:00 GMT
+</code></pre>
+<p>如果资源未变化，服务器返回：</p>
+<pre><code class="language-http">HTTP/1.1 304 Not Modified
+</code></pre>
+<h4 id="http_3">HTTP 连接管理</h4>
+<p>HTTP/1.0 默认短连接，一个请求通常对应一次 TCP 连接。</p>
+<p>HTTP/1.1 默认支持长连接：</p>
+<pre><code class="language-http">Connection: keep-alive
+</code></pre>
+<p>长连接可以复用 TCP 连接，减少三次握手和慢启动开销。</p>
+<p>HTTP/1.1 仍存在队头阻塞问题：同一连接上的请求需要按顺序处理，前面的响应慢，会影响后面的响应。</p>
+<p>HTTP/2 的改进：</p>
+<ul>
+<li>二进制分帧。</li>
+<li>多路复用，同一连接上并发多个请求和响应。</li>
+<li>头部压缩。</li>
+<li>支持流优先级。</li>
+</ul>
+<p>HTTP/3 的改进：</p>
+<ul>
+<li>基于 QUIC，而不是直接基于 TCP。</li>
+<li>QUIC 基于 UDP。</li>
+<li>减少连接建立延迟。</li>
+<li>缓解 TCP 层面的队头阻塞。</li>
+</ul>
+<h4 id="cors">跨域 CORS</h4>
+<p>浏览器有同源策略。协议、域名、端口三者都相同，才算同源。</p>
+<p>例如：</p>
+<pre><code class="language-text">https://example.com:443
+</code></pre>
+<p>和下面地址不是同源：</p>
+<pre><code class="language-text">http://example.com:80
+https://api.example.com:443
+https://example.com:8443
+</code></pre>
+<p>CORS 通过 HTTP 头允许跨域访问。</p>
+<p>常见响应头：</p>
+<pre><code class="language-http">Access-Control-Allow-Origin: https://www.example.com
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: Content-Type, Authorization
+</code></pre>
+<p>复杂跨域请求前，浏览器会先发送 <code>OPTIONS</code> 预检请求。</p>
+<h3 id="3-https">3. HTTPS</h3>
+<p>HTTPS = HTTP + TLS。</p>
+<p>HTTPS 的作用：</p>
+<ul>
+<li>加密传输内容，防止窃听。</li>
+<li>校验数据完整性，防止篡改。</li>
+<li>通过证书验证服务器身份，防止伪造网站。</li>
+</ul>
+<p>HTTP 明文传输，任何能截获流量的中间节点都可能看到请求内容。HTTPS 在 HTTP 与 TCP 之间加入 TLS，加密 HTTP 报文。</p>
+<pre><code class="language-text">HTTP
+TLS
+TCP
+IP
+</code></pre>
+<h4 id="tls">TLS 的安全目标</h4>
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>身份认证</td>
+<td>确认访问的服务器确实是目标网站</td>
+</tr>
+<tr>
+<td>机密性</td>
+<td>传输内容被加密，中间人难以读取</td>
+</tr>
+<tr>
+<td>完整性</td>
+<td>数据被篡改时能够被发现</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">对称加密和非对称加密</h4>
+<p>HTTPS 同时使用对称加密和非对称加密：</p>
+<ul>
+<li>非对称加密：用于身份认证和密钥协商，计算成本较高。</li>
+<li>对称加密：用于大量应用数据传输，速度快。</li>
+</ul>
+<p>简化理解：</p>
+<ol>
+<li>握手阶段用证书和非对称密码学确认身份、协商密钥。</li>
+<li>数据传输阶段使用协商出的对称密钥加密 HTTP 内容。</li>
+</ol>
+<h4 id="_13">数字证书</h4>
+<p>服务器证书通常包含：</p>
+<ul>
+<li>域名</li>
+<li>公钥</li>
+<li>证书有效期</li>
+<li>证书颁发机构 CA</li>
+<li>CA 的数字签名</li>
+</ul>
+<p>浏览器验证证书时会检查：</p>
+<ul>
+<li>证书是否过期。</li>
+<li>证书域名是否匹配当前访问域名。</li>
+<li>证书是否由受信任 CA 签发。</li>
+<li>证书链是否完整。</li>
+<li>证书是否被吊销。</li>
+</ul>
+<h4 id="tls_1">TLS 握手简化过程</h4>
+<ol>
+<li>客户端请求建立 HTTPS 连接。</li>
+<li>客户端发送支持的 TLS 版本、加密套件和随机数。</li>
+<li>服务端选择 TLS 版本和加密套件，返回证书和随机数。</li>
+<li>客户端验证证书是否合法。</li>
+<li>双方通过密钥协商算法生成会话密钥。</li>
+<li>后续 HTTP 数据使用会话密钥加密传输。</li>
+</ol>
+<h4 id="sni">SNI</h4>
+<p>SNI 是 Server Name Indication。它允许客户端在 TLS 握手时告诉服务器自己要访问哪个域名。</p>
+<p>没有 SNI 时，同一个 IP 上部署多个 HTTPS 站点会比较困难，因为服务器不知道应该返回哪张证书。</p>
+<h4 id="hsts">HSTS</h4>
+<p>HSTS 是 HTTP Strict Transport Security，用于强制浏览器使用 HTTPS 访问网站。</p>
+<p>响应头示例：</p>
+<pre><code class="language-http">Strict-Transport-Security: max-age=31536000; includeSubDomains
+</code></pre>
+<p>启用 HSTS 后，浏览器会在有效期内自动把 HTTP 请求升级为 HTTPS。</p>
+<h4 id="https">HTTPS 常见问题</h4>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>可能原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>证书不受信任</td>
+<td>使用自签名证书或 CA 不受浏览器信任</td>
+</tr>
+<tr>
+<td>证书过期</td>
+<td>证书超过有效期</td>
+</tr>
+<tr>
+<td>域名不匹配</td>
+<td>证书绑定的域名不是当前访问域名</td>
+</tr>
+<tr>
+<td>证书链不完整</td>
+<td>服务器没有正确配置中间证书</td>
+</tr>
+<tr>
+<td>混合内容</td>
+<td>HTTPS 页面中加载了 HTTP 资源</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-dhcp">4. DHCP</h3>
+<p>DHCP 用于自动分配网络配置。</p>
+<p>常见分配内容：</p>
+<ul>
+<li>IP 地址</li>
+<li>子网掩码</li>
+<li>默认网关</li>
+<li>DNS 服务器地址</li>
+</ul>
+<p>DHCP 获取地址的过程：</p>
+<pre><code class="language-text">Discover -&gt; Offer -&gt; Request -&gt; ACK
+</code></pre>
+<h3 id="5-ftpsmtppop3imap">5. FTP、SMTP、POP3、IMAP</h3>
+<ul>
+<li>FTP：文件传输协议。</li>
+<li>SMTP：发送邮件。</li>
+<li>POP3：下载邮件到本地。</li>
+<li>IMAP：在服务器上同步管理邮件。</li>
+</ul>
+<h2 id="_14">八、浏览器访问网页的完整过程</h2>
+<p>以访问 <code>https://www.example.com</code> 为例：</p>
+<ol>
+<li>浏览器解析 URL，判断协议、域名、端口和路径。</li>
+<li>查询浏览器缓存，检查是否已有可用资源。</li>
+<li>进行 DNS 解析，获得服务器 IP 地址。</li>
+<li>通过 ARP 获取网关或目标主机的 MAC 地址。</li>
+<li>建立 TCP 连接，完成三次握手。</li>
+<li>如果是 HTTPS，进行 TLS 握手并协商密钥。</li>
+<li>浏览器发送 HTTP 请求。</li>
+<li>服务器处理请求并返回 HTTP 响应。</li>
+<li>浏览器解析 HTML，继续请求 CSS、JavaScript、图片等资源。</li>
+<li>浏览器构建 DOM、CSSOM，生成渲染树并绘制页面。</li>
+<li>连接可能保持复用，也可能在空闲后关闭。</li>
+</ol>
+<h2 id="_15">九、网络安全基础</h2>
+<h3 id="1_3">1. 安全三要素</h3>
+<ul>
+<li>机密性：数据不能被未授权者读取。</li>
+<li>完整性：数据不能被非法篡改。</li>
+<li>可用性：系统和服务需要在需要时可用。</li>
+</ul>
+<h3 id="2_4">2. 常见攻击</h3>
+<table>
+<thead>
+<tr>
+<th>攻击方式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DDoS</td>
+<td>利用大量流量压垮目标服务</td>
+</tr>
+<tr>
+<td>ARP 欺骗</td>
+<td>伪造 IP 与 MAC 的对应关系</td>
+</tr>
+<tr>
+<td>DNS 劫持</td>
+<td>篡改域名解析结果</td>
+</tr>
+<tr>
+<td>中间人攻击</td>
+<td>攻击者插入通信双方之间窃听或篡改数据</td>
+</tr>
+<tr>
+<td>钓鱼攻击</td>
+<td>伪造网站或消息骗取账号密码</td>
+</tr>
+<tr>
+<td>端口扫描</td>
+<td>探测目标主机开放的服务</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3_3">3. 常见防护手段</h3>
+<ul>
+<li>使用 HTTPS、SSH 等加密协议。</li>
+<li>配置防火墙和访问控制策略。</li>
+<li>及时更新系统和软件补丁。</li>
+<li>使用强密码和多因素认证。</li>
+<li>对重要服务限制来源 IP。</li>
+<li>定期查看日志，发现异常访问。</li>
+<li>在公共网络中谨慎使用未加密服务。</li>
+</ul>
+<h3 id="4_1">4. 防火墙</h3>
+<p>防火墙根据规则允许或拒绝网络流量。</p>
+<p>常见过滤依据：</p>
+<ul>
+<li>源 IP</li>
+<li>目标 IP</li>
+<li>源端口</li>
+<li>目标端口</li>
+<li>协议类型</li>
+<li>连接状态</li>
+</ul>
+<h2 id="_16">十、常用网络命令</h2>
+<h3 id="1-windows">1. Windows 常用命令</h3>
+<pre><code class="language-powershell">ipconfig
+ipconfig /all
+ipconfig /flushdns
+ping www.baidu.com
+tracert www.baidu.com
+nslookup www.baidu.com
+netstat -ano
+arp -a
+route print
+</code></pre>
+<p>说明：</p>
+<ul>
+<li><code>ipconfig</code>：查看本机 IP、网关、DNS 等配置。</li>
+<li><code>ipconfig /all</code>：查看完整网络配置。</li>
+<li><code>ipconfig /flushdns</code>：清空 DNS 缓存。</li>
+<li><code>ping</code>：测试网络连通性和延迟。</li>
+<li><code>tracert</code>：查看访问目标经过的路由。</li>
+<li><code>nslookup</code>：查询 DNS 解析结果。</li>
+<li><code>netstat -ano</code>：查看端口和连接状态。</li>
+<li><code>arp -a</code>：查看 ARP 缓存。</li>
+<li><code>route print</code>：查看路由表。</li>
+</ul>
+<h3 id="2-linux">2. Linux 常用命令</h3>
+<pre><code class="language-bash">ip addr
+ip route
+ping example.com
+traceroute example.com
+dig example.com
+nslookup example.com
+ss -tulnp
+curl -I https://example.com
+</code></pre>
+<h2 id="_17">十一、常见故障排查思路</h2>
+<h3 id="1_4">1. 无法上网</h3>
+<p>排查顺序：</p>
+<ol>
+<li>检查网线、Wi-Fi、网卡是否正常。</li>
+<li>查看是否获取到正确的 IP 地址。</li>
+<li>检查默认网关是否正确。</li>
+<li><code>ping 127.0.0.1</code>，测试本机 TCP/IP 协议栈。</li>
+<li><code>ping 本机 IP</code>，测试网卡配置。</li>
+<li><code>ping 网关 IP</code>，测试局域网连通性。</li>
+<li><code>ping 公网 IP</code>，测试是否能访问外网。</li>
+<li><code>nslookup 域名</code>，检查 DNS 是否正常。</li>
+</ol>
+<h3 id="2-ping-ip">2. 能 ping IP，但不能访问域名</h3>
+<p>通常是 DNS 问题。</p>
+<p>可能原因：</p>
+<ul>
+<li>DNS 服务器配置错误。</li>
+<li>DNS 缓存异常。</li>
+<li>本地 hosts 文件配置错误。</li>
+<li>DNS 被劫持或污染。</li>
+</ul>
+<h3 id="3_4">3. 能访问网站，但速度慢</h3>
+<p>可能原因：</p>
+<ul>
+<li>本地带宽不足。</li>
+<li>Wi-Fi 信号弱。</li>
+<li>线路拥塞。</li>
+<li>DNS 解析慢。</li>
+<li>服务器响应慢。</li>
+<li>丢包率高。</li>
+</ul>
+<h3 id="4_2">4. 某个端口无法访问</h3>
+<p>排查方向：</p>
+<ul>
+<li>服务是否启动。</li>
+<li>服务是否监听正确端口。</li>
+<li>防火墙是否放行。</li>
+<li>路由是否可达。</li>
+<li>NAT 或端口映射是否正确。</li>
+<li>云服务器安全组是否开放。</li>
+</ul>
+<h1 id="web">Web 渲染原理</h1>
+<p>Web 渲染原理研究的是：浏览器拿到 HTML、CSS、JavaScript、图片等资源后，如何把它们转换成用户最终看到的页面。</p>
+<p>简化流程：</p>
+<pre><code class="language-text">HTML/CSS/JS 下载
+  -&gt; HTML 解析生成 DOM 树
+  -&gt; CSS 解析生成 CSSOM 树
+  -&gt; DOM + CSSOM 合成 Render Tree
+  -&gt; Layout 计算布局
+  -&gt; Paint 绘制像素
+  -&gt; Composite 合成图层
+  -&gt; 显示到屏幕
+</code></pre>
+<h3 id="1_5">1. 浏览器主要组成</h3>
+<p>浏览器不是单个模块，而是多个模块协同工作。</p>
+<table>
+<thead>
+<tr>
+<th>组成部分</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户界面</td>
+<td>地址栏、前进后退、书签栏等</td>
+</tr>
+<tr>
+<td>浏览器引擎</td>
+<td>协调 UI 和渲染引擎</td>
+</tr>
+<tr>
+<td>渲染引擎</td>
+<td>解析 HTML/CSS，布局、绘制页面</td>
+</tr>
+<tr>
+<td>JavaScript 引擎</td>
+<td>解析和执行 JavaScript</td>
+</tr>
+<tr>
+<td>网络模块</td>
+<td>发送 HTTP/HTTPS 请求，下载资源</td>
+</tr>
+<tr>
+<td>存储模块</td>
+<td>管理 Cookie、LocalStorage、Cache 等</td>
+</tr>
+<tr>
+<td>GPU 进程</td>
+<td>处理图层合成、部分图形加速</td>
+</tr>
+</tbody>
+</table>
+<p>常见渲染引擎：</p>
+<ul>
+<li>Blink：Chrome、Edge 使用。</li>
+<li>WebKit：Safari 使用。</li>
+<li>Gecko：Firefox 使用。</li>
+</ul>
+<p>常见 JavaScript 引擎：</p>
+<ul>
+<li>V8：Chrome、Edge、Node.js 使用。</li>
+<li>JavaScriptCore：Safari 使用。</li>
+<li>SpiderMonkey：Firefox 使用。</li>
+</ul>
+<h3 id="2_5">2. 多进程架构</h3>
+<p>现代浏览器通常采用多进程架构，提高稳定性和安全性。</p>
+<p>常见进程：</p>
+<table>
+<thead>
+<tr>
+<th>进程</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>浏览器主进程</td>
+<td>管理窗口、地址栏、书签、下载等</td>
+</tr>
+<tr>
+<td>渲染进程</td>
+<td>负责页面解析、JS 执行、布局、绘制</td>
+</tr>
+<tr>
+<td>网络进程</td>
+<td>负责网络请求</td>
+</tr>
+<tr>
+<td>GPU 进程</td>
+<td>负责图形加速和图层合成</td>
+</tr>
+<tr>
+<td>插件进程</td>
+<td>运行浏览器插件</td>
+</tr>
+</tbody>
+</table>
+<p>多进程的好处：</p>
+<ul>
+<li>一个页面崩溃不一定影响整个浏览器。</li>
+<li>不同站点可以隔离，安全性更高。</li>
+<li>可以更好地利用多核 CPU。</li>
+</ul>
+<h3 id="3_5">3. 关键渲染路径</h3>
+<p>关键渲染路径是浏览器从接收 HTML 到首次渲染页面所经历的关键步骤。</p>
+<p>核心步骤：</p>
+<ol>
+<li>解析 HTML，构建 DOM 树。</li>
+<li>解析 CSS，构建 CSSOM 树。</li>
+<li>DOM 和 CSSOM 合成渲染树。</li>
+<li>计算每个节点的位置和大小。</li>
+<li>把节点绘制到不同图层。</li>
+<li>合成图层并显示到屏幕。</li>
+</ol>
+<p>优化关键渲染路径的目标是让页面更快出现可见内容。</p>
+<h3 id="4-html-dom">4. HTML 解析与 DOM 树</h3>
+<p>浏览器下载 HTML 后，会边下载边解析。</p>
+<p>HTML 解析过程：</p>
+<pre><code class="language-text">字节流 -&gt; 字符 -&gt; Token -&gt; Node -&gt; DOM Tree
+</code></pre>
+<p>DOM 是 Document Object Model，表示页面结构。</p>
+<p>示例 HTML：</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Demo&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+    &lt;p&gt;Web rendering&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>对应 DOM 树大致是：</p>
+<pre><code class="language-text">Document
+  html
+    head
+      title
+    body
+      h1
+      p
+</code></pre>
+<p>DOM 树只描述文档结构，不包含最终样式和布局位置。</p>
+<h3 id="5-css-cssom">5. CSS 解析与 CSSOM 树</h3>
+<p>CSSOM 是 CSS Object Model，表示 CSS 规则解析后的结构。</p>
+<p>CSS 解析过程：</p>
+<pre><code class="language-text">CSS 文本 -&gt; Token -&gt; Rule -&gt; CSSOM Tree
+</code></pre>
+<p>示例 CSS：</p>
+<pre><code class="language-css">body {
+  font-size: 16px;
+}
+
+h1 {
+  color: red;
+}
+</code></pre>
+<p>CSSOM 会记录选择器、属性、继承关系和层叠结果。</p>
+<p>CSSOM 的特点：</p>
+<ul>
+<li>CSS 会阻塞渲染，因为浏览器必须知道样式才能正确绘制页面。</li>
+<li>CSS 不一定阻塞 DOM 解析，但会影响渲染树生成。</li>
+<li>外部 CSS 文件下载慢，会延迟首次渲染。</li>
+</ul>
+<h3 id="6-javascript">6. JavaScript 对解析的影响</h3>
+<p>普通 <code>&lt;script&gt;</code> 会阻塞 HTML 解析。</p>
+<p>原因：</p>
+<ul>
+<li>JavaScript 可能通过 <code>document.write()</code> 修改 HTML。</li>
+<li>JavaScript 可能读取或修改 DOM。</li>
+<li>JavaScript 可能读取样式计算结果。</li>
+</ul>
+<p>示例：</p>
+<pre><code class="language-html">&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>浏览器遇到普通脚本时通常会：</p>
+<ol>
+<li>暂停 HTML 解析。</li>
+<li>下载脚本。</li>
+<li>执行脚本。</li>
+<li>继续解析 HTML。</li>
+</ol>
+<p><code>defer</code> 和 <code>async</code> 可以减少阻塞。</p>
+<table>
+<thead>
+<tr>
+<th>写法</th>
+<th>下载行为</th>
+<th>执行时机</th>
+<th>是否保证顺序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通 script</td>
+<td>阻塞解析时下载</td>
+<td>下载后立即执行</td>
+<td>是</td>
+</tr>
+<tr>
+<td>defer</td>
+<td>不阻塞 HTML 解析</td>
+<td>DOM 解析完成后执行</td>
+<td>是</td>
+</tr>
+<tr>
+<td>async</td>
+<td>不阻塞 HTML 解析</td>
+<td>下载完成后立即执行</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p>使用建议：</p>
+<ul>
+<li>依赖 DOM 的脚本可以使用 <code>defer</code>。</li>
+<li>独立统计、广告脚本可以使用 <code>async</code>。</li>
+<li>关键交互脚本应控制体积，避免长时间占用主线程。</li>
+</ul>
+<h3 id="7-render-tree">7. 渲染树 Render Tree</h3>
+<p>浏览器会把 DOM 和 CSSOM 合成渲染树。</p>
+<p>渲染树只包含需要显示的节点。</p>
+<p>不会进入渲染树的节点：</p>
+<ul>
+<li><code>display: none</code> 的元素。</li>
+<li><code>head</code>、<code>script</code>、<code>meta</code> 等不直接显示的节点。</li>
+</ul>
+<p>会进入渲染树但可能不可见的节点：</p>
+<ul>
+<li><code>visibility: hidden</code> 的元素仍占据布局空间。</li>
+<li><code>opacity: 0</code> 的元素仍参与布局和绘制。</li>
+</ul>
+<p>对比：</p>
+<table>
+<thead>
+<tr>
+<th>样式</th>
+<th>是否占据空间</th>
+<th>是否渲染</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>display: none</code></td>
+<td>否</td>
+<td>否</td>
+</tr>
+<tr>
+<td><code>visibility: hidden</code></td>
+<td>是</td>
+<td>不可见</td>
+</tr>
+<tr>
+<td><code>opacity: 0</code></td>
+<td>是</td>
+<td>透明</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8-layout">8. 布局 Layout</h3>
+<p>布局也叫回流 Reflow。它负责计算每个可见元素的几何信息。</p>
+<p>布局阶段会计算：</p>
+<ul>
+<li>元素宽高。</li>
+<li>元素位置。</li>
+<li>行盒、块盒、弹性盒、网格布局等。</li>
+<li>父子元素之间的约束关系。</li>
+</ul>
+<p>可能触发布局的操作：</p>
+<ul>
+<li>修改元素尺寸：<code>width</code>、<code>height</code>。</li>
+<li>修改元素位置：<code>top</code>、<code>left</code>、<code>margin</code>。</li>
+<li>添加或删除 DOM 节点。</li>
+<li>修改字体大小。</li>
+<li>改变窗口大小。</li>
+<li>读取某些布局属性后又修改样式。</li>
+</ul>
+<p>常见会强制浏览器计算布局的属性：</p>
+<pre><code class="language-text">offsetWidth
+offsetHeight
+offsetTop
+offsetLeft
+clientWidth
+clientHeight
+scrollTop
+scrollHeight
+getBoundingClientRect()
+getComputedStyle()
+</code></pre>
+<p>如果在循环中反复读写这些属性，容易造成布局抖动。</p>
+<h3 id="9-paint">9. 绘制 Paint</h3>
+<p>绘制阶段会把渲染树中的节点转换为绘制指令。</p>
+<p>绘制内容包括：</p>
+<ul>
+<li>文本。</li>
+<li>颜色。</li>
+<li>边框。</li>
+<li>阴影。</li>
+<li>图片。</li>
+<li>背景。</li>
+</ul>
+<p>常见会触发重绘的操作：</p>
+<ul>
+<li>修改 <code>color</code>。</li>
+<li>修改 <code>background-color</code>。</li>
+<li>修改 <code>box-shadow</code>。</li>
+<li>修改 <code>visibility</code>。</li>
+</ul>
+<p>重绘不一定重新布局，但仍然有性能成本。</p>
+<h3 id="10-composite">10. 合成 Composite</h3>
+<p>浏览器可能会把页面拆分为多个图层。绘制完成后，合成线程把这些图层按正确顺序合成到屏幕上。</p>
+<p>可能创建独立合成层的情况：</p>
+<ul>
+<li>使用 <code>transform</code>。</li>
+<li>使用 <code>opacity</code> 动画。</li>
+<li>使用 <code>position: fixed</code>。</li>
+<li>使用 <code>will-change</code>。</li>
+<li>使用视频、Canvas、WebGL。</li>
+</ul>
+<p>合成的优势：</p>
+<ul>
+<li>某些动画可以只在合成层完成，不触发布局和绘制。</li>
+<li><code>transform</code> 和 <code>opacity</code> 通常比修改 <code>left</code>、<code>top</code> 更流畅。</li>
+</ul>
+<p>示例：</p>
+<pre><code class="language-css">/* 推荐用于动画 */
+.box {
+  transform: translateX(100px);
+}
+
+/* 容易触发布局 */
+.box {
+  left: 100px;
+}
+</code></pre>
+<p>注意：不要滥用 <code>will-change</code>，过多图层会增加内存占用和合成成本。</p>
+<h3 id="11">11. 回流、重绘、合成的区别</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>英文</th>
+<th>影响范围</th>
+<th>性能成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>回流</td>
+<td>Layout / Reflow</td>
+<td>重新计算布局</td>
+<td>最大</td>
+</tr>
+<tr>
+<td>重绘</td>
+<td>Paint / Repaint</td>
+<td>重新绘制像素</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>合成</td>
+<td>Composite</td>
+<td>合成已有图层</td>
+<td>较小</td>
+</tr>
+</tbody>
+</table>
+<p>性能成本大致：</p>
+<pre><code class="language-text">回流 &gt; 重绘 &gt; 合成
+</code></pre>
+<p>例子：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>可能触发</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>改 <code>width</code></td>
+<td>回流 + 重绘 + 合成</td>
+</tr>
+<tr>
+<td>改 <code>color</code></td>
+<td>重绘 + 合成</td>
+</tr>
+<tr>
+<td>改 <code>transform</code></td>
+<td>合成</td>
+</tr>
+<tr>
+<td>改 <code>opacity</code></td>
+<td>合成</td>
+</tr>
+<tr>
+<td>添加 DOM 节点</td>
+<td>回流 + 重绘 + 合成</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12">12. 浏览器主线程与事件循环</h3>
+<p>渲染进程中有一个重要的主线程，负责大量页面工作。</p>
+<p>主线程通常负责：</p>
+<ul>
+<li>执行 JavaScript。</li>
+<li>解析 HTML。</li>
+<li>样式计算。</li>
+<li>布局。</li>
+<li>绘制准备。</li>
+<li>处理用户输入事件。</li>
+</ul>
+<p>如果 JavaScript 长时间占用主线程，页面就可能卡顿，用户点击、滚动也会变慢。</p>
+<p>事件循环大致流程：</p>
+<pre><code class="language-text">执行一个宏任务
+  -&gt; 清空微任务队列
+  -&gt; 必要时执行渲染
+  -&gt; 执行下一个宏任务
+</code></pre>
+<p>常见宏任务：</p>
+<ul>
+<li><code>setTimeout</code></li>
+<li><code>setInterval</code></li>
+<li>用户交互事件</li>
+<li>网络回调</li>
+<li>整体脚本执行</li>
+</ul>
+<p>常见微任务：</p>
+<ul>
+<li><code>Promise.then</code></li>
+<li><code>queueMicrotask</code></li>
+<li><code>MutationObserver</code></li>
+</ul>
+<p>示例：</p>
+<pre><code class="language-js">console.log('start');
+
+setTimeout(() =&gt; {
+  console.log('timeout');
+});
+
+Promise.resolve().then(() =&gt; {
+  console.log('promise');
+});
+
+console.log('end');
+</code></pre>
+<p>输出顺序：</p>
+<pre><code class="language-text">start
+end
+promise
+timeout
+</code></pre>
+<h3 id="13">13. 一帧是如何渲染的</h3>
+<p>大多数屏幕刷新率是 60Hz，也就是每秒刷新 60 次。</p>
+<p>每帧时间约为：</p>
+<pre><code class="language-text">1000ms / 60 ≈ 16.7ms
+</code></pre>
+<p>一帧中可能包含：</p>
+<ol>
+<li>处理输入事件。</li>
+<li>执行 JavaScript。</li>
+<li>执行 <code>requestAnimationFrame</code> 回调。</li>
+<li>样式计算。</li>
+<li>布局。</li>
+<li>绘制。</li>
+<li>合成。</li>
+<li>显示到屏幕。</li>
+</ol>
+<p>如果一帧内工作超过 16.7ms，就可能掉帧，用户会感觉卡顿。</p>
+<p><code>requestAnimationFrame</code> 适合做动画，因为它会在浏览器下一次绘制前执行。</p>
+<pre><code class="language-js">function move() {
+  element.style.transform = 'translateX(100px)';
+  requestAnimationFrame(move);
+}
+
+requestAnimationFrame(move);
+</code></pre>
+<h3 id="14">14. 资源加载对渲染的影响</h3>
+<p>不同资源对渲染的影响不同。</p>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>对渲染的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML</td>
+<td>渲染入口，必须先解析</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>阻塞渲染，影响 CSSOM 和渲染树</td>
+</tr>
+<tr>
+<td>普通 JS</td>
+<td>阻塞 HTML 解析</td>
+</tr>
+<tr>
+<td>defer JS</td>
+<td>不阻塞 HTML 解析，DOM 完成后执行</td>
+</tr>
+<tr>
+<td>async JS</td>
+<td>不阻塞 HTML 解析，下载完立即执行</td>
+</tr>
+<tr>
+<td>图片</td>
+<td>通常不阻塞 DOM 解析，但会影响布局和 LCP</td>
+</tr>
+<tr>
+<td>字体</td>
+<td>可能导致文字不可见或字体切换</td>
+</tr>
+</tbody>
+</table>
+<p>常见资源优化手段：</p>
+<pre><code class="language-html">&lt;link rel=&quot;preload&quot; href=&quot;/style.css&quot; as=&quot;style&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://cdn.example.com&quot;&gt;
+&lt;script src=&quot;/main.js&quot; defer&gt;&lt;/script&gt;
+&lt;img src=&quot;/hero.jpg&quot; loading=&quot;lazy&quot; alt=&quot;&quot;&gt;
+</code></pre>
+<p>说明：</p>
+<ul>
+<li><code>preload</code>：提前加载当前页面马上要用的关键资源。</li>
+<li><code>preconnect</code>：提前建立到第三方源的连接。</li>
+<li><code>defer</code>：延后执行脚本，减少解析阻塞。</li>
+<li><code>loading="lazy"</code>：图片懒加载，减少首屏资源压力。</li>
+</ul>
+<h3 id="15">15. 前端性能指标</h3>
+<p>常见页面性能指标：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FP</td>
+<td>First Paint，首次绘制</td>
+</tr>
+<tr>
+<td>FCP</td>
+<td>First Contentful Paint，首次内容绘制</td>
+</tr>
+<tr>
+<td>LCP</td>
+<td>Largest Contentful Paint，最大内容绘制</td>
+</tr>
+<tr>
+<td>CLS</td>
+<td>Cumulative Layout Shift，累计布局偏移</td>
+</tr>
+<tr>
+<td>TTFB</td>
+<td>Time To First Byte，首字节时间</td>
+</tr>
+<tr>
+<td>TTI</td>
+<td>Time To Interactive，可交互时间</td>
+</tr>
+<tr>
+<td>INP</td>
+<td>Interaction to Next Paint，交互到下一次绘制的延迟</td>
+</tr>
+</tbody>
+</table>
+<p>重点理解：</p>
+<ul>
+<li>FCP 关注页面何时开始出现内容。</li>
+<li>LCP 关注首屏主要内容何时完成显示。</li>
+<li>CLS 关注页面是否发生意外布局跳动。</li>
+<li>INP 关注用户交互后页面响应是否及时。</li>
+<li>TTFB 反映网络和服务端响应速度。</li>
+</ul>
+<h3 id="16">16. 常见优化思路</h3>
+<p>减少网络耗时：</p>
+<ul>
+<li>开启 HTTP 缓存。</li>
+<li>使用 CDN。</li>
+<li>压缩 HTML、CSS、JavaScript。</li>
+<li>使用 HTTP/2 或 HTTP/3。</li>
+<li>减少不必要请求。</li>
+</ul>
+<p>减少渲染阻塞：</p>
+<ul>
+<li>关键 CSS 内联或优先加载。</li>
+<li>非关键 CSS 延迟加载。</li>
+<li>JavaScript 使用 <code>defer</code> 或按需加载。</li>
+<li>减少首屏依赖的大体积资源。</li>
+</ul>
+<p>减少回流和重绘：</p>
+<ul>
+<li>批量修改 DOM。</li>
+<li>避免循环中交替读取布局属性和修改样式。</li>
+<li>动画优先使用 <code>transform</code> 和 <code>opacity</code>。</li>
+<li>避免频繁修改影响布局的 CSS 属性。</li>
+</ul>
+<p>优化图片和字体：</p>
+<ul>
+<li>使用合适尺寸的图片。</li>
+<li>使用 WebP、AVIF 等高压缩格式。</li>
+<li>给图片设置 <code>width</code> 和 <code>height</code>，减少布局偏移。</li>
+<li>字体按需加载，避免加载过多字重。</li>
+</ul>
+<p>优化 JavaScript：</p>
+<ul>
+<li>拆分长任务。</li>
+<li>减少主线程阻塞。</li>
+<li>使用 Web Worker 处理复杂计算。</li>
+<li>对滚动、输入等高频事件使用节流或防抖。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Ming-0702" target="_blank" rel="noopener" title="github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tracking", "navigation.tabs", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
