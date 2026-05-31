@@ -1,0 +1,1713 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ming-0702.github.io/notes/%E5%90%8E%E7%AB%AF%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93.html">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="/notes/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>后端与数据库 - AMingg的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="AMingg的笔记本" class="md-header__button md-logo" aria-label="AMingg的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M22.7 33.4c13.5-4.1 28.1 1.1 35.9 12.9l165.4 248 165.4-248c7.8-11.7 22.4-17 35.9-12.9S448 49.9 448 64v384c0 17.7-14.3 32-32 32s-32-14.3-32-32V169.7L250.6 369.8c-5.9 8.9-15.9 14.2-26.6 14.2s-20.7-5.3-26.6-14.2L64 169.7V448c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-14.1 9.2-26.5 22.7-30.6"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AMingg的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              后端与数据库
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="deep-purple"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark Mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="defalut" data-md-color-primary="light-green" data-md-color-accent="deep-orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/notes/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ming-0702/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ming-0702/notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  主页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="vibecoding.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="AMingg的笔记本" class="md-nav__button md-logo" aria-label="AMingg的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M22.7 33.4c13.5-4.1 28.1 1.1 35.9 12.9l165.4 248 165.4-248c7.8-11.7 22.4-17 35.9-12.9S448 49.9 448 64v384c0 17.7-14.3 32-32 32s-32-14.3-32-32V169.7L250.6 369.8c-5.9 8.9-15.9 14.2-26.6 14.2s-20.7-5.3-26.6-14.2L64 169.7V448c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-14.1 9.2-26.5 22.7-30.6"/></svg>
+
+    </a>
+    AMingg的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ming-0702/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ming-0702/notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    主页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="say.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vibecoding.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Web.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%BD%91%E9%A1%B5%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网页渲染原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%89%8D%E7%AB%AF.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、后端开发基础
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、后端开发基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 后端的职责
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. API 的制定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 参数校验
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 测试方法论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 文件处理与云存储
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-golang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Golang 后端开发
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、数据库基础
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、数据库基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 数据库的作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 关系型数据库核心概念
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 表结构设计
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. SQL 基础
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 索引
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 事务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 慢查询优化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gorm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、GORM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、GORM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gorm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. GORM 的作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-gorm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 使用 GORM 的注意点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、登录与鉴权
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、登录与鉴权">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 登录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 鉴权
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 常见安全风险
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、缓存
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、缓存">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 缓存的作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Redis 常见用途
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 缓存常见问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 缓存一致性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#es" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、搜索引擎与 ES
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、搜索引擎与 ES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 搜索引擎的作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Elasticsearch 核心概念
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 数据同步
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        七、向量数据库
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="七、向量数据库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 向量数据库的作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 核心概念
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 后端接入流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        八、实时通信技术
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="八、实时通信技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 常见方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 后端关注点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stripe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        九、支付后端：Stripe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十、后端学习重点总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>后端与数据库</h1>
+
+<h2 id="_1">一、后端开发基础</h2>
+<h3 id="1">1. 后端的职责</h3>
+<p>后端主要负责处理业务逻辑、管理数据、提供接口，并保证系统安全、稳定和可维护。</p>
+<p>常见职责包括：</p>
+<ul>
+<li>接收前端或其他服务的请求</li>
+<li>校验请求参数</li>
+<li>执行业务逻辑</li>
+<li>读写数据库</li>
+<li>调用第三方服务</li>
+<li>处理登录、鉴权和权限控制</li>
+<li>返回统一格式的响应</li>
+<li>记录日志和处理异常</li>
+</ul>
+<h3 id="2-api">2. API 的制定</h3>
+<p>API 是前端、后端和其他系统之间的通信约定。设计 API 时要保证清晰、稳定、易扩展。</p>
+<p>常见设计要点：</p>
+<ul>
+<li>使用清晰的资源路径，例如 <code>/users</code>、<code>/orders</code></li>
+<li>使用 HTTP 方法表达操作语义</li>
+<li>使用统一的响应格式</li>
+<li>使用统一的错误码</li>
+<li>支持分页、排序和筛选</li>
+<li>注意接口幂等性</li>
+<li>保持接口版本兼容</li>
+</ul>
+<p>常见 HTTP 方法：</p>
+<ul>
+<li><code>GET</code>：查询资源</li>
+<li><code>POST</code>：创建资源</li>
+<li><code>PUT</code>：整体更新资源</li>
+<li><code>PATCH</code>：局部更新资源</li>
+<li><code>DELETE</code>：删除资源</li>
+</ul>
+<p>统一响应示例：</p>
+<pre><code class="language-json">{
+  &quot;code&quot;: 0,
+  &quot;message&quot;: &quot;success&quot;,
+  &quot;data&quot;: {}
+}
+</code></pre>
+<h3 id="3">3. 参数校验</h3>
+<p>后端必须进行参数校验，不能只依赖前端校验。</p>
+<p>常见校验内容：</p>
+<ul>
+<li>必填字段是否为空</li>
+<li>字符串长度是否合法</li>
+<li>数字范围是否合法</li>
+<li>邮箱、手机号、URL 等格式是否合法</li>
+<li>枚举值是否合法</li>
+<li>当前用户是否有权限操作该资源</li>
+</ul>
+<p>参数校验可以避免脏数据进入系统，也可以降低安全风险。</p>
+<h3 id="4">4. 测试方法论</h3>
+<p>后端测试用于保证业务逻辑正确、接口稳定、系统改动不会引入明显回归。</p>
+<p>常见测试类型：</p>
+<ul>
+<li>单元测试：测试函数、方法或小模块</li>
+<li>集成测试：测试数据库、缓存、第三方接口等组件协作</li>
+<li>接口测试：测试 API 入参、返回值和状态码</li>
+<li>回归测试：验证新修改没有破坏旧功能</li>
+</ul>
+<p>测试重点：</p>
+<ul>
+<li>核心业务流程</li>
+<li>复杂条件分支</li>
+<li>权限判断</li>
+<li>数据库读写逻辑</li>
+<li>异常场景</li>
+</ul>
+<h3 id="5">5. 文件处理与云存储</h3>
+<p>文件处理是后端常见功能，例如头像上传、附件上传、导入导出文件。</p>
+<p>常见设计方式：</p>
+<ul>
+<li>小文件可以直接通过后端上传</li>
+<li>大文件适合分片上传</li>
+<li>文件本体通常放对象存储</li>
+<li>数据库只保存文件元信息</li>
+<li>下载可以使用签名 URL 控制访问权限</li>
+</ul>
+<p>文件元信息通常包括：</p>
+<ul>
+<li>文件名</li>
+<li>文件大小</li>
+<li>文件类型</li>
+<li>存储地址</li>
+<li>上传用户</li>
+<li>上传时间</li>
+</ul>
+<h3 id="6-golang">6. Golang 后端开发</h3>
+<p>Go 常用于开发后端服务，特点是语法简洁、并发能力强、部署方便。</p>
+<p>后端开发中需要重点掌握：</p>
+<ul>
+<li><code>goroutine</code>：轻量级并发执行单元</li>
+<li><code>channel</code>：协程之间通信</li>
+<li><code>context</code>：控制超时、取消和请求链路</li>
+<li><code>interface</code>：抽象能力</li>
+<li><code>error</code>：显式错误处理</li>
+<li><code>net/http</code>：HTTP 服务基础库</li>
+</ul>
+<p>Go 后端项目常见分层：</p>
+<ul>
+<li>handler/controller：处理 HTTP 请求</li>
+<li>service：处理业务逻辑</li>
+<li>repository/dao：处理数据库访问</li>
+<li>model/entity：定义数据结构</li>
+<li>middleware：处理中间件逻辑，例如鉴权、日志、跨域</li>
+</ul>
+<h2 id="_2">二、数据库基础</h2>
+<h3 id="1_1">1. 数据库的作用</h3>
+<p>数据库用于持久化保存业务数据，并提供可靠的数据查询、更新和事务能力。</p>
+<p>常见数据库类型：</p>
+<ul>
+<li>关系型数据库：MySQL、PostgreSQL</li>
+<li>缓存数据库：Redis</li>
+<li>文档数据库：MongoDB</li>
+<li>搜索引擎：Elasticsearch</li>
+<li>向量数据库：Milvus、Qdrant、Pinecone</li>
+</ul>
+<h3 id="2">2. 关系型数据库核心概念</h3>
+<ul>
+<li>表：保存某类业务数据</li>
+<li>行：一条具体记录</li>
+<li>列：数据字段</li>
+<li>主键：唯一标识一条记录</li>
+<li>外键：建立表之间的关联</li>
+<li>索引：提升查询效率</li>
+<li>事务：保证一组操作要么全部成功，要么全部失败</li>
+</ul>
+<h3 id="3_1">3. 表结构设计</h3>
+<p>表结构设计要围绕业务实体展开。</p>
+<p>设计时要关注：</p>
+<ul>
+<li>字段是否完整</li>
+<li>字段类型是否合适</li>
+<li>主键是否稳定</li>
+<li>是否需要唯一约束</li>
+<li>是否需要外键或逻辑关联</li>
+<li>是否需要创建索引</li>
+<li>是否存在冗余字段</li>
+</ul>
+<p>用户表示例：</p>
+<pre><code class="language-sql">CREATE TABLE users (
+  id BIGINT PRIMARY KEY,
+  username VARCHAR(64) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  email VARCHAR(128),
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL
+);
+</code></pre>
+<h3 id="4-sql">4. SQL 基础</h3>
+<p>常见 SQL 操作包括增删改查。</p>
+<pre><code class="language-sql">INSERT INTO users (id, username) VALUES (1, 'alice');
+
+SELECT id, username FROM users WHERE id = 1;
+
+UPDATE users SET username = 'bob' WHERE id = 1;
+
+DELETE FROM users WHERE id = 1;
+</code></pre>
+<p>常见查询能力：</p>
+<ul>
+<li><code>WHERE</code>：条件过滤</li>
+<li><code>ORDER BY</code>：排序</li>
+<li><code>LIMIT</code>：限制返回数量</li>
+<li><code>GROUP BY</code>：分组统计</li>
+<li><code>JOIN</code>：多表关联</li>
+</ul>
+<h3 id="5_1">5. 索引</h3>
+<p>索引用于提升查询速度，本质上是数据库为字段建立的高效查找结构。</p>
+<p>适合建索引的字段：</p>
+<ul>
+<li>经常出现在 <code>WHERE</code> 条件中</li>
+<li>经常用于排序</li>
+<li>经常用于关联查询</li>
+<li>区分度较高的字段</li>
+</ul>
+<p>不适合滥用索引的原因：</p>
+<ul>
+<li>索引会占用存储空间</li>
+<li>写入、更新、删除时需要维护索引</li>
+<li>索引过多会增加数据库负担</li>
+</ul>
+<p>常见索引类型：</p>
+<ul>
+<li>普通索引</li>
+<li>唯一索引</li>
+<li>联合索引</li>
+<li>全文索引</li>
+</ul>
+<h3 id="6">6. 事务</h3>
+<p>事务用于保证一组数据库操作的一致性。</p>
+<p>事务的 ACID 特性：</p>
+<ul>
+<li>原子性：事务中的操作要么全部成功，要么全部失败</li>
+<li>一致性：事务前后数据要保持合法状态</li>
+<li>隔离性：并发事务之间不能互相破坏</li>
+<li>持久性：事务提交后数据要永久保存</li>
+</ul>
+<p>常见并发问题：</p>
+<ul>
+<li>脏读</li>
+<li>不可重复读</li>
+<li>幻读</li>
+</ul>
+<p>常见隔离级别：</p>
+<ul>
+<li>读未提交</li>
+<li>读已提交</li>
+<li>可重复读</li>
+<li>串行化</li>
+</ul>
+<h3 id="7">7. 慢查询优化</h3>
+<p>数据库性能优化常见思路：</p>
+<ul>
+<li>避免 <code>SELECT *</code></li>
+<li>给高频查询字段建立索引</li>
+<li>避免在索引字段上使用函数计算</li>
+<li>减少深分页</li>
+<li>使用合理的字段类型</li>
+<li>拆分复杂 SQL</li>
+<li>通过执行计划分析查询过程</li>
+</ul>
+<h2 id="gorm">三、GORM</h2>
+<p>GORM 是 Go 语言常用的 ORM 框架，用于把数据库表映射为 Go 结构体。</p>
+<h3 id="1-gorm">1. GORM 的作用</h3>
+<ul>
+<li>简化 CRUD 操作</li>
+<li>管理模型和表之间的映射</li>
+<li>支持事务</li>
+<li>支持关联查询</li>
+<li>支持自动迁移</li>
+<li>支持钩子方法</li>
+</ul>
+<p>模型示例：</p>
+<pre><code class="language-go">type User struct {
+    ID           uint
+    Username     string
+    PasswordHash string
+    Email        string
+}
+</code></pre>
+<p>常见查询示例：</p>
+<pre><code class="language-go">var user User
+db.Where(&quot;username = ?&quot;, &quot;alice&quot;).First(&amp;user)
+</code></pre>
+<h3 id="2-gorm">2. 使用 GORM 的注意点</h3>
+<ul>
+<li>不要因为使用 ORM 就忽略 SQL 性能</li>
+<li>复杂查询需要关注生成的 SQL</li>
+<li>批量操作要避免逐条循环写入</li>
+<li>事务要明确提交和回滚</li>
+<li>关联查询要避免 N+1 查询问题</li>
+</ul>
+<h2 id="_3">四、登录与鉴权</h2>
+<h3 id="1_2">1. 登录</h3>
+<p>登录用于确认用户身份。常见流程：</p>
+<ol>
+<li>用户提交账号和密码</li>
+<li>后端校验账号是否存在</li>
+<li>后端比较密码哈希</li>
+<li>校验成功后生成登录态</li>
+<li>前端保存 Cookie 或 Token</li>
+<li>后续请求携带登录凭证</li>
+</ol>
+<p>密码不能明文保存，应该使用安全哈希算法并加盐。</p>
+<h3 id="2_1">2. 鉴权</h3>
+<p>鉴权用于判断当前用户是否有权限访问某个资源或执行某个操作。</p>
+<p>常见模型：</p>
+<ul>
+<li>RBAC：基于角色的权限控制</li>
+<li>ACL：基于资源的访问控制列表</li>
+</ul>
+<p>常见鉴权方式：</p>
+<ul>
+<li>Session + Cookie</li>
+<li>JWT</li>
+<li>Access Token</li>
+</ul>
+<h3 id="3_2">3. 常见安全风险</h3>
+<ul>
+<li>SQL 注入</li>
+<li>越权访问</li>
+<li>Token 泄露</li>
+<li>密码明文存储</li>
+<li>暴力破解</li>
+<li>重放攻击</li>
+</ul>
+<p>防护方式：</p>
+<ul>
+<li>使用参数化查询</li>
+<li>后端统一鉴权</li>
+<li>密码加盐哈希</li>
+<li>登录失败次数限制</li>
+<li>Token 设置过期时间</li>
+<li>敏感接口二次校验</li>
+</ul>
+<h2 id="_4">五、缓存</h2>
+<h3 id="1_3">1. 缓存的作用</h3>
+<p>缓存用于提高访问速度，减少数据库压力。</p>
+<p>常见缓存场景：</p>
+<ul>
+<li>热点数据</li>
+<li>用户会话</li>
+<li>配置信息</li>
+<li>排行榜</li>
+<li>短时间内频繁读取的数据</li>
+</ul>
+<h3 id="2-redis">2. Redis 常见用途</h3>
+<ul>
+<li>缓存查询结果</li>
+<li>保存登录态</li>
+<li>分布式锁</li>
+<li>计数器</li>
+<li>限流</li>
+<li>排行榜</li>
+<li>消息队列的简单替代方案</li>
+</ul>
+<h3 id="3_3">3. 缓存常见问题</h3>
+<p>缓存穿透：</p>
+<ul>
+<li>查询不存在的数据，请求持续打到数据库</li>
+<li>解决方式：空值缓存、布隆过滤器</li>
+</ul>
+<p>缓存击穿：</p>
+<ul>
+<li>热点 Key 失效，大量请求同时访问数据库</li>
+<li>解决方式：互斥锁、热点数据永不过期、提前刷新</li>
+</ul>
+<p>缓存雪崩：</p>
+<ul>
+<li>大量 Key 同时失效，数据库压力骤增</li>
+<li>解决方式：过期时间加随机值、多级缓存、限流降级</li>
+</ul>
+<h3 id="4_1">4. 缓存一致性</h3>
+<p>缓存和数据库同时存在时，要考虑数据一致性。</p>
+<p>常见策略：</p>
+<ul>
+<li>先更新数据库，再删除缓存</li>
+<li>设置合理过期时间</li>
+<li>对关键业务使用消息队列同步变更</li>
+<li>对强一致场景减少缓存依赖</li>
+</ul>
+<h2 id="es">六、搜索引擎与 ES</h2>
+<h3 id="1_4">1. 搜索引擎的作用</h3>
+<p>搜索引擎适合处理全文搜索、复杂筛选和聚合分析。</p>
+<p>适用场景：</p>
+<ul>
+<li>商品搜索</li>
+<li>文章搜索</li>
+<li>日志检索</li>
+<li>用户行为分析</li>
+<li>多条件筛选</li>
+</ul>
+<h3 id="2-elasticsearch">2. Elasticsearch 核心概念</h3>
+<ul>
+<li>Index：索引，类似数据库中的表</li>
+<li>Document：文档，类似一条记录</li>
+<li>Field：字段</li>
+<li>Mapping：字段结构定义</li>
+<li>Inverted Index：倒排索引</li>
+<li>Analyzer：分词器</li>
+</ul>
+<h3 id="3_4">3. 数据同步</h3>
+<p>实际系统中，数据库通常是主数据源，ES 是搜索副本。</p>
+<p>常见同步方式：</p>
+<ul>
+<li>业务代码写数据库后同步写 ES</li>
+<li>使用消息队列异步同步</li>
+<li>监听数据库 binlog 同步</li>
+</ul>
+<p>需要关注：</p>
+<ul>
+<li>数据延迟</li>
+<li>同步失败重试</li>
+<li>数据一致性</li>
+<li>删除和更新的处理</li>
+</ul>
+<h2 id="_5">七、向量数据库</h2>
+<h3 id="1_5">1. 向量数据库的作用</h3>
+<p>向量数据库用于存储向量并进行相似度检索。</p>
+<p>常见场景：</p>
+<ul>
+<li>语义搜索</li>
+<li>推荐系统</li>
+<li>图片相似搜索</li>
+<li>RAG 知识库检索</li>
+</ul>
+<h3 id="2_2">2. 核心概念</h3>
+<ul>
+<li>Embedding：把文本、图片等内容转换成向量</li>
+<li>相似度：衡量两个向量的接近程度</li>
+<li>TopK：返回最相似的前 K 条结果</li>
+<li>ANN：近似最近邻搜索，用于提升检索性能</li>
+</ul>
+<h3 id="3_5">3. 后端接入流程</h3>
+<ol>
+<li>原始数据入库</li>
+<li>调用模型生成 embedding</li>
+<li>将向量和元数据写入向量数据库</li>
+<li>用户查询时生成查询向量</li>
+<li>在向量数据库中检索相似内容</li>
+<li>返回结果或进入后续业务流程</li>
+</ol>
+<h2 id="_6">八、实时通信技术</h2>
+<h3 id="1_6">1. 常见方式</h3>
+<ul>
+<li>WebSocket：适合双向实时通信</li>
+<li>SSE：适合服务端持续向客户端推送</li>
+<li>长轮询：兼容性较好，但效率较低</li>
+</ul>
+<h3 id="2_3">2. 适用场景</h3>
+<ul>
+<li>聊天系统</li>
+<li>实时通知</li>
+<li>协同编辑</li>
+<li>订单状态推送</li>
+<li>在线状态同步</li>
+</ul>
+<h3 id="3_6">3. 后端关注点</h3>
+<ul>
+<li>连接管理</li>
+<li>用户身份校验</li>
+<li>消息路由</li>
+<li>断线重连</li>
+<li>心跳检测</li>
+<li>消息可靠性</li>
+</ul>
+<h2 id="stripe">九、支付后端：Stripe</h2>
+<p>Stripe 属于后端常见的第三方支付集成能力。</p>
+<p>后端接入重点：</p>
+<ul>
+<li>创建支付会话</li>
+<li>接收 Webhook 回调</li>
+<li>校验回调签名</li>
+<li>处理支付成功、失败、退款等状态</li>
+<li>保证订单状态幂等更新</li>
+<li>做好对账和异常补偿</li>
+</ul>
+<p>支付系统必须重视幂等性。相同支付事件可能被重复通知，后端不能重复发货或重复入账。</p>
+<h2 id="_7">十、后端学习重点总结</h2>
+<p>后端部分重点：</p>
+<ul>
+<li>API 设计</li>
+<li>参数校验</li>
+<li>测试</li>
+<li>登录与鉴权</li>
+<li>文件处理</li>
+<li>第三方服务接入</li>
+<li>实时通信</li>
+</ul>
+<p>数据库部分重点：</p>
+<ul>
+<li>表结构设计</li>
+<li>SQL 查询</li>
+<li>索引</li>
+<li>事务</li>
+<li>慢查询优化</li>
+<li>ORM 使用</li>
+<li>缓存设计</li>
+<li>ES 检索</li>
+<li>向量数据库检索</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Ming-0702" target="_blank" rel="noopener" title="github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tracking", "navigation.tabs", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
