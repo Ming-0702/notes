@@ -11,6 +11,8 @@
         <link rel="canonical" href="https://ming-0702.github.io/notes/%E5%9F%9F%E5%90%8D%E5%92%8C%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.html">
       
       
+        <link rel="prev" href="CICD.html">
+      
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>域名和域名解析学习笔记 - AMingg的笔记本</title>
+        <title>域名解析 - AMingg的笔记本</title>
       
     
     
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              域名和域名解析学习笔记
+              域名解析
             
           </span>
         </div>
@@ -278,10 +280,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="vibecoding.html" class="md-tabs__link">
           
   
@@ -449,8 +453,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -474,19 +480,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -504,7 +513,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -715,10 +724,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="域名与域名解析.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    域名解析
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="%E5%9F%9F%E5%90%8D%E5%92%8C%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -734,6 +770,923 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、域名是什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、域名层级结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、域名层级结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 根域
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 顶级域 TLD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 二级域
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 子域名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-fqdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. FQDN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、域名注册相关概念
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、域名注册相关概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 注册局 Registry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-registrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 注册商 Registrar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-registrant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 注册人 Registrant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-whois" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. WHOIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 域名状态
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、DNS 是什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、DNS 中的重要角色
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、DNS 中的重要角色">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-resolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Resolver 解析器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-recursive-resolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Recursive Resolver 递归解析器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-root-dns-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Root DNS 根 DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tld-dns-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. TLD DNS 顶级域 DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-authoritative-dns-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Authoritative DNS 权威 DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、域名解析过程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        七、递归查询和迭代查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="七、递归查询和迭代查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 递归查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 迭代查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        八、DNS 记录类型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="八、DNS 记录类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 常见记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. A 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-aaaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. AAAA 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. CNAME 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. MX 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-txt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. TXT 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. NS 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-soa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. SOA 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-caa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. CAA 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-ptr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. PTR 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        九、主机记录、记录值和线路
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="九、主机记录、记录值和线路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 主机记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 记录值
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 解析线路
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ttl-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十、TTL 和 DNS 缓存
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十、TTL 和 DNS 缓存">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ttl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. TTL 的影响
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 修改解析为什么不是立刻生效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 切换服务器前的做法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十一、常见域名配置场景
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十一、常见域名配置场景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 域名指向网站服务器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-www" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. www 指向根域名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 子域名指向不同服务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 使用 CDN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 配置邮箱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 第三方平台域名验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 域名跳转
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十二、域名和 HTTPS 证书
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十二、域名和 HTTPS 证书">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 常见证书类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. DNS 验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十三、常用排查命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十三、常用排查命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-linux-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Linux / macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 查看本机连接
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十四、常见问题排查
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十四、常见问题排查">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 域名解析不到
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 解析到了旧 IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ping-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 能 ping IP，但不能访问域名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 域名能解析，但网站打不开
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-cname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. CNAME 配置后不生效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 邮件收不到或进入垃圾箱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. HTTPS 证书申请失败
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十五、DNS 安全
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十五、DNS 安全">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. DNS 劫持
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dnssec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. DNSSEC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-caa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. CAA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 域名账号安全
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 子域名接管
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十六、域名接入网站的完整步骤
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十七、学习重点
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十八、常用检查清单
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
