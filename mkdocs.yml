@@ -74,3 +74,6 @@ nav:
     - 网页渲染原理: 网页渲染原理.md
     - 前端: 前端.md
     - 后端: 后端与数据库.md
+    - docker: docker.md
+    - CI/CD: CICD.md
+    - 域名解析: 域名与域名解析.md
