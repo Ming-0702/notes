@@ -76,4 +76,4 @@ nav:
     - 后端: 后端与数据库.md
     - docker: docker.md
     - CI/CD: CICD.md
-    - 域名解析: 域名与域名解析.md
+    - 域名解析: 域名和域名解析.md
