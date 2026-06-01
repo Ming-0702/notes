@@ -1,0 +1,2650 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ming-0702.github.io/notes/%E5%9F%9F%E5%90%8D%E5%92%8C%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90.html">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="/notes/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>域名和域名解析学习笔记 - AMingg的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="AMingg的笔记本" class="md-header__button md-logo" aria-label="AMingg的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M22.7 33.4c13.5-4.1 28.1 1.1 35.9 12.9l165.4 248 165.4-248c7.8-11.7 22.4-17 35.9-12.9S448 49.9 448 64v384c0 17.7-14.3 32-32 32s-32-14.3-32-32V169.7L250.6 369.8c-5.9 8.9-15.9 14.2-26.6 14.2s-20.7-5.3-26.6-14.2L64 169.7V448c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-14.1 9.2-26.5 22.7-30.6"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AMingg的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              域名和域名解析学习笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="deep-purple"  aria-label="Dark Mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark Mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="defalut" data-md-color-primary="light-green" data-md-color-accent="deep-orange"  aria-label="Light Mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Light Mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/notes/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ming-0702/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ming-0702/notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  主页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="vibecoding.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="AMingg的笔记本" class="md-nav__button md-logo" aria-label="AMingg的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M22.7 33.4c13.5-4.1 28.1 1.1 35.9 12.9l165.4 248 165.4-248c7.8-11.7 22.4-17 35.9-12.9S448 49.9 448 64v384c0 17.7-14.3 32-32 32s-32-14.3-32-32V169.7L250.6 369.8c-5.9 8.9-15.9 14.2-26.6 14.2s-20.7-5.3-26.6-14.2L64 169.7V448c0 17.7-14.3 32-32 32S0 465.7 0 448V64c0-14.1 9.2-26.5 22.7-30.6"/></svg>
+
+    </a>
+    AMingg的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ming-0702/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ming-0702/notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    主页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="say.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vibecoding.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Web.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%BD%91%E9%A1%B5%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网页渲染原理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%89%8D%E7%AB%AF.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%90%8E%E7%AB%AF%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后端
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docker.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CICD.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI/CD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="域名与域名解析.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    域名解析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、域名是什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、域名层级结构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、域名层级结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 根域
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 顶级域 TLD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 二级域
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 子域名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-fqdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. FQDN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、域名注册相关概念
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、域名注册相关概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 注册局 Registry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-registrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 注册商 Registrar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-registrant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 注册人 Registrant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-whois" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. WHOIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 域名状态
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、DNS 是什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、DNS 中的重要角色
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、DNS 中的重要角色">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-resolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Resolver 解析器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-recursive-resolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Recursive Resolver 递归解析器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-root-dns-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Root DNS 根 DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tld-dns-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. TLD DNS 顶级域 DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-authoritative-dns-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Authoritative DNS 权威 DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、域名解析过程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        七、递归查询和迭代查询
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="七、递归查询和迭代查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 递归查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 迭代查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        八、DNS 记录类型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="八、DNS 记录类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 常见记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. A 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-aaaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. AAAA 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. CNAME 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. MX 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-txt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. TXT 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. NS 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-soa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. SOA 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-caa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. CAA 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-ptr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. PTR 记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        九、主机记录、记录值和线路
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="九、主机记录、记录值和线路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 主机记录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 记录值
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 解析线路
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ttl-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十、TTL 和 DNS 缓存
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十、TTL 和 DNS 缓存">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ttl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. TTL 的影响
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 修改解析为什么不是立刻生效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 切换服务器前的做法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十一、常见域名配置场景
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十一、常见域名配置场景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 域名指向网站服务器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-www" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. www 指向根域名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 子域名指向不同服务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 使用 CDN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 配置邮箱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 第三方平台域名验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 域名跳转
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十二、域名和 HTTPS 证书
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十二、域名和 HTTPS 证书">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 常见证书类型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. DNS 验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十三、常用排查命令
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十三、常用排查命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-linux-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Linux / macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 查看本机连接
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十四、常见问题排查
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十四、常见问题排查">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 域名解析不到
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 解析到了旧 IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ping-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 能 ping IP，但不能访问域名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 域名能解析，但网站打不开
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-cname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. CNAME 配置后不生效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 邮件收不到或进入垃圾箱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. HTTPS 证书申请失败
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十五、DNS 安全
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十五、DNS 安全">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. DNS 劫持
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dnssec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. DNSSEC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-caa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. CAA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 域名账号安全
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 子域名接管
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十六、域名接入网站的完整步骤
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十七、学习重点
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        十八、常用检查清单
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">域名和域名解析学习笔记</h1>
+<h2 id="_2">一、域名是什么</h2>
+<p>域名是互联网上用于标识网站或服务的可读名称。</p>
+<p>例如：</p>
+<pre><code class="language-text">www.example.com
+</code></pre>
+<p>人更容易记住域名，计算机真正通信时需要 IP 地址。域名解析的作用就是把域名转换成对应的 IP 地址或其他服务信息。</p>
+<pre><code class="language-text">www.example.com -&gt; 93.184.216.34
+</code></pre>
+<h2 id="_3">二、域名层级结构</h2>
+<p>域名是分层的，从右往左层级越来越低。</p>
+<p>以 <code>www.example.com</code> 为例：</p>
+<pre><code class="language-text">www.example.com.
+│   │       │   │
+│   │       │   └─ 根域 root，通常省略不写
+│   │       └──── 顶级域 TLD
+│   └──────────── 二级域
+└──────────────── 子域名 / 主机名
+</code></pre>
+<h3 id="1">1. 根域</h3>
+<p>根域是 DNS 层级的最顶层，完整域名最后其实有一个点：</p>
+<pre><code class="language-text">www.example.com.
+</code></pre>
+<p>日常使用时最后的点通常省略。</p>
+<h3 id="2-tld">2. 顶级域 TLD</h3>
+<p>常见顶级域：</p>
+<ul>
+<li><code>.com</code></li>
+<li><code>.net</code></li>
+<li><code>.org</code></li>
+<li><code>.cn</code></li>
+<li><code>.edu</code></li>
+<li><code>.io</code></li>
+<li><code>.dev</code></li>
+</ul>
+<p>顶级域由对应的注册局管理。</p>
+<h3 id="3">3. 二级域</h3>
+<p>例如 <code>example.com</code> 中的 <code>example</code> 就是二级域。</p>
+<p>一般购买域名时，买到的是类似下面这样的域名：</p>
+<pre><code class="language-text">example.com
+example.cn
+my-site.net
+</code></pre>
+<h3 id="4">4. 子域名</h3>
+<p>子域名是在主域名前继续增加的层级。</p>
+<p>例如：</p>
+<pre><code class="language-text">www.example.com
+api.example.com
+blog.example.com
+dev.api.example.com
+</code></pre>
+<p>常见用途：</p>
+<ul>
+<li><code>www</code>：网站主页。</li>
+<li><code>api</code>：后端接口。</li>
+<li><code>admin</code>：管理后台。</li>
+<li><code>cdn</code>：静态资源。</li>
+<li><code>mail</code>：邮件服务。</li>
+</ul>
+<h3 id="5-fqdn">5. FQDN</h3>
+<p>FQDN 是 Fully Qualified Domain Name，完全限定域名。</p>
+<p>严格来说完整写法是：</p>
+<pre><code class="language-text">www.example.com.
+</code></pre>
+<p>最后的点表示根域。</p>
+<h2 id="_4">三、域名注册相关概念</h2>
+<h3 id="1-registry">1. 注册局 Registry</h3>
+<p>注册局负责管理某个顶级域。</p>
+<p>例如 <code>.com</code>、<code>.cn</code> 这样的顶级域背后都有对应的注册局。</p>
+<h3 id="2-registrar">2. 注册商 Registrar</h3>
+<p>注册商是提供域名购买和管理服务的平台。</p>
+<p>用户通常通过注册商购买域名、续费域名、设置 DNS 服务器。</p>
+<p>常见功能：</p>
+<ul>
+<li>查询域名是否可注册。</li>
+<li>注册域名。</li>
+<li>续费域名。</li>
+<li>修改域名联系人信息。</li>
+<li>设置 nameserver。</li>
+<li>开启域名锁。</li>
+</ul>
+<h3 id="3-registrant">3. 注册人 Registrant</h3>
+<p>注册人是域名的持有人。</p>
+<p>域名到期后如果没有续费，可能进入宽限期、赎回期，最后被释放重新注册。</p>
+<h3 id="4-whois">4. WHOIS</h3>
+<p>WHOIS 用来查询域名注册信息。</p>
+<p>可能包含：</p>
+<ul>
+<li>注册商。</li>
+<li>注册时间。</li>
+<li>到期时间。</li>
+<li>域名状态。</li>
+<li>DNS 服务器。</li>
+<li>联系人信息。</li>
+</ul>
+<p>很多域名会开启隐私保护，因此不一定能看到真实联系人信息。</p>
+<h3 id="5">5. 域名状态</h3>
+<p>常见状态：</p>
+<table>
+<thead>
+<tr>
+<th>状态</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clientTransferProhibited</code></td>
+<td>禁止转移，通常是域名锁</td>
+</tr>
+<tr>
+<td><code>ok</code></td>
+<td>正常状态</td>
+</tr>
+<tr>
+<td><code>pendingDelete</code></td>
+<td>等待删除</td>
+</tr>
+<tr>
+<td><code>redemptionPeriod</code></td>
+<td>赎回期</td>
+</tr>
+<tr>
+<td><code>serverHold</code></td>
+<td>注册局暂停解析</td>
+</tr>
+</tbody>
+</table>
+<p>如果域名状态异常，即使 DNS 记录配置正确，也可能无法正常解析。</p>
+<h2 id="dns">四、DNS 是什么</h2>
+<p>DNS 是 Domain Name System，域名系统。</p>
+<p>DNS 的作用：</p>
+<ul>
+<li>把域名解析为 IP 地址。</li>
+<li>指定邮件服务器。</li>
+<li>做域名所有权验证。</li>
+<li>提供服务发现。</li>
+<li>支持 CDN、负载均衡和容灾。</li>
+</ul>
+<p>DNS 是分布式系统，不是某一台服务器保存所有域名记录。</p>
+<h2 id="dns_1">五、DNS 中的重要角色</h2>
+<h3 id="1-resolver">1. Resolver 解析器</h3>
+<p>解析器负责帮用户查询域名结果。</p>
+<p>常见解析器：</p>
+<ul>
+<li>运营商 DNS。</li>
+<li>公共 DNS。</li>
+<li>公司内网 DNS。</li>
+<li>本机 DNS 缓存。</li>
+</ul>
+<p>用户电脑通常不会直接询问根 DNS，而是把请求交给递归解析器。</p>
+<h3 id="2-recursive-resolver">2. Recursive Resolver 递归解析器</h3>
+<p>递归解析器负责代替客户端完成完整查询。</p>
+<p>如果缓存中没有结果，它会继续询问：</p>
+<pre><code class="language-text">根 DNS -&gt; 顶级域 DNS -&gt; 权威 DNS
+</code></pre>
+<p>最后把结果返回给客户端，并缓存一段时间。</p>
+<h3 id="3-root-dns-dns">3. Root DNS 根 DNS</h3>
+<p>根 DNS 知道各个顶级域 DNS 在哪里。</p>
+<p>它不会直接知道 <code>www.example.com</code> 的 IP，但它知道 <code>.com</code> 应该去问谁。</p>
+<h3 id="4-tld-dns-dns">4. TLD DNS 顶级域 DNS</h3>
+<p>顶级域 DNS 负责某个顶级域。</p>
+<p>例如 <code>.com</code> 的 TLD DNS 知道 <code>example.com</code> 的权威 DNS 服务器是谁。</p>
+<h3 id="5-authoritative-dns-dns">5. Authoritative DNS 权威 DNS</h3>
+<p>权威 DNS 保存某个域名真正的 DNS 记录。</p>
+<p>例如 <code>example.com</code> 的权威 DNS 会保存：</p>
+<ul>
+<li><code>www.example.com</code> 对应哪个 IP。</li>
+<li><code>api.example.com</code> 对应哪个 IP。</li>
+<li><code>example.com</code> 使用哪些邮件服务器。</li>
+<li><code>example.com</code> 的 TXT 验证记录。</li>
+</ul>
+<h2 id="_5">六、域名解析过程</h2>
+<p>以访问 <code>www.example.com</code> 为例：</p>
+<pre><code class="language-text">浏览器访问 www.example.com
+  -&gt; 检查浏览器 DNS 缓存
+  -&gt; 检查操作系统 DNS 缓存
+  -&gt; 查询本地配置的递归 DNS
+  -&gt; 递归 DNS 查询根 DNS
+  -&gt; 根 DNS 返回 .com 的 TLD DNS
+  -&gt; 递归 DNS 查询 .com TLD DNS
+  -&gt; TLD DNS 返回 example.com 的权威 DNS
+  -&gt; 递归 DNS 查询权威 DNS
+  -&gt; 权威 DNS 返回 www.example.com 的记录
+  -&gt; 递归 DNS 把结果返回给客户端
+  -&gt; 浏览器拿到 IP 后发起连接
+</code></pre>
+<p>简化理解：</p>
+<pre><code class="language-text">客户端问递归 DNS：www.example.com 是多少？
+递归 DNS 负责一路问到权威 DNS，然后把答案返回。
+</code></pre>
+<h2 id="_6">七、递归查询和迭代查询</h2>
+<h3 id="1_1">1. 递归查询</h3>
+<p>客户端要求 DNS 服务器给出最终结果。</p>
+<p>如果 DNS 服务器不知道，它需要继续帮客户端查。</p>
+<p>常见场景：</p>
+<pre><code class="language-text">电脑 -&gt; 运营商 DNS / 公共 DNS
+</code></pre>
+<h3 id="2">2. 迭代查询</h3>
+<p>DNS 服务器不知道最终结果时，只告诉你下一步应该问谁。</p>
+<p>常见场景：</p>
+<pre><code class="language-text">递归 DNS -&gt; 根 DNS
+递归 DNS -&gt; TLD DNS
+递归 DNS -&gt; 权威 DNS
+</code></pre>
+<h2 id="dns_2">八、DNS 记录类型</h2>
+<h3 id="1_2">1. 常见记录</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>作用</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>域名指向 IPv4 地址</td>
+<td><code>www -&gt; 192.0.2.10</code></td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td>域名指向 IPv6 地址</td>
+<td><code>www -&gt; 2001:db8::1</code></td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>域名别名，指向另一个域名</td>
+<td><code>www -&gt; example.com</code></td>
+</tr>
+<tr>
+<td>MX</td>
+<td>指定邮件服务器</td>
+<td><code>example.com -&gt; mail.example.com</code></td>
+</tr>
+<tr>
+<td>TXT</td>
+<td>文本记录，常用于验证和反垃圾邮件</td>
+<td>SPF、DKIM、DMARC</td>
+</tr>
+<tr>
+<td>NS</td>
+<td>指定权威 DNS 服务器</td>
+<td><code>ns1.example-dns.com</code></td>
+</tr>
+<tr>
+<td>SOA</td>
+<td>区域起始授权记录</td>
+<td>包含序列号、刷新时间等</td>
+</tr>
+<tr>
+<td>SRV</td>
+<td>指定某服务的主机和端口</td>
+<td>SIP、LDAP 等</td>
+</tr>
+<tr>
+<td>CAA</td>
+<td>指定允许哪些 CA 签发证书</td>
+<td><code>letsencrypt.org</code></td>
+</tr>
+<tr>
+<td>PTR</td>
+<td>反向解析，IP 指向域名</td>
+<td>邮件服务器常用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-a">2. A 记录</h3>
+<p>A 记录把域名解析到 IPv4 地址。</p>
+<p>示例：</p>
+<pre><code class="language-text">www.example.com -&gt; 203.0.113.10
+</code></pre>
+<p>适合：</p>
+<ul>
+<li>网站服务器。</li>
+<li>API 服务器。</li>
+<li>直接绑定公网 IP 的服务。</li>
+</ul>
+<h3 id="3-aaaa">3. AAAA 记录</h3>
+<p>AAAA 记录把域名解析到 IPv6 地址。</p>
+<p>示例：</p>
+<pre><code class="language-text">www.example.com -&gt; 2001:db8::10
+</code></pre>
+<p>如果网站支持 IPv6，可以同时配置 A 和 AAAA。</p>
+<h3 id="4-cname">4. CNAME 记录</h3>
+<p>CNAME 是别名记录，把一个域名指向另一个域名。</p>
+<p>示例：</p>
+<pre><code class="language-text">www.example.com -&gt; example.github.io
+</code></pre>
+<p>注意：</p>
+<ul>
+<li>CNAME 的目标应该是域名，不是 IP。</li>
+<li>一个主机名如果配置了 CNAME，通常不能再同时配置 A、MX、TXT 等其他记录。</li>
+<li>根域名 <code>example.com</code> 是否支持 CNAME 取决于 DNS 服务商，有些平台提供 ALIAS、ANAME 或 CNAME Flattening 来解决根域名指向另一个域名的问题。</li>
+</ul>
+<h3 id="5-mx">5. MX 记录</h3>
+<p>MX 记录指定收邮件的服务器。</p>
+<p>示例：</p>
+<pre><code class="language-text">example.com MX 10 mail.example.com
+</code></pre>
+<p>数字表示优先级，数字越小优先级越高。</p>
+<p>邮件服务通常还需要 TXT 记录配合：</p>
+<ul>
+<li>SPF</li>
+<li>DKIM</li>
+<li>DMARC</li>
+</ul>
+<h3 id="6-txt">6. TXT 记录</h3>
+<p>TXT 记录保存文本信息。</p>
+<p>常见用途：</p>
+<ul>
+<li>证明域名所有权。</li>
+<li>配置 SPF。</li>
+<li>配置 DKIM。</li>
+<li>配置 DMARC。</li>
+<li>第三方平台验证。</li>
+</ul>
+<p>示例：</p>
+<pre><code class="language-text">example.com TXT &quot;v=spf1 include:_spf.example.net -all&quot;
+</code></pre>
+<h3 id="7-ns">7. NS 记录</h3>
+<p>NS 记录指定某个域名由哪些权威 DNS 服务器负责。</p>
+<p>在注册商处设置的 nameserver 决定整个域名使用哪组权威 DNS。</p>
+<p>例如：</p>
+<pre><code class="language-text">ns1.example-dns.com
+ns2.example-dns.com
+</code></pre>
+<h3 id="8-soa">8. SOA 记录</h3>
+<p>SOA 是 Start of Authority，表示 DNS 区域的起始授权信息。</p>
+<p>包含：</p>
+<ul>
+<li>主 DNS 服务器。</li>
+<li>管理员邮箱。</li>
+<li>序列号。</li>
+<li>刷新时间。</li>
+<li>重试时间。</li>
+<li>过期时间。</li>
+<li>最小 TTL。</li>
+</ul>
+<p>普通网站配置中很少直接修改 SOA，但排查权威 DNS 问题时会看到它。</p>
+<h3 id="9-caa">9. CAA 记录</h3>
+<p>CAA 用来限制哪些证书颁发机构可以给域名签发证书。</p>
+<p>示例：</p>
+<pre><code class="language-text">example.com CAA 0 issue &quot;letsencrypt.org&quot;
+</code></pre>
+<p>如果配置错误，可能导致 HTTPS 证书申请失败。</p>
+<h3 id="10-ptr">10. PTR 记录</h3>
+<p>PTR 用于反向解析，把 IP 地址解析回域名。</p>
+<p>常见于邮件服务器，因为很多邮件服务会检查发送方 IP 是否有合理的反向解析。</p>
+<p>PTR 记录通常由 IP 所属的云厂商、机房或运营商配置，不是在普通域名 DNS 面板中配置。</p>
+<h2 id="_7">九、主机记录、记录值和线路</h2>
+<h3 id="1_3">1. 主机记录</h3>
+<p>主机记录表示要配置哪个子域。</p>
+<p>常见写法：</p>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>完整域名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@</code></td>
+<td><code>example.com</code></td>
+</tr>
+<tr>
+<td><code>www</code></td>
+<td><code>www.example.com</code></td>
+</tr>
+<tr>
+<td><code>api</code></td>
+<td><code>api.example.com</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>泛解析，例如 <code>anything.example.com</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2_1">2. 记录值</h3>
+<p>记录值是解析目标。</p>
+<p>例如：</p>
+<ul>
+<li>A 记录的记录值是 IPv4 地址。</li>
+<li>AAAA 记录的记录值是 IPv6 地址。</li>
+<li>CNAME 记录的记录值是另一个域名。</li>
+<li>MX 记录的记录值是邮件服务器域名。</li>
+</ul>
+<h3 id="3_1">3. 解析线路</h3>
+<p>有些 DNS 服务商支持按线路返回不同结果。</p>
+<p>例如：</p>
+<ul>
+<li>默认线路。</li>
+<li>电信线路。</li>
+<li>联通线路。</li>
+<li>移动线路。</li>
+<li>海外线路。</li>
+</ul>
+<p>这可以用于访问优化，但也会让不同地区查询到不同 IP，排查时要注意查询来源。</p>
+<h2 id="ttl-dns">十、TTL 和 DNS 缓存</h2>
+<p>TTL 是 Time To Live，表示 DNS 记录可以被缓存多久。</p>
+<p>例如 TTL 为 600：</p>
+<pre><code class="language-text">递归 DNS 可以把这个结果缓存 600 秒
+</code></pre>
+<h3 id="1-ttl">1. TTL 的影响</h3>
+<p>TTL 越大：</p>
+<ul>
+<li>缓存时间长。</li>
+<li>DNS 查询压力小。</li>
+<li>修改解析后生效更慢。</li>
+</ul>
+<p>TTL 越小：</p>
+<ul>
+<li>修改解析后更快生效。</li>
+<li>DNS 查询压力更大。</li>
+<li>适合迁移、切换前临时降低。</li>
+</ul>
+<h3 id="2_2">2. 修改解析为什么不是立刻生效</h3>
+<p>原因：</p>
+<ul>
+<li>递归 DNS 缓存还没过期。</li>
+<li>本机 DNS 缓存还没刷新。</li>
+<li>浏览器有自己的 DNS 缓存。</li>
+<li>不同地区递归 DNS 更新时间不同。</li>
+<li>权威 DNS 服务器之间同步需要时间。</li>
+</ul>
+<p>通常说的“DNS 生效时间”本质上主要受缓存和 TTL 影响。</p>
+<h3 id="3_2">3. 切换服务器前的做法</h3>
+<p>如果计划把域名从旧服务器切到新服务器：</p>
+<ol>
+<li>提前把 TTL 调低，例如 300 秒。</li>
+<li>等旧 TTL 过期。</li>
+<li>修改 A 记录到新 IP。</li>
+<li>验证不同地区解析结果。</li>
+<li>确认稳定后再把 TTL 调回正常值。</li>
+</ol>
+<h2 id="_8">十一、常见域名配置场景</h2>
+<h3 id="1_4">1. 域名指向网站服务器</h3>
+<p>假设服务器公网 IP 是：</p>
+<pre><code class="language-text">203.0.113.10
+</code></pre>
+<p>配置：</p>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>类型</th>
+<th>记录值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@</code></td>
+<td>A</td>
+<td><code>203.0.113.10</code></td>
+</tr>
+<tr>
+<td><code>www</code></td>
+<td>A</td>
+<td><code>203.0.113.10</code></td>
+</tr>
+</tbody>
+</table>
+<p>访问：</p>
+<pre><code class="language-text">https://example.com
+https://www.example.com
+</code></pre>
+<p>还需要：</p>
+<ul>
+<li>Web 服务器监听 80/443。</li>
+<li>防火墙或安全组放行 80/443。</li>
+<li>配置 HTTPS 证书。</li>
+<li>Web 服务中绑定对应域名。</li>
+</ul>
+<h3 id="2-www">2. <code>www</code> 指向根域名</h3>
+<p>配置：</p>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>类型</th>
+<th>记录值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@</code></td>
+<td>A</td>
+<td><code>203.0.113.10</code></td>
+</tr>
+<tr>
+<td><code>www</code></td>
+<td>CNAME</td>
+<td><code>example.com</code></td>
+</tr>
+</tbody>
+</table>
+<p>这样 <code>www.example.com</code> 会作为别名解析到 <code>example.com</code>。</p>
+<h3 id="3_3">3. 子域名指向不同服务</h3>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>类型</th>
+<th>记录值</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>www</code></td>
+<td>A</td>
+<td><code>203.0.113.10</code></td>
+<td>官网</td>
+</tr>
+<tr>
+<td><code>api</code></td>
+<td>A</td>
+<td><code>203.0.113.20</code></td>
+<td>API</td>
+</tr>
+<tr>
+<td><code>admin</code></td>
+<td>A</td>
+<td><code>203.0.113.30</code></td>
+<td>后台</td>
+</tr>
+<tr>
+<td><code>cdn</code></td>
+<td>CNAME</td>
+<td><code>cdn-provider.example.net</code></td>
+<td>静态资源</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-cdn">4. 使用 CDN</h3>
+<p>CDN 通常会要求配置 CNAME。</p>
+<p>示例：</p>
+<pre><code class="language-text">www.example.com CNAME www.example.com.cdn-provider.net
+</code></pre>
+<p>流程：</p>
+<pre><code class="language-text">用户访问 www.example.com
+  -&gt; DNS 返回 CDN 域名
+  -&gt; CDN 根据地区和网络返回就近节点
+  -&gt; 用户访问 CDN 节点
+  -&gt; CDN 命中缓存或回源到源站
+</code></pre>
+<p>注意：</p>
+<ul>
+<li>CDN 平台通常还要配置源站。</li>
+<li>HTTPS 证书需要在 CDN 上配置。</li>
+<li>源站要限制不必要的公网访问时，需要考虑 CDN 回源 IP。</li>
+</ul>
+<h3 id="5_1">5. 配置邮箱</h3>
+<p>邮件服务一般需要：</p>
+<ul>
+<li>MX 记录。</li>
+<li>SPF TXT 记录。</li>
+<li>DKIM TXT 记录。</li>
+<li>DMARC TXT 记录。</li>
+</ul>
+<p>示例：</p>
+<pre><code class="language-text">example.com MX 10 mail.example.com
+mail.example.com A 203.0.113.50
+example.com TXT &quot;v=spf1 mx -all&quot;
+_dmarc.example.com TXT &quot;v=DMARC1; p=quarantine; rua=mailto:dmarc@example.com&quot;
+</code></pre>
+<p>具体值要以邮件服务商提供的配置为准。</p>
+<h3 id="6">6. 第三方平台域名验证</h3>
+<p>很多平台会要求添加 TXT 记录证明域名所有权。</p>
+<p>例如：</p>
+<pre><code class="language-text">example.com TXT &quot;verification=abc123&quot;
+</code></pre>
+<p>添加后平台会查询 DNS 记录，确认你能控制该域名。</p>
+<h3 id="7">7. 域名跳转</h3>
+<p>DNS 本身不负责 HTTP 跳转。</p>
+<p>例如要实现：</p>
+<pre><code class="language-text">example.com -&gt; https://www.example.com
+</code></pre>
+<p>需要在以下位置配置重定向：</p>
+<ul>
+<li>Web 服务器。</li>
+<li>CDN。</li>
+<li>负载均衡。</li>
+<li>域名服务商提供的 URL 转发功能。</li>
+</ul>
+<p>DNS 只能告诉客户端去哪个 IP 或域名，不能直接返回 HTTP 301/302。</p>
+<h2 id="https">十二、域名和 HTTPS 证书</h2>
+<p>HTTPS 证书必须和访问域名匹配。</p>
+<p>例如访问：</p>
+<pre><code class="language-text">https://api.example.com
+</code></pre>
+<p>证书必须包含：</p>
+<pre><code class="language-text">api.example.com
+</code></pre>
+<p>或者使用通配符证书：</p>
+<pre><code class="language-text">*.example.com
+</code></pre>
+<h3 id="1_5">1. 常见证书类型</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单域名证书</td>
+<td><code>www.example.com</code></td>
+<td>只保护一个域名</td>
+</tr>
+<tr>
+<td>多域名证书</td>
+<td><code>example.com</code>、<code>www.example.com</code></td>
+<td>一个证书包含多个域名</td>
+</tr>
+<tr>
+<td>通配符证书</td>
+<td><code>*.example.com</code></td>
+<td>保护一级子域名</td>
+</tr>
+</tbody>
+</table>
+<p>注意：</p>
+<pre><code class="language-text">*.example.com
+</code></pre>
+<p>可以匹配：</p>
+<pre><code class="language-text">www.example.com
+api.example.com
+</code></pre>
+<p>不能匹配：</p>
+<pre><code class="language-text">dev.api.example.com
+</code></pre>
+<h3 id="2-dns">2. DNS 验证</h3>
+<p>申请证书时，CA 可能要求添加 TXT 记录完成 DNS 验证。</p>
+<p>常见记录：</p>
+<pre><code class="language-text">_acme-challenge.example.com TXT &quot;xxxx&quot;
+</code></pre>
+<p>验证通过后才能签发证书。</p>
+<h2 id="_9">十三、常用排查命令</h2>
+<h3 id="1-windows">1. Windows</h3>
+<pre><code class="language-powershell">nslookup example.com
+nslookup www.example.com
+nslookup -type=mx example.com
+nslookup -type=txt example.com
+ipconfig /flushdns
+</code></pre>
+<p>说明：</p>
+<ul>
+<li><code>nslookup example.com</code>：查询默认 A 记录。</li>
+<li><code>-type=mx</code>：查询 MX 记录。</li>
+<li><code>-type=txt</code>：查询 TXT 记录。</li>
+<li><code>ipconfig /flushdns</code>：清理 Windows DNS 缓存。</li>
+</ul>
+<h3 id="2-linux-macos">2. Linux / macOS</h3>
+<pre><code class="language-bash">dig example.com
+dig example.com A
+dig example.com AAAA
+dig example.com MX
+dig example.com TXT
+dig www.example.com CNAME
+dig +trace www.example.com
+</code></pre>
+<p>说明：</p>
+<ul>
+<li><code>dig</code>：常用 DNS 查询工具。</li>
+<li><code>dig +trace</code>：从根域开始追踪解析链路。</li>
+</ul>
+<p>指定 DNS 服务器查询：</p>
+<pre><code class="language-bash">dig @8.8.8.8 example.com
+dig @1.1.1.1 example.com
+</code></pre>
+<p>查询权威 DNS：</p>
+<pre><code class="language-bash">dig example.com NS
+</code></pre>
+<h3 id="3_4">3. 查看本机连接</h3>
+<pre><code class="language-bash">ping example.com
+curl -I https://example.com
+traceroute example.com
+</code></pre>
+<p>Windows：</p>
+<pre><code class="language-powershell">ping example.com
+curl -I https://example.com
+tracert example.com
+</code></pre>
+<p>注意：<code>ping</code> 成功不代表 HTTP 服务正常，<code>ping</code> 失败也不一定代表网站不可访问，因为服务器或防火墙可能禁用了 ICMP。</p>
+<h2 id="_10">十四、常见问题排查</h2>
+<h3 id="1_6">1. 域名解析不到</h3>
+<p>现象：</p>
+<pre><code class="language-text">NXDOMAIN
+</code></pre>
+<p>可能原因：</p>
+<ul>
+<li>域名没有注册。</li>
+<li>域名过期。</li>
+<li>主机记录写错。</li>
+<li>权威 DNS 中没有该记录。</li>
+<li>nameserver 配置错误。</li>
+</ul>
+<p>排查：</p>
+<pre><code class="language-bash">dig example.com NS
+dig www.example.com
+dig +trace www.example.com
+</code></pre>
+<h3 id="2-ip">2. 解析到了旧 IP</h3>
+<p>可能原因：</p>
+<ul>
+<li>递归 DNS 缓存未过期。</li>
+<li>本机 DNS 缓存未清理。</li>
+<li>浏览器缓存。</li>
+<li>修改了错误的 DNS 服务商面板。</li>
+<li>权威 DNS 还没同步。</li>
+</ul>
+<p>排查：</p>
+<pre><code class="language-bash">dig @权威DNS www.example.com
+dig @8.8.8.8 www.example.com
+dig @1.1.1.1 www.example.com
+</code></pre>
+<p>如果权威 DNS 返回新 IP，而公共 DNS 返回旧 IP，多半是缓存还没过期。</p>
+<h3 id="3-ping-ip">3. 能 ping IP，但不能访问域名</h3>
+<p>可能原因：</p>
+<ul>
+<li>DNS 解析失败。</li>
+<li>域名解析到错误 IP。</li>
+<li>Web 服务没有绑定该域名。</li>
+<li>HTTPS 证书不匹配。</li>
+<li>CDN 或反向代理配置错误。</li>
+</ul>
+<p>排查顺序：</p>
+<ol>
+<li>查域名解析结果。</li>
+<li>直接访问 IP 测试服务。</li>
+<li>检查 Web 服务器虚拟主机配置。</li>
+<li>检查 80/443 端口。</li>
+<li>检查 HTTPS 证书。</li>
+</ol>
+<h3 id="4_1">4. 域名能解析，但网站打不开</h3>
+<p>DNS 只负责把域名解析到目标地址。网站打不开不一定是 DNS 问题。</p>
+<p>继续检查：</p>
+<ul>
+<li>服务器是否运行。</li>
+<li>Web 服务是否启动。</li>
+<li>端口是否开放。</li>
+<li>云服务器安全组是否放行。</li>
+<li>防火墙是否阻拦。</li>
+<li>Nginx / Apache / 应用日志是否报错。</li>
+<li>HTTPS 证书是否正确。</li>
+</ul>
+<h3 id="5-cname">5. CNAME 配置后不生效</h3>
+<p>可能原因：</p>
+<ul>
+<li>CNAME 和 A 记录冲突。</li>
+<li>CNAME 目标域名写错。</li>
+<li>CNAME 目标本身无法解析。</li>
+<li>在根域名配置 CNAME，但服务商不支持。</li>
+<li>缓存未过期。</li>
+</ul>
+<h3 id="6_1">6. 邮件收不到或进入垃圾箱</h3>
+<p>检查：</p>
+<ul>
+<li>MX 记录是否正确。</li>
+<li>SPF 是否正确。</li>
+<li>DKIM 是否正确。</li>
+<li>DMARC 是否正确。</li>
+<li>发送服务器 IP 是否有 PTR 反向解析。</li>
+<li>邮件服务商是否要求额外验证。</li>
+</ul>
+<h3 id="7-https">7. HTTPS 证书申请失败</h3>
+<p>可能原因：</p>
+<ul>
+<li>DNS 验证 TXT 记录未生效。</li>
+<li>CAA 记录限制了证书颁发机构。</li>
+<li>证书申请域名和实际记录不一致。</li>
+<li>使用了 CDN，验证请求没有正确到达源站。</li>
+<li>域名状态异常。</li>
+</ul>
+<h2 id="dns_3">十五、DNS 安全</h2>
+<h3 id="1-dns">1. DNS 劫持</h3>
+<p>DNS 劫持是指解析结果被恶意篡改，用户访问域名时被引导到错误地址。</p>
+<p>防护方式：</p>
+<ul>
+<li>使用可信 DNS 服务。</li>
+<li>重要域名开启 DNSSEC。</li>
+<li>网站使用 HTTPS。</li>
+<li>用户侧避免使用不可信网络。</li>
+</ul>
+<h3 id="2-dnssec">2. DNSSEC</h3>
+<p>DNSSEC 用数字签名验证 DNS 记录是否被篡改。</p>
+<p>作用：</p>
+<ul>
+<li>验证 DNS 数据完整性。</li>
+<li>防止部分 DNS 欺骗攻击。</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>DNSSEC 不能加密查询内容。</li>
+<li>配置错误可能导致域名无法解析。</li>
+<li>开启前要确认注册商和 DNS 服务商都支持。</li>
+</ul>
+<h3 id="3-caa">3. CAA</h3>
+<p>CAA 可以限制哪些 CA 可以为域名签发证书。</p>
+<p>好处：</p>
+<ul>
+<li>降低证书被错误签发的风险。</li>
+</ul>
+<p>风险：</p>
+<ul>
+<li>配错会导致正常证书签发失败。</li>
+</ul>
+<h3 id="4_2">4. 域名账号安全</h3>
+<p>建议：</p>
+<ul>
+<li>注册商账号开启多因素认证。</li>
+<li>开启域名转移锁。</li>
+<li>使用强密码。</li>
+<li>限制 DNS 管理权限。</li>
+<li>定期检查 DNS 记录。</li>
+<li>删除不用的子域名记录。</li>
+<li>防止子域名接管。</li>
+</ul>
+<h3 id="5_2">5. 子域名接管</h3>
+<p>如果 DNS 中存在 CNAME 指向某个第三方平台，但该平台上的资源已经删除，攻击者可能重新创建同名资源接管该子域名。</p>
+<p>常见风险：</p>
+<pre><code class="language-text">old.example.com CNAME old-site.third-party.com
+</code></pre>
+<p>如果第三方平台上的 <code>old-site</code> 已被删除，就要及时删除这条 DNS 记录。</p>
+<h2 id="_11">十六、域名接入网站的完整步骤</h2>
+<p>以把 <code>example.com</code> 绑定到一台服务器为例：</p>
+<ol>
+<li>购买域名。</li>
+<li>在注册商处确认域名状态正常。</li>
+<li>选择 DNS 服务商。</li>
+<li>在注册商处设置 nameserver，或使用注册商默认 DNS。</li>
+<li>在 DNS 面板添加 A 记录。</li>
+<li>服务器开放 80 和 443 端口。</li>
+<li>Web 服务器配置域名。</li>
+<li>申请并配置 HTTPS 证书。</li>
+<li>使用 <code>dig</code> 或 <code>nslookup</code> 验证解析结果。</li>
+<li>使用浏览器和 <code>curl -I</code> 验证网站访问。</li>
+<li>配置监控和证书续期。</li>
+</ol>
+<h2 id="_12">十七、学习重点</h2>
+<ul>
+<li>域名是给人看的名字，IP 是计算机通信使用的地址。</li>
+<li>DNS 负责把域名解析为 IP 或其他服务记录。</li>
+<li>域名解析链路是：根 DNS -&gt; TLD DNS -&gt; 权威 DNS。</li>
+<li>用户通常查询递归 DNS，递归 DNS 代替用户完成完整查询。</li>
+<li>A 记录指向 IPv4，AAAA 指向 IPv6，CNAME 指向另一个域名。</li>
+<li>MX 用于邮件，TXT 常用于验证和邮件安全。</li>
+<li>TTL 决定缓存时间，影响解析修改后的生效速度。</li>
+<li>DNS 不负责 HTTP 跳转，跳转要在 Web 服务器、CDN 或负载均衡配置。</li>
+<li>HTTPS 证书必须匹配访问的域名。</li>
+<li>排查 DNS 问题时要区分权威 DNS 结果和递归 DNS 缓存结果。</li>
+</ul>
+<h2 id="_13">十八、常用检查清单</h2>
+<p>域名无法访问时：</p>
+<ul>
+<li>域名是否过期。</li>
+<li>nameserver 是否正确。</li>
+<li>权威 DNS 是否有记录。</li>
+<li>A / CNAME 记录是否正确。</li>
+<li>TTL 是否还没过期。</li>
+<li>本机 DNS 缓存是否需要清理。</li>
+<li>服务器端口是否开放。</li>
+<li>Web 服务是否绑定该域名。</li>
+<li>HTTPS 证书是否匹配。</li>
+<li>CDN 或代理配置是否正确。</li>
+</ul>
+<p>新增域名解析时：</p>
+<ul>
+<li>主机记录是否写对。</li>
+<li>记录类型是否选对。</li>
+<li>记录值是否正确。</li>
+<li>是否和已有记录冲突。</li>
+<li>TTL 是否符合切换需求。</li>
+<li>是否需要同时配置 <code>@</code> 和 <code>www</code>。</li>
+<li>是否需要配置 HTTPS 证书。</li>
+<li>是否需要配置邮件相关记录。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Ming-0702" target="_blank" rel="noopener" title="github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tracking", "navigation.tabs", "navigation.top", "navigation.sections", "navigation.indexes", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
